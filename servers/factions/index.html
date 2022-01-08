@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> CoolCraft – Servers – Factions </title>
+    <link href="../../images/icons/coolcraft_icon.png" rel="icon" type="image/png"/>
+
+    <link href="../../style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <script src="../../script.js"> </script>
+    <script src="../../database.js"> </script>
+
+    <div class="header">
+      <a class="icon" href=""> <img alt="Server icon" src="../../images/icons/coolcraft_icon.png"> </a>
+      <a class="title" href=""> CoolCraft </a>
+    </div>
+
+    <nav class="flex-container">
+      <ul class="nav">
+        <li> <a class="inactive" href="../../"> Home </a> </li>
+        <li> <a class="inactive" href="../../info"> Info </a> </li>
+        <li> <a class="active" href="../"> Servers </a> </li>
+        <li> <a class="inactive" href="../../gallery"> Gallery </a> </li>
+        <li> <a class="inactive" href="../../news"> News </a> </li>
+        <li> <a class="inactive" href="../../faq"> FAQ </a> </li>
+        <li> <a class="inactive" href="../../support"> Support </a> </li>
+        <li> <a class="inactive" href="../../store"> Store </a> </li>
+      </ul>
+    </nav>
+
+    <div id="slidebg">
+      <div class="banner" v-on:click="change">
+        <img :src="image" alt="BG" class="banner">
+        <div class="ip">
+          Servers
+        </div>
+      </div>
+    </div>
+
+
+ <h1 class="what_is">
+      <b> Factions </b>
+    </h1>
+
+    <div class="line"> </div>
+
+    <div class="what_is_desc">
+      <b>Factions</b> is a competitive PvP game mode that lets players team up by creating and joining different factions. 
+      <br>
+      Players within the same faction work together to gather resources, 
+      <br>
+      build bases, protect their land, recruit new members and raid other factions.
+    </div>
+
+<div id="divofservers">
+<ul id="serverspics">
+  <li><img src="images/factionsspawn.png" id="survivalpic2"></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br>
+
+    <footer class="footer">
+      <div class="footer_up"> </div>
+      <div class="footer_left">
+        CoolCraft &copy; 2021
+      </div>
+      <div class="footer_right">
+        All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

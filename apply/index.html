@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> CoolCraft – Applications </title>
+    <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png"/>
+
+    <link href="../style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <script src="../script.js"> </script>
+    <script src="../database.js"> </script>
+
+    <div class="header">
+      <a class="icon" href=""> <img alt="Server icon" src="../images/icons/coolcraft_icon.png"> </a>
+      <a class="title" href=""> CoolCraft </a>
+    </div>
+
+    <nav class="flex-container">
+      <ul class="nav">
+        <li> <a class="inactive" href="../"> Home </a> </li>
+        <li> <a class="inactive" href="../info"> Info </a> </li>
+        <li> <a class="inactive" href="../servers"> Servers </a> </li>
+        <li> <a class="inactive" href="../gallery"> Gallery </a> </li>
+        <li> <a class="inactive" href="../news"> News </a> </li>
+        <li> <a class="inactive" href="../faq"> FAQ </a> </li>
+        <li> <a class="inactive" href="../support"> Support </a> </li>
+        <li> <a class="inactive" href="../store"> Store </a> </li>
+      </ul>
+    </nav>
+
+    <div id="slidebg">
+      <div class="banner" v-on:click="change">
+        <img :src="image" alt="Background image" class="banner">
+        <div class="ip">
+          Applications
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="main">
+		<h1 class="title">
+          <b> Applications </b>
+        </h1>
+
+        <div class="line_title"> </div>
+
+        <div class="text">
+		  <p> <a href="builder"> Builder </a> </p>
+          <p> <a href="helper"> Helper </a> </p>
+          <p> <a href="content_creator"> Content Creator </a> </p>
+		  <br><br><br>
+        </div>
+        <br><br>
+      </div>
+
+      <div class="sidebar">
+
+        <h1 class="contact">
+          <b> Contact us </b>
+        </h1>
+
+        <div class="line_contact"> </div>
+
+        <p> <a href="https://discord.com/invite/nnvvCr7" target="_blank"> Discord </a> </p>
+        <p> <a href="https://twitter.com/coolcraft_net" target="_blank"> Twitter </a> </p>
+        <p> <a href="https://facebook.com/coolcraftmc" target="_blank"> Facebook </a> </p>
+
+        <br><br>
+
+        <h1 class="info">
+          <b> Info </b>
+        </h1>
+
+        <div class="line_info"> </div>
+
+        <p> Server IP address: <b>play.coolcraft.me</b> </p>
+        <p> Supported MC versions: 1.8 and above </p>
+
+      </div>
+    </div>
+    <br><br><br>
+
+    <footer class="footer">
+      <div class="footer_up"> </div>
+      <div class="footer_left">
+        CoolCraft &copy; 2021
+      </div>
+      <div class="footer_right">
+        All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

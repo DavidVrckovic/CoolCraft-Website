@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> CoolCraft – Servers – Minigames </title>
+    <link href="../../images/icons/coolcraft_icon.png" rel="icon" type="image/png"/>
+
+    <link href="../../style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <script src="../../script.js"> </script>
+    <script src="../../database.js"> </script>
+
+    <div class="header">
+      <a class="icon" href=""> <img alt="Server icon" src="../../images/icons/coolcraft_icon.png"> </a>
+      <a class="title" href=""> CoolCraft </a>
+    </div>
+
+    <nav class="flex-container">
+      <ul class="nav">
+        <li> <a class="inactive" href="../../"> Home </a> </li>
+        <li> <a class="inactive" href="../../info"> Info </a> </li>
+        <li> <a class="active" href="../"> Servers </a> </li>
+        <li> <a class="inactive" href="../../gallery"> Gallery </a> </li>
+        <li> <a class="inactive" href="../../news"> News </a> </li>
+        <li> <a class="inactive" href="../../faq"> FAQ </a> </li>
+        <li> <a class="inactive" href="../../support"> Support </a> </li>
+        <li> <a class="inactive" href="../../store"> Store </a> </li>
+      </ul>
+    </nav>
+
+    <div id="slidebg">
+      <div class="banner" v-on:click="change">
+        <img :src="image" alt="BG" class="banner">
+        <div class="ip">
+          Servers
+        </div>
+      </div>
+    </div>
+
+
+
+ <h1 class="what_is">
+      <b> Minigames </b>
+    </h1>
+
+    <div class="line"> </div>
+
+    <div class="what_is_desc">
+<b>Minigames</b> is a mix of many different smaller game modes. Every minigame has its own unique gameplay.
+<br><br>
+<b>BedWars</b> is a competitive PvP minigame where players where you must protect
+your bed whilst trying to 
+<br>
+eliminate your opponents on islands in the sky. You 
+ can continue to respawn while your bed is safe. If your bed is destroyed, you’re
+ <br>
+  on your last life! 
+  Use the shop on your island to get better items and win.<br><br>
+
+<b>SkyWars</b> is a competitive PvP minigame where players start off on a separate island and try to 
+<br>
+battle each other. The main goal is to be the last person or team alive to win.<br><br>
+
+<b>TNTRun</b> is a competitive fast-paced minigame where players start on layer of sand and every block that
+<br>
+ they step on dissapears. If a player falls through all of the layers they loose the game.<br><br>
+<b>Duels</b> is a simple competitive PvP minigame where players fight in a 1v1 format.<br><br>
+<b>UHC</b> is a competitive minigame where players fight each other in a randomly generated survival-like world. <br>The main goal is to be the last person or team alive to win.
+
+
+
+    </div>
+
+<div id="divofservers">
+<ul id="serverspics">
+  <li><img src="images/pic5.png" id="survivalpic1"></li>
+  <li><img src="images/2021-06-05_15.46.32.png" id="survivalpic1"></li>
+</ul>
+</div>
+
+
+
+
+
+
+    <br><br><br><br><br><br><br>
+
+    <footer class="footer">
+      <div class="footer_up"> </div>
+      <div class="footer_left">
+        CoolCraft &copy; 2021
+      </div>
+      <div class="footer_right">
+        All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
