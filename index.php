@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> CoolCraft – Home </title>
+    <link href="images/icons/coolcraft_icon.png" rel="icon" type="image/png"/>
+
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <script src="script.js"> </script>
+    <script src="ajax_db.js"> </script>
+
+    <div class="header">
+      <a class="icon" href=""> <img alt="Server icon" src="images/icons/coolcraft_icon.png"> </a>
+      <a class="title" href=""> CoolCraft </a>
+    </div>
+
+    <nav class="flex-container">
+      <ul class="nav">
+        <li> <a class="active" href=""> Home </a> </li>
+        <li> <a class="inactive" href="info"> Info </a> </li>
+        <li> <a class="inactive" href="servers"> Servers </a> </li>
+        <li> <a class="inactive" href="gallery"> Gallery </a> </li>
+        <li> <a class="inactive" href="news"> News </a> </li>
+        <li> <a class="inactive" href="faq"> FAQ </a> </li>
+        <li> <a class="inactive" href="support"> Support </a> </li>
+        <li> <a class="inactive" href="store"> Store </a> </li>
+      </ul>
+    </nav>
+
+    <div id="slidebg">
+      <div class="banner" v-on:click="change">
+        <img :src="image" alt="Background image" class="banner">
+        <div class="ip">
+          coolcraft.me
+        </div>
+      </div>
+    </div>
+
+    <h1 class="what_is">
+      <b> What is CoolCraft? </b>
+    </h1>
+
+    <div class="line"> </div>
+
+    <div class="what_is_desc">
+      CoolCraft is a Minecraft server network with many different servers for you to check out!
+      <br>
+      You can find a variety of gameplay and activities for you and your friends.
+    </div>
+    <br><br>
+
+    <div class="banner">
+      <img src="images/pic2.png" alt="Background image" class="banner">
+      <div class="motivation">
+        We are always trying to put more features in, add more servers and improve the experience overall.
+      </div>
+    </div>
+
+    <div class="servers" id="servers">
+      <div class="flex-container">
+        <ul class="nav">
+          <li class="switch">
+            <div v-on:click="goleft" class="left">
+              <button class="switch"> &#8592; </button>
+            </div>
+          </li>
+          <li>
+            <a :href="link1" id="serverlinks">
+            <div id="server1">
+              <div class="server_icon">
+                <img :src="image1" alt="Icon" class="selectserver" id="image1">
+              </div>
+              <div class="server_name">
+                {{ ime1 }}
+              </div>
+              <div class="server_desc">
+                {{ desc1 }}
+              </div>
+            </div>
+          </li>
+            </a>
+          <li>
+              <a :href="link2" id="serverlinks"> 
+            <div id="server2">
+              <div class="server_icon">
+                <img :src="image2" alt="Icon" class="selectserver" id="image2">
+              </div>
+              <div class="server_name">
+                {{ ime2 }}
+              </div>
+              <div class="server_desc">
+                {{ desc2 }}
+              </div>
+            </div>
+            </a>
+          </li>
+          <li>
+          <a :href="link3" id="serverlinks"> 
+            <div id="server3">
+              <div class="server_icon">
+                <img :src="image3" alt="Icon" class="selectserver" id="image3">
+              </div>
+              <div class="server_name">
+                {{ ime3 }}
+              </div>
+              <div class="server_desc">
+                {{ desc3 }}
+              </div>
+            </div>
+          </a>
+          </li>
+          <li class="switch">
+            <div v-on:click="goright" class="right">
+              <button class="switch"> &#8594; </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="banner">
+      <img src="images/pic4.png" alt="BG" class="banner">
+      <div class="motivation">
+        We can’t wait to see you play and explore! Join us now!
+      </div>
+    </div>
+
+    <h1 class="need_help">
+      <b> Need help? </b>
+    </h1>
+
+    <div class="line_2"> </div>
+
+    <div class="need_help_desc">
+      You can always contact us directly if you have questions or suggestions! Follow these links: 
+      <a href="https://discord.com/invite/nnvvCr7" target="_blank"> Discord</a>,
+      <a href="https://twitter.com/coolcraft_net" target="_blank"> Twitter</a> or 
+      <a href="https://facebook.com/coolcraftmc" target="_blank">Facebook</a>.
+      <br>
+      <a href="faq">Click here</a> to check out our FAQ where you might find some answers or 
+      <a href="support">click here</a> to get support.<br>
+    </div>
+
+    <br><br><br>
+
+    <footer class="footer">
+      <div class="footer_up"> </div>
+      <div class="footer_left">
+        CoolCraft &copy; 2021
+      </div>
+      <div class="footer_right">
+        All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
