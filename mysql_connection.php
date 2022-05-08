@@ -1,61 +1,76 @@
 <?php
-    /*
-    $dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "";
-    $dbname = "skywars";
-    */
-    $dbhost = "eu01-sql.pebblehost.com";
-    $dbuser = "customer_84661_skywars";
-    $dbpass = "2TK48XMnKu0sQ@BgYs8d";
-    $dbname = "customer_84661_skywars";
+// Start the session
+session_start();
+?>
 
-    // Create connection to DB
-    $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+<?php
 
-    // Check connection to DB
-    if (!$connection) {
-        die ("DB connection failed: " . mysql_error($connection));
+/* Localhost MySQL server */
+$db_hostname = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "skywars";
+/* */
+
+/* Pebblehost MySQL server
+$db_hostname = "eu01-sql.pebblehost.com";
+$db_username = "customer_84661_skywars";
+$db_password = "2TK48XMnKu0sQ@BgYs8d";
+$db_name = "customer_84661_skywars";
+/* */
+
+
+
+// Open connection to the MySQL DB server
+$db_connection = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
+
+// Check connection to the MySQL DB server
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+  exit();
+}
+
+
+
+// Check if $_GET super global variable is not null
+// Fixes "Undefined array key" error
+if (isset($_GET['q'])) {
+  // Get searched data with $_GET
+  $search = $_GET['q'];
+  $search = mysqli_real_escape_string($db_connection, $search);
+
+  // Select searched data from the MySQL DB server
+  mysqli_select_db($db_connection, "sw_player");
+  $db_query = "SELECT * FROM sw_player WHERE player_name LIKE '" . $search . "'";
+  $db_results = mysqli_query($db_connection, $db_query);
+}
+
+
+
+// Check if $_GET super global variable is not null
+// Fixes "Undefined array key" error
+if (isset($_GET['results'])) {
+  // Get searched data with $_GET
+  // Sent through ajax_search.js
+  $livesearh = $_GET['results'];
+  $livesearh = mysqli_real_escape_string($db_connection, $livesearh);
+
+  // Select data from DB
+  mysqli_select_db($db_connection, "sw_player");
+  $db_query_livesearch = "SELECT player_name FROM sw_player WHERE player_name LIKE '%" . $livesearh . "%' LIMIT 10";
+  $db_results_livesearch = mysqli_query($db_connection, $db_query_livesearch);
+
+  // Check if at least 1 character is entered in the search bar
+  if (strlen($livesearh) > 1) {
+    while ($row = mysqli_fetch_array($db_results_livesearch)) {
+      echo '<a href="search.php?q=' . $row["player_name"] . '">' . $row["player_name"] . '</a><br>';
     }
+  }
+}
 
-    // GET from AJAX
-    $player_name = $_GET['q'];
-    $player_name = mysqli_real_escape_string($connection, $player_name);
 
-    // Select data from DB
-    mysqli_select_db($connection, "sw_player");
-    $query = "SELECT * FROM sw_player WHERE player_name LIKE '".$player_name."'";
-    $result = mysqli_query($connection, $query);
 
-    // Create an HTML table
-    echo "<table>
-    <tr>
-    <th> Username </th>
-    <th> Wins </th>
-    <th> Losses </th>
-    <th> Kills </th>
-    <th> Deaths </th>
-    <th> SW Experience </th>
-    <th> Glass color </th>
-    </tr>";
-
-    // Filling the HTML table with data from the DB
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<tr>";
-        echo "<td>" . $row['player_name'] . "</td>";
-        echo "<td>" . $row['wins'] . "</td>";
-        echo "<td>" . $row['losses'] . "</td>";
-        echo "<td>" . $row['kills'] . "</td>";
-        echo "<td>" . $row['deaths'] . "</td>";
-        echo "<td>" . $row['xp'] . "</td>";
-        echo "<td>" . $row['glasscolor'] . "</td>";
-        echo "</tr>";
-    }
-
-    // Close an HTML table tag
-    echo "</table>";
-
-    // Close connection to DB
-    mysqli_close($connection);
+// Close connection to the MySQL DB server
+mysqli_close($db_connection);
 
 ?>

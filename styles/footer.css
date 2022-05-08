@@ -1,0 +1,42 @@
+.footer {
+    background-color: #ff1a1ace;
+    color: white;
+    height: 100px;
+}
+
+div.footer_up {
+    height: 40px;
+}
+
+div.footer_left {
+    float: left;
+    margin-left: 30px;
+}
+
+div.footer_right {
+    float: right;
+    margin-right: 30px;
+}
+
+
+/*
+RESPONSIVENESS
+Depending on the screen width
+*/
+@media screen and (min-width: 901px) {}
+
+@media screen and (min-width: 651px) and (max-width: 900px) {}
+
+@media screen and (min-width: 401px) and (max-width: 650px) {}
+
+@media screen and (max-width: 400px) {
+    div.footer_left {
+        float: left;
+        margin-left: 25%;
+    }
+
+    div.footer_right {
+        float: right;
+        margin-right: 33%;
+    }
+}

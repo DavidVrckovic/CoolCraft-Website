@@ -1,0 +1,391 @@
+div.section {
+    align-items: center;
+    color: white;
+    display: flex;
+    position: static;
+    text-align: center;
+}
+
+img.section {
+    display: block;
+    filter: brightness(75%);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    padding: 0;
+    user-select: none;
+    width: 100%;
+}
+
+div.inner_section {
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+div.inner_section.text {
+    color: black;
+}
+
+h1.title {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+div.section_line {
+    background-color: #d1d1e0;
+    height: 1px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+div.description {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+/* Available servers */
+
+div ul.nav li {
+    padding: 10px;
+    width: 20%;
+}
+
+div.left,
+div.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+
+
+button.switch {
+    background-color: #262626f0;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    height: 50px;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    width: 50px;
+}
+
+button.switch:hover {
+    background-color: #121212f0;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    height: 50px;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    width: 50px;
+}
+
+img.selectserver {
+    object-fit: cover;
+    user-select: none;
+    width: 64px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+#serverlinks {
+    color: black;
+    text-decoration: none;
+}
+
+
+div.server_icon {
+    padding: 8px;
+    text-align: center;
+}
+
+div.server_name {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+div.server_desc {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Need help? */
+
+.need_help {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+div.line_2 {
+    background-color: #ff8800;
+    height: 1px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 50vw;
+}
+
+.need_help_desc {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.need_help_desc>a {
+    color: #ff8800;
+}
+
+.need_help_desc>a:hover {
+    color: #ff8800;
+}
+
+.need_help_desc>a:visited {
+    color: #ff8800;
+}
+
+
+/*
+RESPONSIVENESS
+Depending on the screen width
+*/
+@media screen and (min-width: 1201px) {
+    .section {
+        height: 30vw;
+    }
+
+    h1.title {
+        font-size: 34px;
+    }
+
+    div.section_line {
+        width: 500px;
+    }
+
+    div.description {
+        font-size: 24px;
+    }
+
+    div.servers ul li {
+        padding: 20px;
+        width: 20%;
+    }
+
+    div#join_now.inner_banner_section {
+        font-size: 33px;
+    }
+
+    div#section5.section {
+        height: 30vw;
+    }
+}
+
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .section {
+        height: 33vw;
+    }
+
+    h1.title {
+        font-size: 29px;
+    }
+
+    div.section_line {
+        width: 450px;
+    }
+
+    div.description {
+        font-size: 21px;
+    }
+
+    div#join_now.inner_banner_section {
+        font-size: 30px;
+    }
+
+    div#section5.section {
+        height: 35vw;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    .section {
+        height: 36vw;
+    }
+
+    h1.title {
+        font-size: 24px;
+    }
+
+    div.section_line {
+        width: 400px;
+    }
+
+    div.description {
+        font-size: 18px;
+    }
+
+    div#join_now.inner_banner_section {
+        font-size: 27px;
+    }
+
+    div#section5.section {
+        height: 40vw;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .section {
+        height: 39vw;
+    }
+
+    h1.title {
+        font-size: 3vw;
+    }
+
+    div.section_line {
+        width: 50vw;
+    }
+
+    div.description {
+        font-size: 2.2vw;
+    }
+
+    /* Servers */
+    div.servers ul li {
+        padding: 20px;
+        width: 33%;
+    }
+
+    div.servers ul li.switch {
+        display: none;
+    }
+
+    div.left,
+    div.right {
+        display: none;
+    }
+
+    button.switch {
+        display: none;
+    }
+
+    div#join_now.inner_banner_section {
+        font-size: 3vw;
+    }
+
+    div#section5.section {
+        height: 45vw;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .section {
+        height: 42vw;
+    }
+
+    h1.title {
+        font-size: 4vw;
+    }
+
+    div.section_line {
+        width: 60vw;
+    }
+
+    div.description {
+        font-size: 3.5vw;
+    }
+
+    /* Servers */
+    div.servers ul li {
+        padding: 20px;
+        width: 100%;
+    }
+
+    div.servers ul li.switch {
+        display: none;
+    }
+
+    div.left,
+    div.right {
+        display: none;
+    }
+
+    button.switch {
+        display: none;
+    }
+
+    div#join_now.inner_banner_section {
+        font-size: 3vw;
+    }
+
+    div#section5.section {
+        height: 50vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section {
+        height: 45vw;
+    }
+
+    h1.title {
+        font-size: 4vw;
+    }
+
+    div.section_line {
+        width: 70vw;
+    }
+
+    div.description {
+        font-size: 3.5vw;
+    }
+
+    /* Servers */
+    div.servers ul li {
+        padding: 20px;
+        width: 100%;
+    }
+
+    div.servers ul li.switch {
+        display: none;
+    }
+
+    div.left,
+    div.right {
+        display: none;
+    }
+
+    button.switch {
+        display: none;
+    }
+
+    div#join_now.inner_banner_section {
+        font-size: 3vw;
+    }
+
+    div#section5.section {
+        height: 55vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {}

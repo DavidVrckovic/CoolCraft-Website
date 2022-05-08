@@ -1,0 +1,44 @@
+div.content {
+    display: flex;
+}
+
+h1.title {
+    font-size: 30px;
+    margin-top: 4vw;
+}
+
+div.line_title {
+    background-color: #ff8800;
+    height: 1px;
+    margin-bottom: 20px;
+    width: 50vw;
+}
+
+div.text {
+    font-size: 20px;
+}
+
+
+
+h1.contact {
+    font-size: 20px;
+    margin-top: 4vw;
+}
+
+div.line_contact {
+    background-color: #ff8800;
+    height: 1px;
+    margin-bottom: 20px;
+    width: 12vw;
+}
+
+h1.info {
+    font-size: 20px;
+}
+
+div.line_info {
+    background-color: #ff8800;
+    height: 1px;
+    margin-bottom: 20px;
+    width: 12vw;
+}
