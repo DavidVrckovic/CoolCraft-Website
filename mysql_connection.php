@@ -12,12 +12,7 @@ $db_password = "";
 $db_name = "skywars";
 /* */
 
-/* Pebblehost MySQL server
-$db_hostname = "eu01-sql.pebblehost.com";
-$db_username = "customer_84661_skywars";
-$db_password = "2TK48XMnKu0sQ@BgYs8d";
-$db_name = "customer_84661_skywars";
-/* */
+
 
 
 

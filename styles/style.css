@@ -4,29 +4,10 @@ div.header {
 }
 
 
-/* WEBSITES OTHER THEN INDEX - CONTENT AND SIDEBAR */
-
-div.content {
-  display: flex;
-}
-
-
 
 /* RESPONSIVENESS */
 
 @media screen and (min-width: 901px) {
-  /* Content & Sidebar */
-  div.main {
-    flex: 70%;
-    padding-left: 10vw;
-    padding-right: 40px;
-  }
-  div.sidebar {
-    flex: 30%;
-    padding-left: 40px;
-    padding-right: 10vw;
-  }
-
   iframe.trailer {
     height: 600px;
     width: 90%;
@@ -34,30 +15,6 @@ div.content {
 }
 
 @media screen and (min-width: 651px) and (max-width: 900px) {
-  /* Content & Sidebar */
-  div.content {
-    display: flex;
-    flex-direction: column;
-  }
-  div.main {
-    flex: 100%;
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-  div.sidebar {
-    flex: 100%;
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-
-  /* INFO */
-  h1.title {
-    font-size: 30px;
-  }
-  div.text {
-    font-size: 20px;
-  }
-
   iframe.trailer {
     height: 400px;
     width: 100%;
@@ -65,29 +22,6 @@ div.content {
 }
 
 @media screen and (min-width: 401px) and (max-width: 650px) {
-  /* Content & Sidebar */
-  div.content {
-    display: flex;
-    flex-direction: column;
-  }
-  div.main {
-    flex: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-  div.sidebar {
-    flex: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-
-  /* INFO */
-  h1.title {
-    font-size: 26px;
-  }
-  div.text {
-    font-size: 18px;
-  }
   .website_banner {
     width: 90%;
   }
@@ -99,29 +33,6 @@ div.content {
 }
 
 @media screen and (max-width: 400px) {
-  /* Content & Sidebar */
-  div.content {
-    display: flex;
-    flex-direction: column;
-  }
-  div.main {
-    flex: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-  div.sidebar {
-    flex: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-
-  /* INFO */
-  h1.title {
-    font-size: 22px;
-  }
-  div.text {
-    font-size: 16px;
-  }
   .website_banner {
     width: 90%;
   }
@@ -182,60 +93,7 @@ faq
 
 
 
-/*
-Objave
-*/
-#postthumbnail{
-  width: 30vw;
-  float: left;
-  padding-bottom: 15px;
-}
-#descofupdate{
-  color:black;
-  text-decoration: none;
-  margin: 20px;
-}
-#update{
-  font-size: 22px;
-}
-#update_text{
-  font-size: 18px;
-}
-#readme{
-  padding: 15px;
-  background-color: #F55145;
-  margin-top: 10px;
-  display: inline-block;
-  color: white;
-}
-#readme:hover {
-  background-color: #f43325;
-}
 
-#dateofupdate{
-  font-size: 15px;
-}
 #updatepic{
   width: 100%;
-}
-
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  #postthumbnail {
-    width: 60vw;
-  }
-}
-@media screen and (min-width: 651px) and (max-width: 900px) {
-  #postthumbnail {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 401px) and (max-width: 650px) {
-  #postthumbnail {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 400px) {
-  #postthumbnail {
-    width: 100%;
-  }
 }

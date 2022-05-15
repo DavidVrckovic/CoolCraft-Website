@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Info </title>
+    <title> CoolCraft | News </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- CSS files -->
@@ -46,44 +46,18 @@
         <div class="main" id="main">
 
             <h1 class="main_title" id="main_title-info">
-                <b> Information and details </b>
+                <b> News and updates </b>
             </h1>
 
             <div class="main_title_line" id="main_title_line-info"> </div>
 
-            <div class="main_text" id="main_text-info">
-                CoolCraft is a Minecraft server network with many different game modes for you to check out! You can find a variety of gameplay and activities for you and your friends.
-                <br><br>
-                Currently available game modes are:
-                <ul>
-                    <li>
-                        <b>Survival</b>
-                    </li>
-                    <li>
-                        <b>Factions</b>
-                    </li>
-                    <li>
-                        <b>SkyBlock</b>
-                    </li>
-                    <li>
-                        <b>Prison</b>
-                    </li>
-                    <li>
-                        <b>Creative</b>
-                    </li>
-                    <li>
-                        <b>Minigames</b> including <b>BedWars</b>, <b>SkyWars</b>, <b>TNTRun</b>, <b>Duels</b>, <b>Parkour</b> and <b>UHC</b>
-                    </li>
-                </ul>
-                <br>
-                We support the following Minecraft versions: <b>1.8 and above</b>.
-                <br><br>
-                <img src="../images/CoolCraft Website Banner.gif" alt="GIF" class="website_banner" />
-                <br><br>
-                We are always trying to put more features in, add more servers and improve the experience overall. If you find any issues, feel free to report them to us.
-                <br>
+            <div class="news" id="news">
+
+                <?php
+                include("../php/news.php");
+                ?>
+
             </div>
-            <br><br>
         </div>
 
         <div class="sidebar" id="sidebar">

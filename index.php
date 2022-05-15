@@ -63,60 +63,60 @@
 
             <div class="section_line" id="section_line-gamemodes"> </div>
 
-            <br><br>
+            <br>
 
-            <ul class="nav">
-                <li class="switch">
+            <ul class="section_list" id="section_list-gamemodes">
+                <li class="switch" id="left_switch">
                     <div class="left" v-on:click="goleft">
                         <button class="switch"> &#8592; </button>
                     </div>
                 </li>
-                <li>
-                    <a id="serverlinks" :href="link1">
+                <a class="gamemode_link" id="serverlinks" :href="link1">
+                    <li class="gamemode" id="gamemode1">
                         <div id="server1">
-                            <div class="server_icon">
-                                <img alt="Icon" class="selectserver" id="image1" :src="image1" />
+                            <div class="gamemode_icon">
+                                <img alt="Icon" class="select_gamemode" id="image1" :src="image1" />
                             </div>
-                            <div class="server_name">
+                            <div class="gamemode_name">
                                 {{ ime1 }}
                             </div>
-                            <div class="server_desc">
+                            <div class="gamemode_description">
                                 {{ desc1 }}
                             </div>
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a id="serverlinks" :href="link2">
+                    </li>
+                </a>
+                <a class="gamemode_link" id="serverlinks" :href="link2">
+                    <li class="gamemode" id="gamemode2">
                         <div id="server2">
-                            <div class="server_icon">
-                                <img alt="Icon" class="selectserver" id="image2" :src="image2" />
+                            <div class="gamemode_icon">
+                                <img alt="Icon" class="select_gamemode" id="image2" :src="image2" />
                             </div>
-                            <div class="server_name">
+                            <div class="gamemode_name">
                                 {{ ime2 }}
                             </div>
-                            <div class="server_desc">
+                            <div class="gamemode_description">
                                 {{ desc2 }}
                             </div>
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a id="serverlinks" :href="link3">
+                    </li>
+                </a>
+                <a class="gamemode_link" id="serverlinks" :href="link3">
+                    <li class="gamemode" id="gamemode3">
                         <div id="server3">
-                            <div class="server_icon">
-                                <img alt="Icon" class="selectserver" id="image3" :src="image3" />
+                            <div class="gamemode_icon">
+                                <img alt="Icon" class="select_gamemode" id="image3" :src="image3" />
                             </div>
-                            <div class="server_name">
+                            <div class="gamemode_name">
                                 {{ ime3 }}
                             </div>
-                            <div class="server_desc">
+                            <div class="gamemode_description">
                                 {{ desc3 }}
                             </div>
                         </div>
-                    </a>
-                </li>
-                <li class="switch">
+                    </li>
+                </a>
+                <li class="switch" id="right_switch">
                     <div class="right" v-on:click="goright">
                         <button class="switch"> &#8594; </button>
                     </div>
@@ -170,9 +170,11 @@
         <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/pic4.png" />
         <div class="inner_section" id="inner_section-joinnow">
 
-            We can't wait to see you play and explore! Join us now!
-            <br>
-            Click here to copy IP
+            <div class="description" id="description-joinnow">
+                We can't wait to see you play and explore! Join us now!
+                <br>
+                Click here to copy IP
+            </div>
 
         </div>
     </div>

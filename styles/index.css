@@ -43,59 +43,41 @@ div.section_line {
     margin-bottom: 20px;
 }
 
+div.section_line.orange {
+    background-color: #ff8800;
+    height: 1px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 div.description {
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
 
-/* Available servers */
-
-div ul.nav li {
-    padding: 10px;
-    width: 20%;
-}
-
-div.left,
-div.right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-}
 
 
-
+/* Game modes */
 button.switch {
-    background-color: #262626f0;
+    background-color: #262626;
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     color: white;
     display: block;
     font-family: 'Lato', sans-serif;
+    font-size: 25px;
     font-weight: bold;
-    height: 50px;
+    height: 60px;
     margin: auto;
-    padding: 8px;
     text-align: center;
-    width: 50px;
+    width: 60px;
 }
 
 button.switch:hover {
-    background-color: #121212f0;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    display: block;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    height: 50px;
-    margin: auto;
-    padding: 8px;
-    text-align: center;
-    width: 50px;
+    background-color: #121212;
 }
 
-img.selectserver {
+img.select_gamemode {
     object-fit: cover;
     user-select: none;
     width: 64px;
@@ -105,64 +87,50 @@ img.selectserver {
     -o-user-select: none;
 }
 
-#serverlinks {
+a.gamemode_link {
     color: black;
     text-decoration: none;
 }
 
+a.gamemode_link:hover {
+    color: black;
+    text-decoration: none;
+}
 
-div.server_icon {
+ul.section_list li.gamemode:hover {
+    background-color: #fff3d3;
+}
+
+div.gamemode_icon {
     padding: 8px;
     text-align: center;
 }
 
-div.server_name {
-    font-family: 'Lato', sans-serif;
+div.gamemode_name {
     font-size: 18px;
     font-weight: bold;
     padding: 5px;
     text-align: center;
 }
 
-div.server_desc {
-    font-family: 'Lato', sans-serif;
+div.gamemode_description {
     font-size: 14px;
     font-weight: normal;
     padding: 5px;
     text-align: center;
 }
 
-/* Need help? */
 
-.need_help {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-}
 
-div.line_2 {
-    background-color: #ff8800;
-    height: 1px;
-    margin: auto;
-    margin-bottom: 20px;
-    width: 50vw;
-}
-
-.need_help_desc {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-}
-
-.need_help_desc>a {
+/* Support */
+div#section-support a {
     color: #ff8800;
 }
 
-.need_help_desc>a:hover {
+div#section-support a:hover {
     color: #ff8800;
 }
 
-.need_help_desc>a:visited {
-    color: #ff8800;
-}
 
 
 /*
@@ -186,17 +154,27 @@ Depending on the screen width
         font-size: 24px;
     }
 
-    div.servers ul li {
-        padding: 20px;
-        width: 20%;
+    /* Game modes */
+    ul.section_list li.switch {
+        align-items: center;
+        display: flex;
+        float: left;
+        height: 20vw;
+        justify-content: center;
+        list-style-type: none;
+        padding: 10px;
+        width: 12.5%;
     }
 
-    div#join_now.inner_banner_section {
-        font-size: 33px;
-    }
-
-    div#section5.section {
-        height: 30vw;
+    ul.section_list li.gamemode {
+        align-items: center;
+        display: flex;
+        float: left;
+        height: 20vw;
+        justify-content: center;
+        list-style-type: none;
+        padding: 10px;
+        width: 25%;
     }
 }
 
@@ -218,12 +196,19 @@ Depending on the screen width
         font-size: 21px;
     }
 
-    div#join_now.inner_banner_section {
-        font-size: 30px;
+    /* Game modes */
+    ul.section_list li.switch {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
     }
 
-    div#section5.section {
-        height: 35vw;
+    ul.section_list li.gamemode {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
     }
 }
 
@@ -244,12 +229,19 @@ Depending on the screen width
         font-size: 18px;
     }
 
-    div#join_now.inner_banner_section {
-        font-size: 27px;
+    /* Game modes */
+    ul.section_list li.switch {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
     }
 
-    div#section5.section {
-        height: 40vw;
+    ul.section_list li.gamemode {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
     }
 }
 
@@ -288,14 +280,6 @@ Depending on the screen width
     button.switch {
         display: none;
     }
-
-    div#join_now.inner_banner_section {
-        font-size: 3vw;
-    }
-
-    div#section5.section {
-        height: 45vw;
-    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
@@ -315,7 +299,7 @@ Depending on the screen width
         font-size: 3.5vw;
     }
 
-    /* Servers */
+    /* Game modes */
     div.servers ul li {
         padding: 20px;
         width: 100%;
@@ -332,14 +316,6 @@ Depending on the screen width
 
     button.switch {
         display: none;
-    }
-
-    div#join_now.inner_banner_section {
-        font-size: 3vw;
-    }
-
-    div#section5.section {
-        height: 50vw;
     }
 }
 
@@ -378,14 +354,8 @@ Depending on the screen width
     button.switch {
         display: none;
     }
-
-    div#join_now.inner_banner_section {
-        font-size: 3vw;
-    }
-
-    div#section5.section {
-        height: 55vw;
-    }
 }
 
+
+/* Dark mode */
 @media (prefers-color-scheme: dark) {}

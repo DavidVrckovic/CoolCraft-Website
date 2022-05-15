@@ -1,0 +1,123 @@
+div.news {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.update, div.gn {
+    padding-bottom: 25px;
+    padding-right: 20px;
+}
+
+div.update_image {
+    background-color: black;
+}
+
+img.update_banner:hover {
+    opacity: 90%;
+}
+
+div.update_text {
+    color: black;
+    margin: 10px 1px 10px;
+    text-decoration: none;
+}
+
+a.update_title {
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+a.update_title:hover {
+    color: #792e00;
+    text-decoration: none;
+}
+
+a.update_date {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a.update_date:hover {
+    color: #792e00;
+    text-decoration: none;
+}
+
+div.update_readmore_button {
+    padding: 15px;
+    background-color: #F55145;
+    margin-top: 10px;
+    display: inline-block;
+    color: white;
+}
+
+div.update_readmore_button:hover {
+    background-color: #f43325;
+}
+
+
+
+/*
+RESPONSIVENESS
+Depending on the screen width
+*/
+@media screen and (min-width: 1201px) {
+    div.update, div.gn {
+        width: 33.3%;
+    }
+
+    img.update_banner {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    div.update, div.gn {
+        width: 50%;
+    }
+
+    img.update_banner {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    div.update, div.gn {
+        width: 50%;
+    }
+
+    img.update_banner {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    div.update, div.gn {
+        width: 50%;
+    }
+
+    img.update_banner {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    div.update, div.gn {
+        width: 100%;
+    }
+
+    img.update_banner {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.update, div.gn {
+        width: 100%;
+    }
+
+    img.update_banner {
+        width: 100%;
+    }
+}
