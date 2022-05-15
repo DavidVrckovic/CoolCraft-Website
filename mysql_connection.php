@@ -5,13 +5,20 @@ session_start();
 
 <?php
 
-/* Localhost MySQL server */
+/* Localhost MySQL server 
 $db_hostname = "localhost";
 $db_username = "root";
 $db_password = "";
 $db_name = "skywars";
 /* */
 
+/* Pebblehost MySQL server */
+$db_config = parse_ini_file("protected/config.ini");
+$db_hostname = $db_config['db_hostname'];
+$db_username = $db_config['db_username'];
+$db_password = $db_config['db_password'];
+$db_name = $db_config['db_name'];
+/* */
 
 
 // Open connection to the MySQL DB server
