@@ -10,12 +10,15 @@
     <title> CoolCraft | News </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
-    <!-- CSS files -->
+    <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="../styles/index.css" rel="stylesheet" type="text/css" />
     <link href="../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
+
+    <!-- Specific CSS files -->
+    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
     <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
 
     <!-- External sources -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
@@ -32,10 +35,21 @@
 
     <!-- Header and Navigation -->
     <?php
+    $header_image = "../images/icons/coolcraft_icon.png";
+
+    $nav_faq = "../faq";
+    $nav_home = "../";
+    $nav_info = "../info";
+    $nav_gamemodes = "../gamemodes";
+    $nav_news = "";
+    $nav_store = "../store";
+
     include("../php/navigation.php");
     ?>
 
-    <!-- Content -->
+
+
+    <!-- CONTENT -->
     <div class="section" id="section-introduction">
         <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/pic1.png" />
         <div class="inner_section" id="inner_section-introduction">
@@ -87,11 +101,19 @@
 
     </div>
 
-    <br><br><br>
 
 
+    <!-- Footer -->
     <?php
     include("../php/footer.php");
+    ?>
+
+    <!-- Other -->
+    <?php
+    $footer_image = "../images/icons/back-to-top.png";
+    $footer_script = "../scripts/back-to-top.js";
+
+    include("../php/back-to-top.php");
     ?>
 </body>
 

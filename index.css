@@ -1,0 +1,197 @@
+/* Game modes */
+button.switch {
+    background-color: #262626;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    height: 60px;
+    margin: auto;
+    text-align: center;
+    width: 60px;
+}
+
+button.switch:hover {
+    background-color: #121212;
+}
+
+img.select_gamemode {
+    object-fit: cover;
+    user-select: none;
+    width: 64px;
+}
+
+a.gamemode_link,
+a.gamemode_link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+ul.section_list li.gamemode:hover {
+    background-color: #fff3d3;
+}
+
+div.gamemode_icon {
+    padding: 8px;
+    text-align: center;
+}
+
+div.gamemode_name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+div.gamemode_description {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+/* Support */
+div#section-support a,
+div#section-support a:hover {
+    color: #ff8800;
+}
+
+
+
+/*
+// RESPONSIVENESS
+// Depending on the screen width
+*/
+@media screen and (min-width: 1201px) {
+
+    /* Game modes */
+    ul.section_list li.switch {
+        align-items: center;
+        display: flex;
+        float: left;
+        height: 20vw;
+        justify-content: center;
+        list-style-type: none;
+        padding: 10px;
+        width: 12.5%;
+    }
+
+    ul.section_list li.gamemode {
+        align-items: center;
+        display: flex;
+        float: left;
+        height: 20vw;
+        justify-content: center;
+        list-style-type: none;
+        padding: 10px;
+        width: 25%;
+    }
+}
+
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+
+    /* Game modes */
+    ul.section_list li.switch {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
+    }
+
+    ul.section_list li.gamemode {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+
+    /* Game modes */
+    ul.section_list li.switch {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
+    }
+
+    ul.section_list li.gamemode {
+        float: left;
+        list-style-type: none;
+        padding: 10px;
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+    /* Game modes */
+    div.servers ul li {
+        padding: 20px;
+        width: 33%;
+    }
+
+    div.servers ul li.switch {
+        display: none;
+    }
+
+    div.left,
+    div.right {
+        display: none;
+    }
+
+    button.switch {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+
+    /* Game modes */
+    div.servers ul li {
+        padding: 20px;
+        width: 100%;
+    }
+
+    div.servers ul li.switch {
+        display: none;
+    }
+
+    div.left,
+    div.right {
+        display: none;
+    }
+
+    button.switch {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    /* Game modes */
+    div.servers ul li {
+        padding: 20px;
+        width: 100%;
+    }
+
+    div.servers ul li.switch {
+        display: none;
+    }
+
+    div.left,
+    div.right {
+        display: none;
+    }
+
+    button.switch {
+        display: none;
+    }
+}

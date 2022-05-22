@@ -13,7 +13,7 @@ div.update_image {
 }
 
 img.update_banner:hover {
-    opacity: 90%;
+    opacity: 85%;
 }
 
 div.update_text {
@@ -59,8 +59,8 @@ div.update_readmore_button:hover {
 
 
 /*
-RESPONSIVENESS
-Depending on the screen width
+// RESPONSIVENESS
+// Depending on the screen width
 */
 @media screen and (min-width: 1201px) {
     div.update, div.gn {

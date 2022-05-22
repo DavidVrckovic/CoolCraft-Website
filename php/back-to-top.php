@@ -1,3 +1,5 @@
-<button class="back_to_top" id="back_to_top" onclick="backToTop()" title="Go to top"> <img id="back_to_top" src="images/icons/back-to-top.png" /> </button>
+<button class="back_to_top" id="back_to_top" onclick="backToTop()" title="Go to top">
+    <img class="back_to_top" id="back_to_top" src="<?php echo($footer_image); ?>" />
+</button>
 
-<script src="scripts/back-to-top.js"></script>
+<script src="<?php echo($footer_script); ?>"></script>

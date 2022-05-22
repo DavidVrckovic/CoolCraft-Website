@@ -8,20 +8,16 @@ div.section {
 
 img.section {
     display: block;
-    filter: brightness(75%);
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
+    filter: brightness(70%);
     object-fit: cover;
-    padding: 0;
     user-select: none;
     width: 100%;
 }
 
 div.inner_section {
     align-items: center;
+    color: white;
     font-family: 'Lato', sans-serif;
-    margin: auto;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -33,7 +29,14 @@ div.inner_section.text {
 
 h1.title {
     font-family: 'Lato', sans-serif;
+    font-weight: bold;
     text-align: center;
+}
+
+a.title,
+a.title:hover {
+    color: white;
+    text-decoration: none;
 }
 
 div.section_line {
@@ -52,90 +55,15 @@ div.section_line.orange {
 
 div.description {
     font-family: 'Lato', sans-serif;
-    text-align: center;
-}
-
-
-
-/* Game modes */
-button.switch {
-    background-color: #262626;
-    border: none;
-    border-radius: 10%;
-    color: white;
-    display: block;
-    font-family: 'Lato', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    height: 60px;
-    margin: auto;
-    text-align: center;
-    width: 60px;
-}
-
-button.switch:hover {
-    background-color: #121212;
-}
-
-img.select_gamemode {
-    object-fit: cover;
-    user-select: none;
-    width: 64px;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-}
-
-a.gamemode_link {
-    color: black;
-    text-decoration: none;
-}
-
-a.gamemode_link:hover {
-    color: black;
-    text-decoration: none;
-}
-
-ul.section_list li.gamemode:hover {
-    background-color: #fff3d3;
-}
-
-div.gamemode_icon {
-    padding: 8px;
-    text-align: center;
-}
-
-div.gamemode_name {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px;
-    text-align: center;
-}
-
-div.gamemode_description {
-    font-size: 14px;
     font-weight: normal;
-    padding: 5px;
     text-align: center;
-}
-
-
-
-/* Support */
-div#section-support a {
-    color: #ff8800;
-}
-
-div#section-support a:hover {
-    color: #ff8800;
 }
 
 
 
 /*
-RESPONSIVENESS
-Depending on the screen width
+// RESPONSIVENESS
+// Depending on the screen width
 */
 @media screen and (min-width: 1201px) {
     .section {
@@ -153,35 +81,12 @@ Depending on the screen width
     div.description {
         font-size: 24px;
     }
-
-    /* Game modes */
-    ul.section_list li.switch {
-        align-items: center;
-        display: flex;
-        float: left;
-        height: 20vw;
-        justify-content: center;
-        list-style-type: none;
-        padding: 10px;
-        width: 12.5%;
-    }
-
-    ul.section_list li.gamemode {
-        align-items: center;
-        display: flex;
-        float: left;
-        height: 20vw;
-        justify-content: center;
-        list-style-type: none;
-        padding: 10px;
-        width: 25%;
-    }
 }
 
 
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
     .section {
-        height: 33vw;
+        height: 34vw;
     }
 
     h1.title {
@@ -195,26 +100,11 @@ Depending on the screen width
     div.description {
         font-size: 21px;
     }
-
-    /* Game modes */
-    ul.section_list li.switch {
-        float: left;
-        list-style-type: none;
-        padding: 10px;
-        width: 20%;
-    }
-
-    ul.section_list li.gamemode {
-        float: left;
-        list-style-type: none;
-        padding: 10px;
-        width: 20%;
-    }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1000px) {
     .section {
-        height: 36vw;
+        height: 38vw;
     }
 
     h1.title {
@@ -228,26 +118,11 @@ Depending on the screen width
     div.description {
         font-size: 18px;
     }
-
-    /* Game modes */
-    ul.section_list li.switch {
-        float: left;
-        list-style-type: none;
-        padding: 10px;
-        width: 20%;
-    }
-
-    ul.section_list li.gamemode {
-        float: left;
-        list-style-type: none;
-        padding: 10px;
-        width: 20%;
-    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 800px) {
     .section {
-        height: 39vw;
+        height: 42vw;
     }
 
     h1.title {
@@ -261,30 +136,11 @@ Depending on the screen width
     div.description {
         font-size: 2.2vw;
     }
-
-    /* Servers */
-    div.servers ul li {
-        padding: 20px;
-        width: 33%;
-    }
-
-    div.servers ul li.switch {
-        display: none;
-    }
-
-    div.left,
-    div.right {
-        display: none;
-    }
-
-    button.switch {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
     .section {
-        height: 42vw;
+        height: 46vw;
     }
 
     h1.title {
@@ -298,30 +154,11 @@ Depending on the screen width
     div.description {
         font-size: 3.5vw;
     }
-
-    /* Game modes */
-    div.servers ul li {
-        padding: 20px;
-        width: 100%;
-    }
-
-    div.servers ul li.switch {
-        display: none;
-    }
-
-    div.left,
-    div.right {
-        display: none;
-    }
-
-    button.switch {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 400px) {
     .section {
-        height: 45vw;
+        height: 50vw;
     }
 
     h1.title {
@@ -335,27 +172,8 @@ Depending on the screen width
     div.description {
         font-size: 3.5vw;
     }
-
-    /* Servers */
-    div.servers ul li {
-        padding: 20px;
-        width: 100%;
-    }
-
-    div.servers ul li.switch {
-        display: none;
-    }
-
-    div.left,
-    div.right {
-        display: none;
-    }
-
-    button.switch {
-        display: none;
-    }
 }
 
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {}
+/* Dark mode (Selected default method) */
+/* @media (prefers-color-scheme: dark) {} */

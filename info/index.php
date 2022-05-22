@@ -10,12 +10,14 @@
     <title> CoolCraft | Info </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
-    <!-- CSS files -->
+    <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="../styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
+
+    <!-- Specific CSS files -->
+    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
     <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
 
     <!-- External sources -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
@@ -32,21 +34,35 @@
 
     <!-- Header and Navigation -->
     <?php
+    $header_image = "../images/icons/coolcraft_icon.png";
+
+    $nav_faq = "../faq";
+    $nav_home = "../";
+    $nav_info = "";
+    $nav_gamemodes = "../gamemodes";
+    $nav_news = "../news";
+    $nav_store = "../store";
+
     include("../php/navigation.php");
     ?>
 
-    <!-- Content -->
+
+
+    <!-- CONTENT Banner -->
     <div class="section" id="section-introduction">
         <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/pic1.png" />
         <div class="inner_section" id="inner_section-introduction">
         </div>
     </div>
 
-    <div class="content" id="content">
-        <div class="main" id="main">
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- MAIN -->
+        <div class="main">
 
             <h1 class="main_title" id="main_title-info">
-                <b> Information and details </b>
+                Information and details
             </h1>
 
             <div class="main_title_line" id="main_title_line-info"> </div>
@@ -84,12 +100,14 @@
                 <br>
             </div>
             <br><br>
+
         </div>
 
-        <div class="sidebar" id="sidebar">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
 
             <h1 class="sidebar_title" id="sidebar_title-contact">
-                <b> Contact us </b>
+                Contact us
             </h1>
 
             <div class="sidebar_title_line" id="sidebar_title_line-contact"> </div>
@@ -101,7 +119,7 @@
             <br><br>
 
             <h1 class="sidebar_title" id="sidebar_title-info">
-                <b> Info </b>
+                Info
             </h1>
 
             <div class="sidebar_title_line" id="sidebar_title_line-info"> </div>
@@ -113,11 +131,19 @@
 
     </div>
 
-    <br><br><br>
 
 
+    <!-- Footer -->
     <?php
     include("../php/footer.php");
+    ?>
+
+    <!-- Other -->
+    <?php
+    $footer_image = "../images/icons/back-to-top.png";
+    $footer_script = "../scripts/back-to-top.js";
+
+    include("../php/back-to-top.php");
     ?>
 </body>
 
