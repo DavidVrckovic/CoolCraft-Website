@@ -24,7 +24,12 @@ div.inner_section {
 }
 
 div.inner_section.text {
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--text);
+}
+
+div.section.text{
+    background-color: var(--primary-color);
 }
 
 h1.title {

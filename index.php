@@ -24,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <link href="styles/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="styles/darkmode.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -76,7 +77,7 @@
             </div>
 
             <!-- Section -->
-            <div class="section" id="section-gamemodes">
+            <div class="section text" id="section-gamemodes">
                 <div class="inner_section text" id="inner_section-gamemodes">
 
                     <h1 class="title" id="title-gamemodes">
@@ -168,7 +169,7 @@
             </div>
 
             <!-- Section -->
-            <div class="section" id="section-support">
+            <div class="section text" id="section-support">
                 <div class="inner_section text" id="inner_section-support">
 
                     <h1 class="title" id="title-support">

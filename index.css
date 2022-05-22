@@ -26,12 +26,12 @@ img.select_gamemode {
 
 a.gamemode_link,
 a.gamemode_link:hover {
-    color: black;
+    color: var(--text);
     text-decoration: none;
 }
 
 ul.section_list li.gamemode:hover {
-    background-color: #fff3d3;
+    background-color: var(--server-list);
 }
 
 div.gamemode_icon {
@@ -44,6 +44,7 @@ div.gamemode_name {
     font-weight: bold;
     padding: 5px;
     text-align: center;
+    color: var(--text);
 }
 
 div.gamemode_description {
