@@ -1,6 +1,6 @@
 <?php
 // Start the session
-session_start();
+//session_start();
 ?>
 
 <?php
@@ -12,17 +12,31 @@ $db_password = "";
 $db_name = "skywars";
 /* */
 
-/* Pebblehost MySQL server */
+/* Remote MySQL server */
 $db_config = parse_ini_file("protected/config.ini");
-$db_hostname = $db_config['db_hostname'];
-$db_username = $db_config['db_username'];
-$db_password = $db_config['db_password'];
-$db_name = $db_config['db_name'];
+
+$login_db_hostname = $db_config['login_db_hostname'];
+$login_db_username = $db_config['login_db_username'];
+$login_db_password = $db_config['login_db_password'];
+$login_db_name = $db_config['login_db_name'];
+
+$sw_db_hostname = $db_config['sw_db_hostname'];
+$sw_db_username = $db_config['sw_db_username'];
+$sw_db_password = $db_config['sw_db_password'];
+$sw_db_name = $db_config['sw_db_name'];
 /* */
 
 
-// Open connection to the MySQL DB server
-$db_connection = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
+
+if ($required_db == "login") {
+  // Open connection to the MySQL DB server
+  $db_connection = mysqli_connect($login_db_hostname, $login_db_username, $login_db_password, $login_db_name);
+} else if ($required_db = "skywars") {
+  // Open connection to the MySQL DB server
+  $db_connection = mysqli_connect($sw_db_hostname, $sw_db_username, $sw_db_password, $sw_db_name);
+} else {
+  exit();
+}
 
 // Check connection to the MySQL DB server
 if (mysqli_connect_errno()) {
