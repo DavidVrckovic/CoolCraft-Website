@@ -1,9 +1,3 @@
-<?php
-session_start();
-
-include("php/login.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +53,7 @@ include("php/login.php");
         <!-- MAIN -->
         <div class="main">
 
-            <form class="login" method="POST">
+            <form action="php/authentication.php" class="login" method="POST">
                 <div class="container">
                     <h1>
                         Register
@@ -84,6 +78,13 @@ include("php/login.php");
                         <b>Password</b>
                     </label>
                     <input id="input_password" name="password" placeholder="Enter password" type="password" required>
+                    <?php
+                    if (isset($_GET['error'])) {
+                        if ($_GET['error'] == "wrong_password") {
+                            echo '<p class="wrong_password" style="color: red;"> The provided password is incorrect. </p>';
+                        }
+                    }
+                    ?>
 
                     <!--<label for="input_password_repeat">
                         <b>Repeat Password</b>

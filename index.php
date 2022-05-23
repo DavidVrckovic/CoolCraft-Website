@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+/*
+// If the user is not logged in, redirect to the login page
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit();
+}
+*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,6 +75,11 @@
 
                     <h1 class="title" id="title-introduction">
                         What is CoolCraft?
+                        <?php
+                        if(isset($_SESSION['loggedin'])) {
+                            echo $_SESSION['user_username'];
+                        }
+                        ?>
                     </h1>
 
                     <div class="section_line" id="section_line-introduction"> </div>
