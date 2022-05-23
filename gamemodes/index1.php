@@ -39,7 +39,7 @@
 
 
     <div class="section" id="section-survival">
-        <img alt="Banner image" class="section" id="section_banner-survival" src="../images/pic2.png" />
+        <img alt="Banner image" class="section" id="section_banner-survival" src="../images/factions_spawn.png" />
         <div class="inner_section" id="inner_section-survival">
 
             <a class="title" href="survival" id="serverlinks">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="section" id="section-factions">
-        <img alt="Banner image" class="section" id="section_banner-factions" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-factions" src="../images/factions_spawn.png" />
         <div class="inner_section" id="inner_section-factions">
 
             <a class="title" href="factions" id="serverlinks">
@@ -79,7 +79,7 @@
     </div>
 
     <div class="section" id="section-skyblock">
-        <img alt="Banner image" class="section" id="section_banner-skyblock" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-skyblock" src="../images/skyblock_spawn.png" />
         <div class="inner_section" id="inner_section-skyblock">
 
             <a class="title" href="skyblock" id="serverlinks">
@@ -100,7 +100,7 @@
     </div>
 
     <div class="section" id="section-prison">
-        <img alt="Banner image" class="section" id="section_banner-prison" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-prison" src="../images/prison_spawn.png" />
         <div class="inner_section" id="inner_section-prison">
 
             <a class="title" href="prison" id="serverlinks">
@@ -123,7 +123,7 @@
     </div>
 
     <div class="section" id="section-creative">
-        <img alt="Banner image" class="section" id="section_banner-creative" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-creative" src="../images/factions_spawn.png" />
         <div class="inner_section" id="inner_section-creative">
 
             <a class="title" href="creative" id="serverlinks">
@@ -146,7 +146,7 @@
     </div>
 
     <div class="section" id="section-minigames">
-        <img alt="Banner image" class="section" id="section_banner-minigames" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-minigames" src="../images/minigames_lobby.png" />
         <div class="inner_section" id="inner_section-minigames">
 
             <a class="title" href="minigames" id="serverlinks">

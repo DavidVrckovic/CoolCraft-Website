@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Home </title>
+    <title> CoolCraft | Login </title>
     <link href="images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- General CSS files -->
@@ -54,34 +54,41 @@
         <div class="main">
 
             <form action="php/authentication.php" class="login" method="POST">
-                <div class="container">
+                <div class="form">
                     <h1>
-                        Register
+                        Login
                     </h1>
                     <p>
-                        Please fill in this form to create an account.
+                        Please fill the information below to log into your account.
                     </p>
 
                     <hr>
 
-                    <label for="input_username">
-                        <b>Username</b>
+                    <label class="input_title" for="input_username">
+                        Username
                     </label>
-                    <input id="input_username" name="username" placeholder="Enter username" type="text" required>
+                    <input class="input_field" id="input_username" name="username" placeholder="Enter username" type="text" required>
 
                     <!--<label for="input_email">
                         <b>Email</b>
                     </label>
                     <input id="input_email" name="email" placeholder="Enter email" type="text" required>-->
 
-                    <label for="input_password">
-                        <b>Password</b>
+                    <label class="input_title" for="input_password">
+                        Password
                     </label>
-                    <input id="input_password" name="password" placeholder="Enter password" type="password" required>
+                    <input class="input_field" id="input_password" name="password" placeholder="Enter password" type="password" required>
+
                     <?php
                     if (isset($_GET['error'])) {
+                        if ($_GET['error'] == "invalid_credentials") {
+                            echo '<p class="invalid_credentials" style="color: red;"> The provided credentials are incorrect. </p>';
+                        }
                         if ($_GET['error'] == "wrong_password") {
                             echo '<p class="wrong_password" style="color: red;"> The provided password is incorrect. </p>';
+                        }
+                        if ($_GET['error'] == "unknown_username") {
+                            echo '<p class="unknown_username" style="color: red;"> The provided username is incorrect. </p>';
                         }
                     }
                     ?>
@@ -97,15 +104,9 @@
                         By creating an account you agree to our <a href="#">Terms & Privacy</a>.
                     </p>
 
-                    <button class="register" type="submit">
-                        Register
+                    <button class="login" type="submit">
+                        Login
                     </button>
-                </div>
-
-                <div class="container signin">
-                    <p>
-                        Already have an account? <a href="#">Sign in</a>.
-                    </p>
                 </div>
             </form>
 

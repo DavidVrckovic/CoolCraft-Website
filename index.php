@@ -51,11 +51,33 @@ if (!isset($_SESSION['loggedin'])) {
     $header_image = "images/icons/coolcraft_icon.png";
 
     $nav_faq = "faq";
+    $nav_gamemodes = "gamemodes";
     $nav_home = "";
     $nav_info = "info";
-    $nav_gamemodes = "gamemodes";
     $nav_news = "news";
     $nav_store = "store";
+
+    $nav_faq_icon = "images/icons/faq_icon.png";
+    $nav_gamemodes_icon = "images/icons/gamemodes_icon.png";
+    $nav_home_icon = "images/icons/home_icon.png";
+    $nav_info_icon = "images/icons/info_icon.png";
+    $nav_news_icon = "images/icons/news_icon.png";
+    $nav_options_icon = "images/icons/options_icon.png";
+    $nav_store_icon = "images/icons/store_icon.png";
+
+    $nav_faq_icon_hover = "images/icons/faq_icon_hover.png";
+    $nav_gamemodes_icon_hover = "images/icons/gamemodes_icon_hover.png";
+    $nav_home_icon_hover = "images/icons/home_icon_hover.png";
+    $nav_info_icon_hover = "images/icons/info_icon_hover.png";
+    $nav_news_icon_hover = "images/icons/news_icon_hover.png";
+    $nav_options_icon_hover = "images/icons/options_icon_hover.png";
+    $nav_store_icon_hover = "images/icons/store_icon_hover.png";
+
+    if (!isset($_SESSION['loggedin'])) {
+        $login_src = "login.php";
+    } else {
+        $login_src = "logout.php";
+    }
 
     include("php/navigation.php");
     ?>
@@ -70,16 +92,11 @@ if (!isset($_SESSION['loggedin'])) {
 
             <!-- Section -->
             <div class="section" id="section-introduction" v-on:click="change">
-                <img alt="Banner image" class="section" id="section_banner-introduction" :src="image" />
+                <img alt="Banner image" class="section" id="section_banner-introduction" :src="introduction_image" />
                 <div class="inner_section" id="inner_section-introduction">
 
                     <h1 class="title" id="title-introduction">
                         What is CoolCraft?
-                        <?php
-                        if(isset($_SESSION['loggedin'])) {
-                            echo $_SESSION['user_username'];
-                        }
-                        ?>
                     </h1>
 
                     <div class="section_line" id="section_line-introduction"> </div>
@@ -167,7 +184,7 @@ if (!isset($_SESSION['loggedin'])) {
 
             <!-- Section -->
             <div class="section" id="section-motivation">
-                <img alt="Banner image" class="section" id="section_banner-motivation" src="images/pic2.png" />
+                <img alt="Banner image" class="section" id="section_banner-motivation" src="images/minigames_lobby.png" />
                 <div class="inner_section" id="inner_section-motivation">
 
                     <h1 class="title" id="title-motivation">
@@ -210,7 +227,7 @@ if (!isset($_SESSION['loggedin'])) {
 
             <!-- Section -->
             <div class="section" id="section-joinnow">
-                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/pic4.png" />
+                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/skyblock_spawn.png" />
                 <div class="inner_section" id="inner_section-joinnow">
 
                     <div class="description" id="description-joinnow">

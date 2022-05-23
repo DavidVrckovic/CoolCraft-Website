@@ -45,9 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 header("Location: ../login.php?error=wrong_password");
             }
         } else {
-            echo "Could not find a username '" . $username . "'.";
+            header("Location: ../login.php?error=unknown_username");
         }
+
+        // Close connection to the MySQL DB server
+        mysqli_close($db_connection);
     } else {
-        echo "You need to provide a valid username and password!";
+        header("Location: ../login.php?error=invalid_credentials");
     }
 }

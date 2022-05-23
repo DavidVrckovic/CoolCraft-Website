@@ -81,9 +81,4 @@ if (isset($_GET['results'])) {
     }
 }
 
-
-
-// Close connection to the MySQL DB server
-//mysqli_close($db_connection);
-
 ?>

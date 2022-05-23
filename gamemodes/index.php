@@ -50,7 +50,7 @@
 
     <!-- CONTENT Banner -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/hub_5.png" />
         <div class="inner_section" id="inner_section-introduction">
         </div>
     </div>
@@ -72,7 +72,7 @@
                 <div class="gamemode" id="gamemode-survival">
                     <a class="gamemode_banner" href="survival">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/pic2.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/factions_spawn.png" />
                             <div class="gamemode_text">
                                 Survival
                             </div>
@@ -83,7 +83,7 @@
                 <div class="gamemode" id="gamemode-factions">
                     <a class="gamemode_banner" href="factions">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/pic2.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/factions_spawn.png" />
                             <div class="gamemode_text">
                                 Factions
                             </div>
@@ -94,7 +94,7 @@
                 <div class="gamemode" id="gamemode-skyblock">
                     <a class="gamemode_banner" href="skyblock">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/pic2.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/skyblock_spawn.png" />
                             <div class="gamemode_text">
                                 SkyBlock
                             </div>
@@ -105,7 +105,7 @@
                 <div class="gamemode" id="gamemode-prison">
                     <a class="gamemode_banner" href="prison">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/pic2.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/prison_spawn.png" />
                             <div class="gamemode_text">
                                 Prison
                             </div>
@@ -116,7 +116,7 @@
                 <div class="gamemode" id="gamemode-creative">
                     <a class="gamemode_banner" href="creative">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/pic2.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/factions_spawn.png" />
                             <div class="gamemode_text">
                                 Creative
                             </div>
@@ -127,7 +127,7 @@
                 <div class="gamemode" id="gamemode-minigames">
                     <a class="gamemode_banner" href="minigames">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/pic2.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/minigames_lobby.png" />
                             <div class="gamemode_text">
                                 Minigames
                             </div>

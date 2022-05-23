@@ -51,7 +51,7 @@
 
     <!-- CONTENT -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/pic1.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/hub_3.png" />
         <div class="inner_section" id="inner_section-introduction">
         </div>
     </div>
