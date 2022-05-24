@@ -54,8 +54,6 @@ div.gamemode_description {
     text-align: center;
 }
 
-
-
 /* Support */
 div#section-support a,
 div#section-support a:hover {
@@ -92,6 +90,16 @@ div#section-support a:hover {
         padding: 10px;
         width: 25%;
     }
+
+    /* Trailer */
+    div#section-trailer {
+        height: 35vw;
+    }
+
+    iframe.trailer {
+        height: 23vw;
+        width: 40%;
+    }
 }
 
 
@@ -111,6 +119,16 @@ div#section-support a:hover {
         padding: 10px;
         width: 20%;
     }
+
+    /* Trailer */
+    div#section-trailer {
+        height: 45vw;
+    }
+
+    iframe.trailer {
+        height: 28vw;
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1000px) {
@@ -128,6 +146,16 @@ div#section-support a:hover {
         list-style-type: none;
         padding: 10px;
         width: 20%;
+    }
+
+    /* Trailer */
+    div#section-trailer {
+        height: 55vw;
+    }
+
+    iframe.trailer {
+        height: 36vw;
+        width: 60%;
     }
 }
 
@@ -151,6 +179,16 @@ div#section-support a:hover {
     button.switch {
         display: none;
     }
+
+    /* Trailer */
+    div#section-trailer {
+        height: 65vw;
+    }
+
+    iframe.trailer {
+        height: 44vw;
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
@@ -173,6 +211,16 @@ div#section-support a:hover {
     button.switch {
         display: none;
     }
+
+    /* Trailer */
+    div#section-trailer {
+        height: 80vw;
+    }
+
+    iframe.trailer {
+        height: 54vw;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -194,5 +242,15 @@ div#section-support a:hover {
 
     button.switch {
         display: none;
+    }
+
+    /* Trailer */
+    div#section-trailer {
+        height: 80vw;
+    }
+
+    iframe.trailer {
+        height: 54vw;
+        width: 90%;
     }
 }

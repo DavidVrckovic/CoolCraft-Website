@@ -1,4 +1,5 @@
-<!--<div class="header">
+<!-- OLD NAVIGATION
+<div class="header">
     <a class="icon" href=""> <img alt="Server icon" src="images/icons/coolcraft_icon.png"> </a>
     <a class="title" href=""> CoolCraft </a>
 </div>
@@ -14,107 +15,80 @@
         <li> <a class="inactive" href="support"> Support </a> </li>
         <li> <a class="inactive" href="store"> Store </a> </li>
     </ul>
-</nav>-->
-
-<!--<header>
-        <img class="logo nav_img" src="logo/CClogo.png" alt="srv_logo">
-        <nav class="navig">
-            <ul class="nav_links">
-                <li>
-
-                    <div class="home nav_div" id="home nav_div"><a href="news.php"><img src="logo/home.png" alt="srv_logo" id="homelightdark" class="nav_img"><img
-                                src="logo/homehover.png" class="img-home nav_img" alt="srv_logo"></a></div>
-
-                </li>
-                <li>
-
-                    <div class="info nav_div"><a href="news.php"><img src="logo/info.png" alt="srv_logo" id="infolightdark" class="nav_img"><img
-                                src="logo/infohover.png" class="img-info nav_img" alt="srv_logo"></a></div>
-
-                </li>
-                <li>
-
-                    <div class="servers nav_div"><a href="news.php"><img src="logo/servers.png" alt="srv_logo" id="serverslightdark" class="nav_img"><img
-                                src="logo/servershover.png" class="img-servers nav_img" alt="srv_logo"></a></div>
-
-                </li>
-                <li>
-
-                    <div class="news nav_div"><a href="news.php"><img src="logo/news.png" alt="srv_logo" id="newslightdark" class="nav_img"><img
-                                src="logo/newshover.png" class="img-news nav_img" alt="srv_logo"></a></div>
-
-                </li>
-                <li>
-
-                    <div class="faq nav_div"><a href="news.php"><img src="logo/faq.png" alt="srv_logo" id="faqlightdark" class="nav_img"><img
-                                src="logo/faqhover.png" class="img-faq nav_img" alt="srv_logo"></a></div>
-
-                </li>
-                <li>
-
-                    <div class="store nav_div"><a href="news.php"><img src="logo/store.png" alt="srv_logo" id="storelightdark" class="nav_img"><img
-                                src="logo/storehover.png" class="img-store nav_img" alt="srv_logo"></a></div>
-
-                </li>
-            </ul>
-        </nav>
-        <div class="options nav_div">
-
-            <a><img src="logo/options.png" alt="srv_logo" id="optionslightdark" class="nav_img"><img src="logo/optionshover.png" class="img-options nav_img"
-                    alt="srv_logo" id="optionshover"></a>
-
-                    <div class="options-dropdown-content nav_div">
-                        <a href="#">Log In</a>
-                        <a href="#">Hr/En</a>
-                        <a href="#" id="lightdarkmode">Light/Dark</a>
-                    </div>
-
-        </div>
-        <script src="navigation.js"></script>
-    </header>-->
+</nav>
+-->
 
 <header>
-    <img class="logo nav_img" src="<?php echo($header_image); ?>" alt="srv_logo">
+    <img alt="Server icon" class="logo nav_img" src="<?php echo ($header_image); ?>" />
     <div class="navi">
         <div class="nav_links">
+
             <div class="button-img">
-
-                <div class="home nav_div" id="home nav_div"><a href="news.php"><img src="<?php echo($nav_home_icon); ?>" alt="srv_logo" id="homelightdark" class="nav_img"><img src="<?php echo($nav_home_icon_hover); ?>" class="img-home nav_img" alt="srv_logo"></a></div>
-
+                <div class="home nav_div">
+                    <a href="<?php echo ($nav_home); ?>">
+                        <img alt="Home icon" class="nav_img" id="homelightdark" src="<?php echo ($nav_home_icon); ?>" />
+                        <img alt="Home icon" class="img-home nav_img" src="<?php echo ($nav_home_icon_hover); ?>" />
+                    </a>
+                </div>
             </div>
+
             <div class="button-img">
-
-                <div class="info nav_div"><a href="news.php"><img src="<?php echo($nav_info_icon); ?>" alt="srv_logo" id="infolightdark" class="nav_img"><img src="<?php echo($nav_info_icon_hover); ?>" class="img-info nav_img" alt="srv_logo"></a></div>
-
+                <div class="info nav_div">
+                    <a href="<?php echo ($nav_info); ?>">
+                        <img alt="Info icon" class="nav_img" id="infolightdark" src="<?php echo ($nav_info_icon); ?>" />
+                        <img alt="Info icon" class="img-info nav_img" src="<?php echo ($nav_info_icon_hover); ?>" />
+                    </a>
+                </div>
             </div>
+
             <div class="button-img">
-
-                <div class="servers nav_div"><a href="news.php"><img src="<?php echo($nav_gamemodes_icon); ?>" alt="srv_logo" id="serverslightdark" class="nav_img"><img src="<?php echo($nav_gamemodes_icon_hover); ?>" class="img-servers nav_img" alt="srv_logo"></a></div>
-
+                <div class="gamemodes nav_div">
+                    <a href="<?php echo ($nav_gamemodes); ?>">
+                        <img alt="Gamemodes icon" class="nav_img" id="gamemodeslightdark" src="<?php echo ($nav_gamemodes_icon); ?>" />
+                        <img alt="Gamemodes icon" class="img-gamemodes nav_img" src="<?php echo ($nav_gamemodes_icon_hover); ?>" />
+                    </a>
+                </div>
             </div>
+
             <div class="button-img">
-
-                <div class="news nav_div"><a href="news.php"><img src="<?php echo($nav_news_icon); ?>" alt="srv_logo" id="newslightdark" class="nav_img"><img src="<?php echo($nav_news_icon_hover); ?>" class="img-news nav_img" alt="srv_logo"></a></div>
-
+                <div class="news nav_div">
+                    <a href="<?php echo ($nav_news); ?>">
+                        <img alt="News icon" class="nav_img" id="newslightdark" src="<?php echo ($nav_news_icon); ?>" />
+                        <img alt="News icon" class="img-news nav_img" src="<?php echo ($nav_news_icon_hover); ?>" />
+                    </a>
+                </div>
             </div>
+
             <div class="button-img">
-
-                <div class="faq nav_div"><a href="news.php"><img src="<?php echo($nav_faq_icon); ?>" alt="srv_logo" id="faqlightdark" class="nav_img"><img src="<?php echo($nav_faq_icon_hover); ?>" class="img-faq nav_img" alt="srv_logo"></a></div>
-
+                <div class="faq nav_div">
+                    <a href="<?php echo ($nav_faq); ?>">
+                        <img alt="FAQ icon" class="nav_img" id="faqlightdark" src="<?php echo ($nav_faq_icon); ?>" />
+                        <img alt="FAQ icon" class="img-faq nav_img" src="<?php echo ($nav_faq_icon_hover); ?>" />
+                    </a>
+                </div>
             </div>
+
             <div class="button-img">
-
-                <div class="store nav_div"><a href="news.php"><img src="<?php echo($nav_store_icon); ?>" alt="srv_logo" id="storelightdark" class="nav_img"><img src="<?php echo($nav_store_icon_hover); ?>" class="img-store nav_img" alt="srv_logo"></a></div>
-
+                <div class="store nav_div">
+                    <a href="<?php echo ($nav_store); ?>">
+                        <img alt="Store icon" class="nav_img" id="storelightdark" src="<?php echo ($nav_store_icon); ?>" />
+                        <img alt="Store icon" class="img-store nav_img" src="<?php echo ($nav_store_icon_hover); ?>" />
+                    </a>
+                </div>
             </div>
+
         </div>
     </div>
-    <div class="options nav_div">
 
-        <a><img src="<?php echo($nav_options_icon); ?>" alt="srv_logo" id="optionslightdark" class="nav_img"><img src="<?php echo($nav_options_icon_hover); ?>" class="img-options nav_img" alt="srv_logo" id="optionshover"></a>
+    <div class="options nav_div">
+        <a>
+            <img alt="Options icon" class="nav_img" id="optionslightdark" src="<?php echo ($nav_options_icon); ?>" />
+            <img alt="Options icon" class="img-options nav_img" id="optionshover" src="<?php echo ($nav_options_icon_hover); ?>" />
+        </a>
 
         <div class="options-dropdown-content nav_div">
-            <a href="<?php echo $login_src; ?>">
+
+            <a href="<?php echo $nav_login; ?>">
                 <?php
                 if (isset($_SESSION['loggedin'])) {
                     echo $_SESSION['user_username'];
@@ -123,10 +97,17 @@
                 }
                 ?>
             </a>
-            <a href="#">Hr/En</a>
-            <a href="#" id="lightdarkmode">Light/Dark</a>
-        </div>
 
+            <a href="">
+                Hr/En
+            </a>
+
+            <a href="" id="lightdarkmode">
+                Light/Dark
+            </a>
+
+        </div>
     </div>
-    <script src="scripts/navigation.js"></script>
+
+    <script src="<?php echo ($nav_script); ?>"></script>
 </header>

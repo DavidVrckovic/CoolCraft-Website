@@ -1,14 +1,14 @@
-:root{
+:root {
     --primary-color: white;
     --secondary-color: #212121;
 
     --text: black;
     --dropbackground: #ddd;
-    --dropboxshadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    --dropboxshadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     --server-list: #fff3d3;
 }
 
-.dark-theme{
+.dark-theme {
     --primary-color: #212121;
     --secondary-color: white;
 

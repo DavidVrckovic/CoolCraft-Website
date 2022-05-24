@@ -1,3 +1,10 @@
+<?php
+// Start the session
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +17,11 @@
     <title> CoolCraft | Game modes </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
+    <!-- External sources -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="../styles/index.css" rel="stylesheet" type="text/css" />
@@ -17,13 +29,9 @@
 
     <!-- Specific CSS files -->
     <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
     <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
     <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
-
-    <!-- External sources -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 
 
@@ -42,6 +50,34 @@
     $nav_gamemodes = "";
     $nav_news = "../news";
     $nav_store = "../store";
+
+    $nav_faq_icon = "../images/navigation/faq_icon_black.png";
+    $nav_gamemodes_icon = "../images/navigation/gamemodes_icon_black.png";
+    $nav_home_icon = "../images/navigation/home_icon_black.png";
+    $nav_info_icon = "../images/navigation/info_icon_black.png";
+    $nav_news_icon = "../images/navigation/news_icon_black.png";
+    $nav_options_icon = "../images/navigation/options_icon_black.png";
+    $nav_store_icon = "../images/navigation/store_icon_black.png";
+
+    $nav_faq_icon_hover = "../images/navigation/faq_icon_gold.png";
+    $nav_gamemodes_icon_hover = "../images/navigation/gamemodes_icon_gold.png";
+    $nav_home_icon_hover = "../images/navigation/home_icon_gold.png";
+    $nav_info_icon_hover = "../images/navigation/info_icon_gold.png";
+    $nav_news_icon_hover = "../images/navigation/news_icon_gold.png";
+    $nav_options_icon_hover = "../images/navigation/options_icon_gold.png";
+    $nav_store_icon_hover = "../images/navigation/store_icon_gold.png";
+
+    $nav_faq_icon_darkmode = "../images/navigation/faq_icon_white.png";
+    $nav_gamemodes_icon_darkmode = "../images/navigation/gamemodes_icon_white.png";
+    $nav_home_icon_darkmode = "../images/navigation/home_icon_white.png";
+    $nav_info_icon_darkmode = "../images/navigation/info_icon_white.png";
+    $nav_news_icon_darkmode = "../images/navigation/news_icon_white.png";
+    $nav_options_icon_darkmode = "../images/navigation/options_icon_white.png";
+    $nav_store_icon_darkmode = "../images/navigation/store_icon_white.png";
+
+    //code for login
+
+    $nav_script = "../scripts/navigation.js";
 
     include("../php/navigation.php");
     ?>
@@ -90,7 +126,7 @@
                         </div>
                     </a>
                 </div>
-                
+
                 <div class="gamemode" id="gamemode-skyblock">
                     <a class="gamemode_banner" href="skyblock">
                         <div class="gamemode_image">
@@ -101,7 +137,7 @@
                         </div>
                     </a>
                 </div>
-                
+
                 <div class="gamemode" id="gamemode-prison">
                     <a class="gamemode_banner" href="prison">
                         <div class="gamemode_image">
@@ -112,7 +148,7 @@
                         </div>
                     </a>
                 </div>
-                
+
                 <div class="gamemode" id="gamemode-creative">
                     <a class="gamemode_banner" href="creative">
                         <div class="gamemode_image">
@@ -123,7 +159,7 @@
                         </div>
                     </a>
                 </div>
-                
+
                 <div class="gamemode" id="gamemode-minigames">
                     <a class="gamemode_banner" href="minigames">
                         <div class="gamemode_image">

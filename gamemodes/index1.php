@@ -10,18 +10,21 @@
     <title> CoolCraft | Game modes </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
-    <!-- CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
-
     <!-- External sources -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <!-- General CSS files -->
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/index.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/content.css" rel="stylesheet" type="text/css" />
+
+    <!-- Specific CSS files -->
+    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
 </head>
 
 

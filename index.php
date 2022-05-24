@@ -1,4 +1,5 @@
 <?php
+// Start the session
 session_start();
 
 /*
@@ -9,6 +10,8 @@ if (!isset($_SESSION['loggedin'])) {
 }
 */
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,22 +25,20 @@ if (!isset($_SESSION['loggedin'])) {
     <title> CoolCraft | Home </title>
     <link href="images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
+    <!-- External sources -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
     <link href="styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="styles/dark_mode.css" rel="stylesheet" type="text/css" />
     <link href="styles/footer.css" rel="stylesheet" type="text/css" />
-
-    <!-- External sources -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-
     <link href="styles/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="styles/darkmode.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 
@@ -57,27 +58,57 @@ if (!isset($_SESSION['loggedin'])) {
     $nav_news = "news";
     $nav_store = "store";
 
-    $nav_faq_icon = "images/icons/faq_icon.png";
-    $nav_gamemodes_icon = "images/icons/gamemodes_icon.png";
-    $nav_home_icon = "images/icons/home_icon.png";
-    $nav_info_icon = "images/icons/info_icon.png";
-    $nav_news_icon = "images/icons/news_icon.png";
-    $nav_options_icon = "images/icons/options_icon.png";
-    $nav_store_icon = "images/icons/store_icon.png";
+    $nav_faq_icon = "images/navigation/faq_icon_black.png";
+    $nav_gamemodes_icon = "images/navigation/gamemodes_icon_black.png";
+    $nav_home_icon = "images/navigation/home_icon_black.png";
+    $nav_info_icon = "images/navigation/info_icon_black.png";
+    $nav_news_icon = "images/navigation/news_icon_black.png";
+    $nav_options_icon = "images/navigation/options_icon_black.png";
+    $nav_store_icon = "images/navigation/store_icon_black.png";
 
-    $nav_faq_icon_hover = "images/icons/faq_icon_hover.png";
-    $nav_gamemodes_icon_hover = "images/icons/gamemodes_icon_hover.png";
-    $nav_home_icon_hover = "images/icons/home_icon_hover.png";
-    $nav_info_icon_hover = "images/icons/info_icon_hover.png";
-    $nav_news_icon_hover = "images/icons/news_icon_hover.png";
-    $nav_options_icon_hover = "images/icons/options_icon_hover.png";
-    $nav_store_icon_hover = "images/icons/store_icon_hover.png";
+    $nav_faq_icon_hover = "images/navigation/faq_icon_gold.png";
+    $nav_gamemodes_icon_hover = "images/navigation/gamemodes_icon_gold.png";
+    $nav_home_icon_hover = "images/navigation/home_icon_gold.png";
+    $nav_info_icon_hover = "images/navigation/info_icon_gold.png";
+    $nav_news_icon_hover = "images/navigation/news_icon_gold.png";
+    $nav_options_icon_hover = "images/navigation/options_icon_gold.png";
+    $nav_store_icon_hover = "images/navigation/store_icon_gold.png";
+
+    $nav_faq_icon_darkmode = "images/navigation/faq_icon_white.png";
+    $nav_gamemodes_icon_darkmode = "images/navigation/gamemodes_icon_white.png";
+    $nav_home_icon_darkmode = "images/navigation/home_icon_white.png";
+    $nav_info_icon_darkmode = "images/navigation/info_icon_white.png";
+    $nav_news_icon_darkmode = "images/navigation/news_icon_white.png";
+    $nav_options_icon_darkmode = "images/navigation/options_icon_white.png";
+    $nav_store_icon_darkmode = "images/navigation/store_icon_white.png";
 
     if (!isset($_SESSION['loggedin'])) {
-        $login_src = "login.php";
+        $nav_login = "login.php";
     } else {
-        $login_src = "logout.php";
+        $nav_login = "logout.php";
     }
+
+    $nav_script = "scripts/navigation.js";
+
+    echo "
+    <script>
+        var nav_faq_icon = '$nav_faq_icon';
+        var nav_gamemodes_icon = '$nav_gamemodes_icon';
+        var nav_home_icon = '$nav_home_icon';
+        var nav_info_icon = '$nav_info_icon';
+        var nav_news_icon = '$nav_news_icon';
+        var nav_options_icon = '$nav_options_icon';
+        var nav_store_icon = '$nav_store_icon';
+
+        var nav_faq_icon_darkmode = '$nav_faq_icon_darkmode';
+        var nav_gamemodes_icon_darkmode = '$nav_gamemodes_icon_darkmode';
+        var nav_home_icon_darkmode = '$nav_home_icon_darkmode';
+        var nav_info_icon_darkmode = '$nav_info_icon_darkmode';
+        var nav_news_icon_darkmode = '$nav_news_icon_darkmode';
+        var nav_options_icon_darkmode = '$nav_options_icon_darkmode';
+        var nav_store_icon_darkmode = '$nav_store_icon_darkmode';
+    </script>
+    ";
 
     include("php/navigation.php");
     ?>
@@ -203,6 +234,35 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
 
             <!-- Section -->
+            <div class="section text" id="section-trailer">
+                <div class="inner_section text" id="inner_section-trailer">
+
+                    <h1 class="title" id="title-trailer">
+                        Watch the trailer
+                    </h1>
+
+                    <div class="section_line" id="section_line-trailer"> </div>
+
+                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="trailer" frameborder="0" src="https://www.youtube.com/embed/fSEJwfOHS8E" title="Trailer"></iframe>
+
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="section" id="section-joinnow">
+                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/skyblock_spawn.png" />
+                <div class="inner_section" id="inner_section-joinnow">
+
+                    <div class="description" id="description-joinnow">
+                        We can't wait to see you play and explore! Join us now!
+                        <br>
+                        Click here to copy IP
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section -->
             <div class="section text" id="section-support">
                 <div class="inner_section text" id="inner_section-support">
 
@@ -220,20 +280,6 @@ if (!isset($_SESSION['loggedin'])) {
                         <br>
                         <a href="faq">Click here</a> to check out our FAQ where you might find some answers or
                         <a href="support">click here</a> to get support.<br>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Section -->
-            <div class="section" id="section-joinnow">
-                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/skyblock_spawn.png" />
-                <div class="inner_section" id="inner_section-joinnow">
-
-                    <div class="description" id="description-joinnow">
-                        We can't wait to see you play and explore! Join us now!
-                        <br>
-                        Click here to copy IP
                     </div>
 
                 </div>

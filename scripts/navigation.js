@@ -8,13 +8,13 @@ const enableDarkMode = () => {
     // 2. Update darkMode in localStorage
     localStorage.setItem('dark-theme', 'enabled');
 
-    optionslightdark.src = "logo/options1.png";
-    homelightdark.src = "logo/home1.png";
-    infolightdark.src = "logo/info1.png";
-    serverslightdark.src = "logo/servers1.png";
-    newslightdark.src = "logo/news1.png";
-    faqlightdark.src = "logo/faq1.png";
-    storelightdark.src = "logo/store1.png";
+    gamemodeslightdark.src = nav_gamemodes_icon_darkmode;
+    faqlightdark.src = nav_faq_icon_darkmode;
+    homelightdark.src = nav_home_icon_darkmode;
+    infolightdark.src = nav_info_icon_darkmode;
+    optionslightdark.src = nav_options_icon_darkmode;
+    newslightdark.src = nav_news_icon_darkmode;
+    storelightdark.src = nav_store_icon_darkmode;
 }
 
 const disableDarkMode = () => {
@@ -23,13 +23,13 @@ const disableDarkMode = () => {
     // 2. Update darkMode in localStorage 
     localStorage.setItem('dark-theme', null);
 
-    optionslightdark.src = "logo/options.png";
-    homelightdark.src = "logo/home.png";
-    infolightdark.src = "logo/info.png";
-    serverslightdark.src = "logo/servers.png";
-    newslightdark.src = "logo/news.png";
-    faqlightdark.src = "logo/faq.png";
-    storelightdark.src = "logo/store.png";
+    gamemodeslightdark.src = nav_gamemodes_icon;
+    faqlightdark.src = nav_faq_icon;
+    homelightdark.src = nav_home_icon;
+    infolightdark.src = nav_info_icon;
+    optionslightdark.src = nav_options_icon;
+    newslightdark.src = nav_news_icon;
+    storelightdark.src = nav_store_icon;
 }
 
 // If the user already visited and enabled darkMode
