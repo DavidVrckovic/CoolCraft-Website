@@ -1,3 +1,10 @@
+<?php
+// Start the session
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +28,7 @@
     <link href="../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
-    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/back_to_top.css" rel="stylesheet" type="text/css" />
     <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
     <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
     <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
@@ -30,14 +37,14 @@
 
 
 <body>
-    <!-- Scripts -->
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/copy-to-clipboard.js"></script>
+    <!-- Links -->
+    <?php
+    $directory_level = 1;
+    include("../php/links.php");
+    ?>
 
     <!-- Header and Navigation -->
     <?php
-    $header_image = "../images/icons/coolcraft_icon.png";
-
     $nav_faq = "../faq";
     $nav_home = "../";
     $nav_info = "../info";
@@ -111,10 +118,7 @@
 
     <!-- Other -->
     <?php
-    $footer_image = "../images/icons/back-to-top.png";
-    $footer_script = "../scripts/back-to-top.js";
-
-    include("../php/back-to-top.php");
+    include("../php/back_to_top.php");
     ?>
 </body>
 

@@ -1,3 +1,10 @@
+<?php
+// Start the session
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +28,7 @@
     <link href="../styles/content.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
-    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/back_to_top.css" rel="stylesheet" type="text/css" />
     <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
     <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
     <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
@@ -30,11 +37,21 @@
 
 
 <body>
-    <!-- Scripts -->
-    <!--<script src="../scripts/script.js"></script>-->
+    <!-- Links -->
+    <?php
+    $directory_level = 1;
+    include("../php/links.php");
+    ?>
 
     <!-- Header and Navigation -->
     <?php
+    $nav_faq = "../faq";
+    $nav_home = "../";
+    $nav_info = "../info";
+    $nav_gamemodes = "";
+    $nav_news = "../news";
+    $nav_store = "../store";
+
     include("../php/navigation.php");
     ?>
 
@@ -176,9 +193,7 @@
 
     <!-- Other -->
     <?php
-    $footer_image = "../images/icons/back-to-top.png";
-    $footer_script = "../scripts/back-to-top.js";
-    include("../php/back-to-top.php");
+    include("../php/back_to_top.php");
     ?>
 </body>
 

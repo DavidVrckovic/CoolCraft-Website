@@ -1,3 +1,16 @@
+<?php
+// Start the session
+session_start();
+
+// If the user is logged in, redirect to the index page
+if (isset($_SESSION['loggedin'])) {
+	header("Location: index.php");
+	exit();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +33,7 @@
     <link href="styles/login.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
-    <link href="styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="styles/back_to_top.css" rel="stylesheet" type="text/css" />
     <link href="styles/dark_mode.css" rel="stylesheet" type="text/css" />
     <link href="styles/footer.css" rel="stylesheet" type="text/css" />
     <link href="styles/navigation.css" rel="stylesheet" type="text/css" />
@@ -29,17 +42,18 @@
 
 
 <body>
-    <!-- Scripts -->
-    <!-- -->
+    <!-- Links -->
+    <?php
+    $directory_level = 0;
+    include("php/links.php");
+    ?>
 
     <!-- Header and Navigation -->
     <?php
-    $header_image = "images/icons/coolcraft_icon.png";
-
     $nav_faq = "faq";
+    $nav_gamemodes = "gamemodes";
     $nav_home = "index.php";
     $nav_info = "info";
-    $nav_gamemodes = "gamemodes";
     $nav_news = "news";
     $nav_store = "store";
 
@@ -124,10 +138,7 @@
 
     <!-- Other -->
     <?php
-    $footer_image = "images/icons/back-to-top.png";
-    $footer_script = "scripts/back-to-top.js";
-
-    include("php/back-to-top.php");
+    include("php/back_to_top.php");
     ?>
 </body>
 

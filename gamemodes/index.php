@@ -28,7 +28,7 @@ session_start();
     <link href="../styles/content.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
-    <link href="../styles/back-to-top.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/back_to_top.css" rel="stylesheet" type="text/css" />
     <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
     <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
     <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
@@ -37,47 +37,20 @@ session_start();
 
 
 <body>
-    <!-- Scripts -->
-    <!--<script src="../scripts/script.js"></script>-->
+    <!-- Links -->
+    <?php
+    $directory_level = 1;
+    include("../php/links.php");
+    ?>
 
     <!-- Header and Navigation -->
     <?php
-    $header_image = "../images/icons/coolcraft_icon.png";
-
     $nav_faq = "../faq";
     $nav_home = "../";
     $nav_info = "../info";
     $nav_gamemodes = "";
     $nav_news = "../news";
     $nav_store = "../store";
-
-    $nav_faq_icon = "../images/navigation/faq_icon_black.png";
-    $nav_gamemodes_icon = "../images/navigation/gamemodes_icon_black.png";
-    $nav_home_icon = "../images/navigation/home_icon_black.png";
-    $nav_info_icon = "../images/navigation/info_icon_black.png";
-    $nav_news_icon = "../images/navigation/news_icon_black.png";
-    $nav_options_icon = "../images/navigation/options_icon_black.png";
-    $nav_store_icon = "../images/navigation/store_icon_black.png";
-
-    $nav_faq_icon_hover = "../images/navigation/faq_icon_gold.png";
-    $nav_gamemodes_icon_hover = "../images/navigation/gamemodes_icon_gold.png";
-    $nav_home_icon_hover = "../images/navigation/home_icon_gold.png";
-    $nav_info_icon_hover = "../images/navigation/info_icon_gold.png";
-    $nav_news_icon_hover = "../images/navigation/news_icon_gold.png";
-    $nav_options_icon_hover = "../images/navigation/options_icon_gold.png";
-    $nav_store_icon_hover = "../images/navigation/store_icon_gold.png";
-
-    $nav_faq_icon_darkmode = "../images/navigation/faq_icon_white.png";
-    $nav_gamemodes_icon_darkmode = "../images/navigation/gamemodes_icon_white.png";
-    $nav_home_icon_darkmode = "../images/navigation/home_icon_white.png";
-    $nav_info_icon_darkmode = "../images/navigation/info_icon_white.png";
-    $nav_news_icon_darkmode = "../images/navigation/news_icon_white.png";
-    $nav_options_icon_darkmode = "../images/navigation/options_icon_white.png";
-    $nav_store_icon_darkmode = "../images/navigation/store_icon_white.png";
-
-    //code for login
-
-    $nav_script = "../scripts/navigation.js";
 
     include("../php/navigation.php");
     ?>
@@ -186,10 +159,7 @@ session_start();
 
     <!-- Other -->
     <?php
-    $footer_image = "../images/icons/back-to-top.png";
-    $footer_script = "../scripts/back-to-top.js";
-
-    include("../php/back-to-top.php");
+    include("../php/back_to_top.php");
     ?>
 </body>
 
