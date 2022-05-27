@@ -30,6 +30,7 @@ if (isset($_SESSION['loggedin'])) {
 
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
     <link href="styles/login.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
@@ -70,7 +71,7 @@ if (isset($_SESSION['loggedin'])) {
 
             <!-- Section -->
             <div class="section" id="section-introduction">
-                <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
+                <img alt="Banner image" class="section" id="section_banner-introduction" src="images/Hub Lobby - 5.png" />
                 <div class="inner_section" id="inner_section-introduction">
 
                     <h1 class="title" id="title-introduction">
@@ -81,8 +82,8 @@ if (isset($_SESSION['loggedin'])) {
             </div>
 
             <!-- Login form -->
-            <form action="php/authentication.php" class="login" method="POST">
-                <div class="form">
+            <div class="form">
+                <form action="php/authentication.php" class="login" method="POST">
                     <h1>
                         Login
                     </h1>
@@ -135,8 +136,8 @@ if (isset($_SESSION['loggedin'])) {
                     <button class="login" type="submit">
                         Login
                     </button>
-                </div>
-            </form>
+                </form>
+            </div>
 
         </div>
 

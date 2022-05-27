@@ -123,6 +123,7 @@ div.sidebar_title_line {
         flex: 100%;
         padding-left: 8vw;
         padding-right: 8vw;
+        padding-top: 8vw;
     }
 
     div.sidebar_title_line {
@@ -158,6 +159,7 @@ div.sidebar_title_line {
         flex: 100%;
         padding-left: 5vw;
         padding-right: 5vw;
+        padding-top: 5vw;
     }
 
     div.sidebar_title_line {
@@ -193,6 +195,7 @@ div.sidebar_title_line {
         flex: 100%;
         padding-left: 5vw;
         padding-right: 5vw;
+        padding-top: 5vw;
     }
 
     div.sidebar_title_line {

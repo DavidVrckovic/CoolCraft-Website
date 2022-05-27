@@ -30,6 +30,10 @@ a.gamemode_link:hover {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 ul.section_list li.gamemode:hover {
     background-color: var(--server-list);
 }
@@ -56,7 +60,9 @@ div.gamemode_description {
 
 /* Support */
 div#section-support a,
-div#section-support a:hover {
+div#section-support a:hover,
+div#description-gamemodes a,
+div#description-gamemodes a:hover {
     color: #ff8800;
 }
 
@@ -69,13 +75,16 @@ div#section-support a:hover {
 @media screen and (min-width: 1201px) {
 
     /* Game modes */
+    div#description-gamemodes {
+        visibility: hidden;
+    }
+
     ul.section_list li.switch {
         align-items: center;
         display: flex;
         float: left;
         height: 20vw;
         justify-content: center;
-        list-style-type: none;
         padding: 10px;
         width: 12.5%;
     }
@@ -86,9 +95,8 @@ div#section-support a:hover {
         float: left;
         height: 20vw;
         justify-content: center;
-        list-style-type: none;
         padding: 10px;
-        width: 25%;
+        width: 24%;
     }
 
     /* Trailer */
@@ -100,24 +108,44 @@ div#section-support a:hover {
         height: 23vw;
         width: 40%;
     }
-}
 
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 40%
+    }
+}
 
 @media screen and (min-width: 1001px) and (max-width: 1200px) {
 
     /* Game modes */
+    div#description-gamemodes {
+        visibility: hidden;
+    }
+
     ul.section_list li.switch {
+        align-items: center;
+        display: flex;
         float: left;
-        list-style-type: none;
+        height: 20vw;
+        justify-content: center;
         padding: 10px;
-        width: 20%;
+        width: 12.5%;
     }
 
     ul.section_list li.gamemode {
+        align-items: center;
+        display: flex;
         float: left;
-        list-style-type: none;
+        height: 20vw;
+        justify-content: center;
         padding: 10px;
-        width: 20%;
+        width: 24%;
     }
 
     /* Trailer */
@@ -129,23 +157,29 @@ div#section-support a:hover {
         height: 28vw;
         width: 50%;
     }
+
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 50%
+    }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1000px) {
 
     /* Game modes */
-    ul.section_list li.switch {
-        float: left;
-        list-style-type: none;
-        padding: 10px;
-        width: 20%;
+    div#description-gamemodes {
+        visibility: visible;
     }
 
-    ul.section_list li.gamemode {
-        float: left;
-        list-style-type: none;
-        padding: 10px;
-        width: 20%;
+    ul.section_list {
+        height: 0px;
+        visibility: hidden;
     }
 
     /* Trailer */
@@ -157,27 +191,29 @@ div#section-support a:hover {
         height: 36vw;
         width: 60%;
     }
+
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 60%
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 800px) {
 
     /* Game modes */
-    div.servers ul li {
-        padding: 20px;
-        width: 33%;
+    div#description-gamemodes {
+        visibility: visible;
     }
 
-    div.servers ul li.switch {
-        display: none;
-    }
-
-    div.left,
-    div.right {
-        display: none;
-    }
-
-    button.switch {
-        display: none;
+    ul.section_list {
+        height: 0px;
+        visibility: hidden;
     }
 
     /* Trailer */
@@ -189,27 +225,29 @@ div#section-support a:hover {
         height: 44vw;
         width: 70%;
     }
+
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 80%
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
 
     /* Game modes */
-    div.servers ul li {
-        padding: 20px;
-        width: 100%;
+    div#description-gamemodes {
+        visibility: visible;
     }
 
-    div.servers ul li.switch {
-        display: none;
-    }
-
-    div.left,
-    div.right {
-        display: none;
-    }
-
-    button.switch {
-        display: none;
+    ul.section_list {
+        height: 0px;
+        visibility: hidden;
     }
 
     /* Trailer */
@@ -226,22 +264,13 @@ div#section-support a:hover {
 @media screen and (max-width: 400px) {
 
     /* Game modes */
-    div.servers ul li {
-        padding: 20px;
-        width: 100%;
+    div#description-gamemodes {
+        visibility: visible;
     }
 
-    div.servers ul li.switch {
-        display: none;
-    }
-
-    div.left,
-    div.right {
-        display: none;
-    }
-
-    button.switch {
-        display: none;
+    ul.section_list {
+        height: 0px;
+        visibility: hidden;
     }
 
     /* Trailer */

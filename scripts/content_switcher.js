@@ -30,12 +30,12 @@ window.onload = function () {
     var servers = new Vue({
         el: '#section-gamemodes',
         data: {
-            factionsinfo: 'Factions is a competitive PvP game mode that lets players team up by creating and joining different factions. Players within the same faction work together to gather resources, build bases, protect their land, recruit new members and raid other factions.',
-            survivalinfo: 'Survival is one of the main game modes in Minecraft. It is a peaceful singleplayer/multiplayer game mode where players must collect resources, build bases, battle mobs, eat, and explore the world in an effort to thrive and survive.',
-            skyblockinfo: 'SkyBlock is a peaceful singleplayer/multiplayer game mode where players spawn on a floating island and must survive and complete challenges with the resources available.',
-            prisoninfo: 'Prison is a peaceful singleplayer/multiplayer game mode where players work hard in mines as prisoners to progress through ranks and obtain freedom. As the ranking gets higher, mining gets harder.',
-            creativeinfo: 'Creative is a peaceful singleplayer/multiplayer game mode where players have access to all blocks and items in the game. Players can build what they want and show off their builds to others.',
-            minigamesinfo: 'Minigames is a mix of many different smaller game modes. Every minigame has its own unique gameplay.',
+            creativeinfo: 'Peaceful singleplayer/multiplayer game mode where players have access to all blocks and items in the game.',
+            factionsinfo: 'Competitive PvP game mode that lets players team up by creating and joining different factions.',
+            minigamesinfo: 'Mix of many different smaller game modes. Every minigame has its own unique gameplay.',
+            prisoninfo: 'Peaceful singleplayer/multiplayer game mode where players work hard in mines as prisoners to progress through ranks and obtain freedom.',
+            skyblockinfo: 'Peaceful singleplayer/multiplayer game mode where players spawn on a floating island and must survive and complete challenges.',
+            survivalinfo: 'Peaceful singleplayer/multiplayer game mode where players explore the world in an effort to thrive and survive.',
             indexnumber: 1,
             ime1: 'Survival',
             ime2: 'Factions',
@@ -43,9 +43,9 @@ window.onload = function () {
             link1: 'gamemodes/survival',
             link2: 'gamemodes/factions',
             link3: 'gamemodes/skyblock',
-            desc1: 'Survival is one of the main game modes in Minecraft. It is a peaceful singleplayer/multiplayer game mode where players must collect resources, build bases, battle mobs, eat, and explore the world in an effort to thrive and survive.',
-            desc2: 'Factions is a competitive PvP game mode that lets players team up by creating and joining different factions. Players within the same faction work together to gather resources, build bases, protect their land, recruit new members and raid other factions.',
-            desc3: 'SkyBlock is a peaceful singleplayer/multiplayer game mode where players spawn on a floating island and must survive and complete challenges with the resources available.',
+            desc1: 'Peaceful singleplayer/multiplayer game mode where players explore the world in an effort to thrive and survive.',
+            desc2: 'Competitive PvP game mode that lets players team up by creating and joining different factions.',
+            desc3: 'Peaceful singleplayer/multiplayer game mode where players spawn on a floating island and must survive and complete challenges.',
             image1: 'images/icons/survival_icon.png',
             image2: 'images/icons/factions_icon.png',
             image3: 'images/icons/skyblock_icon.png',
@@ -162,5 +162,4 @@ window.onload = function () {
         computed: {
         }
     });
-
 }

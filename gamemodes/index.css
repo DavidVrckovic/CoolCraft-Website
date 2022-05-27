@@ -52,7 +52,7 @@ div.description {
 */
 @media screen and (min-width: 1201px) {
     div.gamemode {
-        width: 33.3%;
+        width: 33.33%;
     }
 
     img.gamemode_banner {

@@ -37,7 +37,7 @@ session_start();
 
 <body>
     <!-- Scripts -->
-    <script src="scripts/script.js"></script>
+    <script src="scripts/content_switcher.js"></script>
 
     <!-- Links -->
     <?php
@@ -95,7 +95,10 @@ session_start();
 
                     <div class="section_line" id="section_line-gamemodes"> </div>
 
-                    <br>
+                    <div class="description" id="description-gamemodes">
+                        <a href="faq">Click here</a> to check out the list of game modes available to play.
+                        <br>
+                    </div>
 
                     <ul class="section_list" id="section_list-gamemodes">
                         <li class="switch" id="left_switch">
@@ -154,6 +157,7 @@ session_start();
                             </div>
                         </li>
                     </ul>
+
                 </div>
             </div>
 
@@ -217,12 +221,12 @@ session_start();
                     <div class="section_line" id="section_line-support"> </div>
 
                     <div class="description" id="description-support">
-                        You can always contact us directly if you have questions or suggestions! Follow these links:
+                        <a href="faq">Click here</a> to check out our FAQ where you might find answers to common issues and questions.
+                        <br><br>
+                        You can always contact us directly if you have questions or suggestions! To do so, follow these links:
                         <a href="https://discord.com/invite/nnvvCr7" target="_blank"> Discord</a>,
                         <a href="https://twitter.com/coolcraft_net" target="_blank"> Twitter</a> or
                         <a href="https://facebook.com/coolcraftmc" target="_blank">Facebook</a>.
-                        <br>
-                        <a href="faq">Click here</a> to check out our FAQ where you might find answers to common issues and questions.
                         <br>
                     </div>
 
