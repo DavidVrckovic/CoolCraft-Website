@@ -4,7 +4,7 @@
 <div class="update" id="update-1_4_0">
     <div class="update_image">
         <a class="update_banner" href="updates/1_4_0.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_5.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 5.png" />
         </a>
     </div>
 
@@ -24,7 +24,7 @@
 <div class="update" id="update-1_3_11">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_11.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_4.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 4.png" />
         </a>
     </div>
 
@@ -44,7 +44,7 @@
 <div class="gn" id="gn-lets_make_the_most">
     <div class="update_image">
         <a class="update_banner" href="general_news/lets_make_the_most.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 
@@ -64,7 +64,7 @@
 <div class="gn" id="gn-no_updates_for_some_time">
     <div class="update_image">
         <a class="update_banner" href="general_news/no_updates_for_some_time.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 
@@ -84,7 +84,7 @@
 <div class="update" id="update-1_3_10">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_10.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 
@@ -104,7 +104,7 @@
 <div class="update" id="update-1_3_9">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_9.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 
@@ -124,7 +124,7 @@
 <div class="update" id="update-1_3_8">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_8.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 
@@ -144,7 +144,7 @@
 <div class="update" id="update-1_3_7">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_7.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 
@@ -164,7 +164,7 @@
 <div class="update" id="update-1_3_6">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_6.php">
-            <img alt="Update banner" class="update_banner" src="../images/hub_3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
         </a>
     </div>
 

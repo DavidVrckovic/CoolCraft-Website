@@ -57,10 +57,15 @@ session_start();
 
 
 
-    <!-- CONTENT Banner -->
+    <!-- Section -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/hub_4.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 4.png" />
         <div class="inner_section" id="inner_section-introduction">
+
+            <h1 class="title" id="title-introduction">
+                Information and details
+            </h1>
+
         </div>
     </div>
 
@@ -70,15 +75,32 @@ session_start();
         <!-- MAIN -->
         <div class="main">
 
-            <h1 class="main_title" id="main_title-info">
-                Information and details
+            <h1 class="main_title" id="main_title-general_info">
+                General info
             </h1>
 
-            <div class="main_title_line" id="main_title_line-info"> </div>
+            <div class="main_title_line" id="main_title_line-general_info"> </div>
 
-            <div class="main_text" id="main_text-info">
+            <div class="main_text" id="main_text-general_info">
                 CoolCraft is a Minecraft server network with many different game modes for you to check out! You can find a variety of gameplay and activities for you and your friends.
                 <br><br>
+                We support the following Minecraft versions: <b>1.8 and above</b>.
+                <br><br>
+                <img alt="GIF" class="website_banner" src="../images/CoolCraft Website Banner.gif" />
+                <br><br>
+                We are always trying to put more features in, add more servers and improve the experience overall. If you find any issues, feel free to report them to us.
+                <br>
+            </div>
+
+
+
+            <h1 class="main_title" id="main_title-available_gamemodes">
+                Available game modes
+            </h1>
+
+            <div class="main_title_line" id="main_title_line-available_gamemodes"> </div>
+
+            <div class="main_text" id="main_text-available_gamemodes">
                 Currently available game modes are:
                 <ul>
                     <li>
@@ -101,14 +123,8 @@ session_start();
                     </li>
                 </ul>
                 <br>
-                We support the following Minecraft versions: <b>1.8 and above</b>.
-                <br><br>
-                <img src="../images/CoolCraft Website Banner.gif" alt="GIF" class="website_banner" />
-                <br><br>
-                We are always trying to put more features in, add more servers and improve the experience overall. If you find any issues, feel free to report them to us.
-                <br>
+                Learn more about each game mode <a href="../gamemodes">here</a>.
             </div>
-            <br><br>
 
         </div>
 

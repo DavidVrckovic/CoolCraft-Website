@@ -57,15 +57,23 @@ session_start();
 
 
 
-    <!-- CONTENT -->
+    <!-- CONTENT Banner -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/hub_3.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 3.png" />
         <div class="inner_section" id="inner_section-introduction">
+
+            <h1 class="title" id="title-introduction">
+                News and updates
+            </h1>
+
         </div>
     </div>
 
-    <div class="content" id="content">
-        <div class="main" id="main">
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- MAIN -->
+        <div class="main">
 
             <h1 class="main_title" id="main_title-info">
                 <b> News and updates </b>
@@ -82,6 +90,7 @@ session_start();
             </div>
         </div>
 
+        <!-- SIDEBAR -->
         <div class="sidebar" id="sidebar">
 
             <h1 class="sidebar_title" id="sidebar_title-contact">

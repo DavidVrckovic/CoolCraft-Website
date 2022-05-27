@@ -57,10 +57,15 @@ session_start();
 
 
 
-    <!-- CONTENT Banner -->
+    <!-- Section -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/hub_5.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
         <div class="inner_section" id="inner_section-introduction">
+
+            <h1 class="title" id="title-introduction">
+                Game modes
+            </h1>
+
         </div>
     </div>
 
@@ -81,7 +86,7 @@ session_start();
                 <div class="gamemode" id="gamemode-survival">
                     <a class="gamemode_banner" href="survival">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/factions_spawn.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Survival Spawn - 1.png" />
                             <div class="gamemode_text">
                                 Survival
                             </div>
@@ -92,7 +97,7 @@ session_start();
                 <div class="gamemode" id="gamemode-factions">
                     <a class="gamemode_banner" href="factions">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/factions_spawn.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Factions Spawn - 1.png" />
                             <div class="gamemode_text">
                                 Factions
                             </div>
@@ -103,7 +108,7 @@ session_start();
                 <div class="gamemode" id="gamemode-skyblock">
                     <a class="gamemode_banner" href="skyblock">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/skyblock_spawn.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyBlock Spawn - 1.png" />
                             <div class="gamemode_text">
                                 SkyBlock
                             </div>
@@ -114,7 +119,7 @@ session_start();
                 <div class="gamemode" id="gamemode-prison">
                     <a class="gamemode_banner" href="prison">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/prison_spawn.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Prison Spawn - 1.png" />
                             <div class="gamemode_text">
                                 Prison
                             </div>
@@ -125,7 +130,7 @@ session_start();
                 <div class="gamemode" id="gamemode-creative">
                     <a class="gamemode_banner" href="creative">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/factions_spawn.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Creative - 1.png" />
                             <div class="gamemode_text">
                                 Creative
                             </div>
@@ -136,7 +141,7 @@ session_start();
                 <div class="gamemode" id="gamemode-minigames">
                     <a class="gamemode_banner" href="minigames">
                         <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/minigames_lobby.png" />
+                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Minigames Lobby - 1.png" />
                             <div class="gamemode_text">
                                 Minigames
                             </div>

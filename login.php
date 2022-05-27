@@ -4,8 +4,8 @@ session_start();
 
 // If the user is logged in, redirect to the index page
 if (isset($_SESSION['loggedin'])) {
-	header("Location: index.php");
-	exit();
+    header("Location: index.php");
+    exit();
 }
 ?>
 
@@ -68,6 +68,19 @@ if (isset($_SESSION['loggedin'])) {
         <!-- MAIN -->
         <div class="main">
 
+            <!-- Section -->
+            <div class="section" id="section-introduction">
+                <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
+                <div class="inner_section" id="inner_section-introduction">
+
+                    <h1 class="title" id="title-introduction">
+                        Authentification
+                    </h1>
+
+                </div>
+            </div>
+
+            <!-- Login form -->
             <form action="php/authentication.php" class="login" method="POST">
                 <div class="form">
                     <h1>

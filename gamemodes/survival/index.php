@@ -57,10 +57,15 @@ session_start();
 
 
 
-    <!-- CONTENT Banner -->
+    <!-- Section -->
     <div class="section" id="section-introduction">
         <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/survival_spawn.png" />
         <div class="inner_section" id="inner_section-introduction">
+
+            <h1 class="title" id="title-introduction">
+                Survival
+            </h1>
+
         </div>
     </div>
 

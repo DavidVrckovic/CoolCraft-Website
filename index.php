@@ -159,7 +159,7 @@ session_start();
 
             <!-- Section -->
             <div class="section" id="section-motivation">
-                <img alt="Banner image" class="section" id="section_banner-motivation" src="images/minigames_lobby.png" />
+                <img alt="Banner image" class="section" id="section_banner-motivation" src="images/Minigames Lobby - 1.png" />
                 <div class="inner_section" id="inner_section-motivation">
 
                     <h1 class="title" id="title-motivation">
@@ -194,7 +194,7 @@ session_start();
 
             <!-- Section -->
             <div class="section" id="section-joinnow">
-                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/skyblock_spawn.png" />
+                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/SkyBlock Spawn - 1.png" />
                 <div class="inner_section" id="inner_section-joinnow">
 
                     <div class="description" id="description-joinnow">
@@ -222,8 +222,8 @@ session_start();
                         <a href="https://twitter.com/coolcraft_net" target="_blank"> Twitter</a> or
                         <a href="https://facebook.com/coolcraftmc" target="_blank">Facebook</a>.
                         <br>
-                        <a href="faq">Click here</a> to check out our FAQ where you might find some answers or
-                        <a href="support">click here</a> to get support.<br>
+                        <a href="faq">Click here</a> to check out our FAQ where you might find answers to common issues and questions.
+                        <br>
                     </div>
 
                 </div>
