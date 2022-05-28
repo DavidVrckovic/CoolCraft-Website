@@ -1,0 +1,21 @@
+div.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form.search {
+    width: 50%;
+}
+
+input.search {
+    border: 1px solid #000000;
+}
+
+div.livesearch {
+    background-color: black;
+}
+
+div.livesearch a {
+    color: #ff8800;
+}

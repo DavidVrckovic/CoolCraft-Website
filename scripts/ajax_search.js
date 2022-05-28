@@ -11,6 +11,6 @@ function showResult(results) {
             document.getElementById("livesearch").style.border = "1px solid #A5ACB2";
         }
     }
-    xmlhttp.open("GET", "mysql_connection.php?results=" + results, true);
+    xmlhttp.open("GET", "../php/search.php?results=" + results, true);
     xmlhttp.send();
 }

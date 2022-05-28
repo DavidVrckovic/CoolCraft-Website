@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $password = $_POST['password'];
 
         // Select searched data from the MySQL DB server
-        //mysqli_select_db($db_connection, "authme");
         $db_query = "SELECT * FROM authme WHERE realname LIKE '" . $username . "' LIMIT 1";
         $db_results = mysqli_query($db_connection, $db_query);
 
@@ -38,19 +37,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['user_lastlogin'] = $user_data['lastlogin'];
                 $_SESSION['user_regdate'] = $user_data['regdate'];
 
-                // Da
+                // Go to index
                 header("Location: ../index.php");
-                die;
+                exit();
             } else {
                 header("Location: ../login.php?error=wrong_password");
+                exit();
             }
         } else {
             header("Location: ../login.php?error=unknown_username");
+            exit();
         }
 
         // Close connection to the MySQL DB server
         mysqli_close($db_connection);
     } else {
         header("Location: ../login.php?error=invalid_credentials");
+        exit();
     }
 }
+?>

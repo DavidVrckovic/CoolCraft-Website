@@ -19,6 +19,21 @@ $login_db_username = $db_config['login_db_username'];
 $login_db_password = $db_config['login_db_password'];
 $login_db_name = $db_config['login_db_name'];
 
+$bw_db_hostname = $db_config['bw_db_hostname'];
+$bw_db_username = $db_config['bw_db_username'];
+$bw_db_password = $db_config['bw_db_password'];
+$bw_db_name = $db_config['bw_db_name'];
+
+$lp_db_hostname = $db_config['lp_db_hostname'];
+$lp_db_username = $db_config['lp_db_username'];
+$lp_db_password = $db_config['lp_db_password'];
+$lp_db_name = $db_config['lp_db_name'];
+
+$nm_db_hostname = $db_config['nm_db_hostname'];
+$nm_db_username = $db_config['nm_db_username'];
+$nm_db_password = $db_config['nm_db_password'];
+$nm_db_name = $db_config['nm_db_name'];
+
 $sw_db_hostname = $db_config['sw_db_hostname'];
 $sw_db_username = $db_config['sw_db_username'];
 $sw_db_password = $db_config['sw_db_password'];
@@ -30,55 +45,78 @@ $sw_db_name = $db_config['sw_db_name'];
 if ($required_db == "login") {
     // Open connection to the MySQL DB server
     $db_connection = mysqli_connect($login_db_hostname, $login_db_username, $login_db_password, $login_db_name);
+
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
+} else if ($required_db = "networkmanager") {
+    // Open connection to the MySQL DB server
+    $db_connection = mysqli_connect($nm_db_hostname, $nm_db_username, $nm_db_password, $nm_db_name);
+
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
 } else if ($required_db = "skywars") {
     // Open connection to the MySQL DB server
     $db_connection = mysqli_connect($sw_db_hostname, $sw_db_username, $sw_db_password, $sw_db_name);
+
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
 } else {
     exit();
 }
 
-// Check connection to the MySQL DB server
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
-    exit();
-}
 
+if ($required_db = "all") {
+    // Open connection to the MySQL DB servers
+    $login_db_connection = mysqli_connect($login_db_hostname, $login_db_username, $login_db_password, $login_db_name);
 
-
-// Check if $_GET super global variable is not null
-// Fixes "Undefined array key" error
-if (isset($_GET['q'])) {
-    // Get searched data with $_GET
-    $search = $_GET['q'];
-    $search = mysqli_real_escape_string($db_connection, $search);
-
-    // Select searched data from the MySQL DB server
-    mysqli_select_db($db_connection, "sw_player");
-    $db_query = "SELECT * FROM sw_player WHERE player_name LIKE '" . $search . "'";
-    $db_results = mysqli_query($db_connection, $db_query);
-}
-
-
-
-// Check if $_GET super global variable is not null
-// Fixes "Undefined array key" error
-if (isset($_GET['results'])) {
-    // Get searched data with $_GET
-    // Sent through ajax_search.js
-    $livesearh = $_GET['results'];
-    $livesearh = mysqli_real_escape_string($db_connection, $livesearh);
-
-    // Select data from DB
-    mysqli_select_db($db_connection, "sw_player");
-    $db_query_livesearch = "SELECT player_name FROM sw_player WHERE player_name LIKE '%" . $livesearh . "%' LIMIT 10";
-    $db_results_livesearch = mysqli_query($db_connection, $db_query_livesearch);
-
-    // Check if at least 1 character is entered in the search bar
-    if (strlen($livesearh) > 1) {
-        while ($row = mysqli_fetch_array($db_results_livesearch)) {
-            echo '<a href="search.php?q=' . $row["player_name"] . '">' . $row["player_name"] . '</a><br>';
-        }
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
     }
+
+    $bw_db_connection = mysqli_connect($bw_db_hostname, $bw_db_username, $bw_db_password, $bw_db_name);
+
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
+
+    $lp_db_connection = mysqli_connect($lp_db_hostname, $lp_db_username, $lp_db_password, $lp_db_name);
+
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
+
+    $nm_db_connection = mysqli_connect($nm_db_hostname, $nm_db_username, $nm_db_password, $nm_db_name);
+
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
+
+    $sw_db_connection = mysqli_connect($sw_db_hostname, $sw_db_username, $sw_db_password, $sw_db_name);
+    
+    // Check connection to the MySQL DB server
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        exit();
+    }
+} else {
+    exit();
 }
 
 ?>
