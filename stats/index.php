@@ -1,5 +1,9 @@
 <?php
 include("../php/search.php");
+
+// Links
+$directory_level = 1;
+include("../php/links.php");
 ?>
 
 
@@ -39,13 +43,8 @@ include("../php/search.php");
 
 
 <body>
+    <!-- Scripts -->
     <script src="../scripts/ajax_search.js"> </script>
-
-    <!-- Links -->
-    <?php
-    $directory_level = 1;
-    include("../php/links.php");
-    ?>
 
     <!-- Header and Navigation -->
     <?php

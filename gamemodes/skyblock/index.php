@@ -18,7 +18,7 @@ include("../../php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Game modes | Survival </title>
+    <title> CoolCraft | Game modes | SkyBlock </title>
     <link href="../../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -57,11 +57,11 @@ include("../../php/links.php");
 
     <!-- Section -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Survival Spawn - 1.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/SkyBlock Spawn - 1.png" />
         <div class="inner_section" id="inner_section-introduction">
 
             <h1 class="title" id="title-introduction">
-                Survival
+                SkyBlock
             </h1>
 
         </div>
@@ -80,7 +80,7 @@ include("../../php/links.php");
             <div class="main_title_line" id="main_title_line-gamemode_info"> </div>
 
             <div class="main_text" id="main_text-info">
-                <b>Survival</b> is one of the main game modes in Minecraft. It is a peaceful singleplayer/multiplayer game mode where players must collect resources, build bases, battle mobs, eat, and explore the world in an effort to thrive and survive.
+                <b>SkyBlock</b> is a peaceful singleplayer/multiplayer game mode where players spawn on a floating island and must survive and complete challenges with the resources available.
             </div>
 
             <h1 class="main_title" id="main_title-gamemode_images">
@@ -91,11 +91,11 @@ include("../../php/links.php");
 
             <div class="gamemodes">
                 <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Survival Spawn - 1.png" />
+                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/SkyBlock Spawn - 1.png" />
                 </div>
                 
                 <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Survival Spawn - 2.png" />
+                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/SkyBlock Spawn - 2.png" />
                 </div>
             </div>
         </div>

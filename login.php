@@ -7,6 +7,10 @@ if (isset($_SESSION['loggedin'])) {
     header("Location: index.php");
     exit();
 }
+
+// Links
+$directory_level = 0;
+include("php/links.php");
 ?>
 
 
@@ -43,12 +47,6 @@ if (isset($_SESSION['loggedin'])) {
 
 
 <body>
-    <!-- Links -->
-    <?php
-    $directory_level = 0;
-    include("php/links.php");
-    ?>
-
     <!-- Header and Navigation -->
     <?php
     $nav_faq = "faq";

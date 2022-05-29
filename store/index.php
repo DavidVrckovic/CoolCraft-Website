@@ -1,6 +1,10 @@
 <?php
 // Start the session
 session_start();
+
+// Links
+$directory_level = 1;
+include("../php/links.php");
 ?>
 
 
@@ -36,12 +40,6 @@ session_start();
 
 
 <body>
-    <!-- Links -->
-    <?php
-    $directory_level = 1;
-    include("../php/links.php");
-    ?>
-
     <!-- Header and Navigation -->
     <?php
     $nav_faq = "../faq";
@@ -62,7 +60,14 @@ session_start();
         <!-- MAIN -->
         <div class="main">
 
+        <!--
         <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="store" frameborder="0" src="https://coolcraftmc.buycraft.net/" title="CoolCraft Store"></iframe>
+        -->
+        
+        <?php
+        header("https://coolcraftmc.buycraft.net");
+        exit();
+        ?>
 
         </div>
 

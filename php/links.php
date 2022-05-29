@@ -29,7 +29,7 @@ if ($directory_level == 0) {
     if (!isset($_SESSION['loggedin'])) {
         $nav_auth = "login.php";
     } else {
-        $nav_auth = "logout.php";
+        $nav_auth = "logout";
         $nav_account = "account";
     }
 
@@ -87,7 +87,7 @@ if ($directory_level == 0) {
     if (!isset($_SESSION['loggedin'])) {
         $nav_auth = "../login.php";
     } else {
-        $nav_auth = "../logout.php";
+        $nav_auth = "../logout";
         $nav_account = "../account";
     }
 
@@ -145,7 +145,7 @@ if ($directory_level == 0) {
     if (!isset($_SESSION['loggedin'])) {
         $nav_auth = "../../login.php";
     } else {
-        $nav_auth = "../../logout.php";
+        $nav_auth = "../../logout";
         $nav_account = "../../account";
     }
 

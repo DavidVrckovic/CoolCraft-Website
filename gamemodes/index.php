@@ -1,6 +1,10 @@
 <?php
 // Start the session
 session_start();
+
+// Links
+$directory_level = 1;
+include("../php/links.php");
 ?>
 
 
@@ -37,12 +41,6 @@ session_start();
 
 
 <body>
-    <!-- Links -->
-    <?php
-    $directory_level = 1;
-    include("../php/links.php");
-    ?>
-
     <!-- Header and Navigation -->
     <?php
     $nav_faq = "../faq";

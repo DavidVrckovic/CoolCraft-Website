@@ -1,11 +1,15 @@
 <?php
 include("../php/account.php");
 
-// If the user is logged in, redirect to the index page
+// If the user is not logged in, redirect to the login page
 if (!isset($_SESSION['loggedin'])) {
     header("Location: ../login.php");
     exit();
 }
+
+// Links
+$directory_level = 1;
+include("../php/links.php");
 ?>
 
 
@@ -42,12 +46,6 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 <body>
-    <!-- Links -->
-    <?php
-    $directory_level = 1;
-    include("../php/links.php");
-    ?>
-
     <!-- Header and Navigation -->
     <?php
     $nav_faq = "../faq";
