@@ -5,7 +5,7 @@ var mybutton = document.getElementById("back_to_top");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";

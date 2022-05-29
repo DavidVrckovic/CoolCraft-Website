@@ -1,42 +1,71 @@
-.footer {
-    background-color: #ff1a1ace;
+footer {
+    align-items: center;
+    background-color: #ff1a1abe;
     color: white;
+    display: flex;
+    flex-wrap: nowrap;
     height: 100px;
+    justify-content: center;
 }
 
-div.footer_up {
-    height: 40px;
+footer div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
-div.footer_left {
-    float: left;
-    margin-left: 30px;
+footer a, footer a:hover, footer a:link {
+    color: white;
 }
 
-div.footer_right {
-    float: right;
-    margin-right: 30px;
-}
 
 
 /*
-RESPONSIVENESS
-Depending on the screen width
+// RESPONSIVENESS
+// Depending on the screen width
 */
-@media screen and (min-width: 901px) {}
+@media screen and (min-width: 1201px) {
+    footer div {
+        width: 100%;
+    }
+}
 
-@media screen and (min-width: 651px) and (max-width: 900px) {}
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    footer div {
+        width: 100%;
+    }
+}
 
-@media screen and (min-width: 401px) and (max-width: 650px) {}
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    footer div {
+        width: 100%;
+    }
+}
 
-@media screen and (max-width: 400px) {
-    div.footer_left {
-        float: left;
-        margin-left: 25%;
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    footer div {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    footer {
+        flex-wrap: wrap;
+        height: 120px;
     }
 
-    div.footer_right {
-        float: right;
-        margin-right: 33%;
+    footer div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer {
+        flex-wrap: wrap;
+        height: 120px;
+    }
+    
+    footer div {
+        width: 100%;
     }
 }
