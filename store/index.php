@@ -60,14 +60,7 @@ include("../php/links.php");
         <!-- MAIN -->
         <div class="main">
 
-        <!--
         <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="store" frameborder="0" src="https://coolcraftmc.buycraft.net/" title="CoolCraft Store"></iframe>
-        -->
-        
-        <?php
-        header("https://coolcraftmc.buycraft.net");
-        exit();
-        ?>
 
         </div>
 

@@ -35,7 +35,7 @@ include("php/links.php");
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="styles/login.css" rel="stylesheet" type="text/css" />
+    <link href="login/index.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
     <link href="styles/back_to_top.css" rel="stylesheet" type="text/css" />

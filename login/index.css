@@ -1,0 +1,107 @@
+div.form {
+    background-color: var(--primary-color);
+    color: var(--text);
+    padding: 30px;
+}
+
+label.input_title {
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=password] {
+    background: #f1f1f1;
+    border: none;
+    display: inline-block;
+    margin: 5px 0 22px 0;
+    padding: 15px;
+    width: 100%;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #dddddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+button.login {
+    background-color: #029161;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.85;
+}
+
+button.login:hover {
+    opacity: 1;
+}
+
+
+
+/*
+// RESPONSIVENESS
+// Depending on the screen width
+*/
+@media screen and (min-width: 1201px) {
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 40%
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 50%
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 60%
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    /* Login */
+    div.form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form.login {
+        width: 80%
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {}
+
+@media screen and (max-width: 400px) {}

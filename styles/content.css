@@ -1,5 +1,11 @@
 div.content {
+    background-color: var(--primary-color);
+    color: var(--text);
     padding-bottom: 40px;
+}
+
+div.main {
+    padding-top: 4vw;
 }
 
 
@@ -8,7 +14,6 @@ h1.main_title {
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 4vw;
 }
 
 div.main_title_line {

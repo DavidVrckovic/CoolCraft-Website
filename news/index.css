@@ -23,7 +23,7 @@ div.update_text {
 }
 
 a.update_title {
-    color: black;
+    color: var(--text);
     font-size: 19px;
     text-decoration: none;
 }
@@ -34,7 +34,7 @@ a.update_title:hover {
 }
 
 a.update_date {
-    color: black;
+    color: var(--text);
     font-size: 14px;
     text-decoration: none;
 }

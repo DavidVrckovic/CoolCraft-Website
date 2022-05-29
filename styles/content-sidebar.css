@@ -1,4 +1,6 @@
 div.content {
+    background-color: var(--primary-color);
+    color: var(--text);
     display: flex;
     padding-bottom: 40px;
 }
