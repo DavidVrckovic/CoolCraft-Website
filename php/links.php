@@ -27,9 +27,10 @@ if ($directory_level == 0) {
     $nav_store_icon_darkmode = "images/navigation/store_icon_white.png";
 
     if (!isset($_SESSION['loggedin'])) {
-        $nav_login = "login.php";
+        $nav_auth = "login.php";
     } else {
-        $nav_login = "logout.php";
+        $nav_auth = "logout.php";
+        $nav_account = "account";
     }
 
     $nav_script = "scripts/navigation.js";
@@ -84,9 +85,10 @@ if ($directory_level == 0) {
     $nav_store_icon_darkmode = "../images/navigation/store_icon_white.png";
 
     if (!isset($_SESSION['loggedin'])) {
-        $nav_login = "../login.php";
+        $nav_auth = "../login.php";
     } else {
-        $nav_login = "../logout.php";
+        $nav_auth = "../logout.php";
+        $nav_account = "../account";
     }
 
     $nav_script = "../scripts/navigation.js";
@@ -141,9 +143,10 @@ if ($directory_level == 0) {
     $nav_store_icon_darkmode = "../../images/navigation/store_icon_white.png";
 
     if (!isset($_SESSION['loggedin'])) {
-        $nav_login = "../../login.php";
+        $nav_auth = "../../login.php";
     } else {
-        $nav_login = "../../logout.php";
+        $nav_auth = "../../logout.php";
+        $nav_account = "../../account";
     }
 
     $nav_script = "../../scripts/navigation.js";

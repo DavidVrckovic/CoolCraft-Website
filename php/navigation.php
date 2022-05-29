@@ -92,11 +92,19 @@
         </a>
 
         <div class="nav options-dropdown-content">
+            
+            <?php
+            if (isset($_SESSION['loggedin'])) {
+                echo '<a href="' . $nav_account . '">'
+                . $_SESSION['user_username']
+                . '</a>';
+            }
+            ?>
 
-            <a href="<?php echo $nav_login; ?>">
+            <a href="<?php echo $nav_auth; ?>">
                 <?php
                 if (isset($_SESSION['loggedin'])) {
-                    echo $_SESSION['user_username'];
+                    echo "Logout";
                 } else {
                     echo "Login";
                 }

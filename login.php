@@ -122,17 +122,6 @@ if (isset($_SESSION['loggedin'])) {
                     }
                     ?>
 
-                    <!--<label for="input_password_repeat">
-                        <b>Repeat Password</b>
-                    </label>
-                    <input id="input_password_repeat" name="password_repeat" placeholder="Repeat password" type="password" required>-->
-
-                    <hr>
-
-                    <p>
-                        By creating an account you agree to our <a href="#">Terms & Privacy</a>.
-                    </p>
-
                     <button class="login" type="submit">
                         Login
                     </button>

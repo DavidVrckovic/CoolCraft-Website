@@ -102,7 +102,11 @@ include("../php/search.php");
             <?php
             if (isset($_GET['q'])) {
                 while ($row = mysqli_fetch_array($lp_db_results)) {
-                    echo "<span> Rank: " . $row['primary_group'] . "</span>";
+                    if ($row['primary_group'] == "default" || $row['primary_group'] == "player") {
+                        echo "<span> Rank: Player </span>";
+                    } else {
+                        echo "<span> Rank: " . $row['primary_group'] . "</span>";
+                    }
                 }
             }
             
@@ -111,7 +115,6 @@ include("../php/search.php");
                     while ($row = mysqli_fetch_array($sw_db_results)) {
                         echo '
                         <div class="gamemode" id="gamemode-survival">
-                        <a class="gamemode_banner" href="survival">
                             <div class="gamemode_image">
                                 <img alt="Game mode banner" class="gamemode_banner" src="../images/Survival Spawn - 1.png" />
                                 <div class="gamemode_text">
@@ -122,7 +125,6 @@ include("../php/search.php");
                                     XP: ' . $row["xp"] . ' <br>
                                 </div>
                             </div>
-                        </a>
                         </div>
                         ';
                     }

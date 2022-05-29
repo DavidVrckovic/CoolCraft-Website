@@ -1,6 +1,10 @@
 <?php
 // Start the session
 session_start();
+
+// Links
+$directory_level = 0;
+include("php/links.php");
 ?>
 
 
@@ -38,12 +42,6 @@ session_start();
 <body>
     <!-- Scripts -->
     <script src="scripts/content_switcher.js"></script>
-
-    <!-- Links -->
-    <?php
-    $directory_level = 0;
-    include("php/links.php");
-    ?>
 
     <!-- Header and Navigation -->
     <?php
