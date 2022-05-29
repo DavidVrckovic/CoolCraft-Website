@@ -18,7 +18,7 @@ include("../../php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | News | Update 1.3.10 </title>
+    <title> CoolCraft | News | Update 1.4.0 </title>
     <link href="../../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -57,11 +57,11 @@ include("../../php/links.php");
 
     <!-- CONTENT Banner -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Hub Lobby - 1.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Parkour Lobby - 1.png" />
         <div class="inner_section" id="inner_section-introduction">
 
             <h1 class="title" id="title-introduction">
-                Update 1.3.10
+                Update 1.4.0
             </h1>
 
         </div>
@@ -83,24 +83,35 @@ include("../../php/links.php");
                 <b> Changes </b>
                 <ul>
                     <li>
-                        Added new Hub lobby.
+                        Added Minecraft 1.17 and 1.17.1 version support.
                     </li>
                     <li>
-                        Added sound effects to join items.
+                        Added interactive boards.
                     </li>
                     <li>
-                        Authentication now uses MySQL to store data.
+                        Added Parkour minigame.
                     </li>
                     <li>
-                        Auctions have been improved.
+                        UHC has been reworked from scratch.
                     </li>
                     <li>
-                        Small adjustments to menus.
+                        You can now get the links for applications in game by typing the command /apply.
+                    </li>
+                    <li>
+                        Removed NPCs. Interactive boards are a replacement. They will still be used for other things, such as BedWars.
+                    </li>
+                </ul>
+                <br>
+                
+                <b> Fixes </b>
+                <ul>
+                    <li>
+                        Fixed an issue where health regenerated too quickly during a BedWars match.
                     </li>
                 </ul>
                 <br>
 
-                <b> Published: </b> 4 April 2021
+                <b> Published: </b> 16 July 2021
 
                 <br><br><br>
             </div>

@@ -39,6 +39,10 @@ div.sidebar_title_line {
     width: 17vw;
 }
 
+a.link, a.link:hover {
+    color: #ff8800;
+}
+
 
 
 /*

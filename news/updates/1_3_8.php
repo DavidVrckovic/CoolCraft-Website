@@ -18,7 +18,7 @@ include("../../php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | News | Update 1.3.10 </title>
+    <title> CoolCraft | News | Update 1.3.8 </title>
     <link href="../../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -57,11 +57,11 @@ include("../../php/links.php");
 
     <!-- CONTENT Banner -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Hub Lobby - 1.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/BedWars - Castle Raiders - 1.png" />
         <div class="inner_section" id="inner_section-introduction">
 
             <h1 class="title" id="title-introduction">
-                Update 1.3.10
+                Update 1.3.8
             </h1>
 
         </div>
@@ -83,24 +83,47 @@ include("../../php/links.php");
                 <b> Changes </b>
                 <ul>
                     <li>
-                        Added new Hub lobby.
+                        Added PaySafeCard payment option to BuyCraft.
                     </li>
                     <li>
-                        Added sound effects to join items.
+                        BedWars has been remade from scratch.
                     </li>
                     <li>
-                        Authentication now uses MySQL to store data.
+                        SkyWars has been improved.
                     </li>
                     <li>
-                        Auctions have been improved.
+                        Nickname command now works across the network.
                     </li>
                     <li>
-                        Small adjustments to menus.
+                        Account menu has been improved and changed completely.
+                    </li>
+                    <li>
+                        Prices have been adjusted for Vaults and Homes in the Shop menu.
+                    </li>
+                    <li>
+                        BedWars data and statistics have been reset.
+                    </li>
+                    <li>
+                        SkyWars data and statistics have been reset.
+                    </li>
+                </ul>
+                <br>
+                
+                <b> Fixes </b>
+                <ul>
+                    <li>
+                        Fixed an issue where servers appeared offline in the Server menu even if they were online.
+                    </li>
+                    <li>
+                        Fixed an issue where placeholders did not load correctly on tab list on the Survival server.
+                    </li>
+                    <li>
+                        Fixed a lot of issues related to BedWars.
                     </li>
                 </ul>
                 <br>
 
-                <b> Published: </b> 4 April 2021
+                <b> Published: </b> 28 February 2021
 
                 <br><br><br>
             </div>

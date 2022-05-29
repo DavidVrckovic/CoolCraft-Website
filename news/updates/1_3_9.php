@@ -18,7 +18,7 @@ include("../../php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Game modes | Creative </title>
+    <title> CoolCraft | News | Update 1.3.9 </title>
     <link href="../../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -27,9 +27,9 @@ include("../../php/links.php");
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="../index.css" rel="stylesheet" type="text/css" />
+    <!--<link href="index.css" rel="stylesheet" type="text/css" />-->
     <link href="../../styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="../../styles/content.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
     <link href="../../styles/back_to_top.css" rel="stylesheet" type="text/css" />
@@ -46,8 +46,8 @@ include("../../php/links.php");
     $nav_faq = "../../faq";
     $nav_home = "../../";
     $nav_info = "../../info";
-    $nav_gamemodes = "../";
-    $nav_news = "../../news";
+    $nav_gamemodes = "../../gamemodes";
+    $nav_news = "../";
     $nav_store = "../../store";
 
     include("../../php/navigation.php");
@@ -55,13 +55,13 @@ include("../../php/links.php");
 
 
 
-    <!-- Section -->
+    <!-- CONTENT Banner -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Creative - 1.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Hub Lobby - 9.png" />
         <div class="inner_section" id="inner_section-introduction">
 
             <h1 class="title" id="title-introduction">
-                Creative
+                Update 1.3.9
             </h1>
 
         </div>
@@ -73,31 +73,48 @@ include("../../php/links.php");
         <!-- MAIN -->
         <div class="main">
 
-            <h1 class="main_title" id="main_title-gamemode_info">
-                Info
+            <h1 class="main_title" id="main_title-info">
+                <b> Update details </b>
             </h1>
 
-            <div class="main_title_line" id="main_title_line-gamemode_info"> </div>
+            <div class="main_title_line" id="main_title_line-info"> </div>
 
             <div class="main_text" id="main_text-info">
-                <b>Creative</b> is a peaceful singleplayer/multiplayer game mode where players have access to all blocks and items in the game. Players can build what they want and show off their builds to others.
-            </div>
-
-            <h1 class="main_title" id="main_title-gamemode_images">
-                Images
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-gamemode_images"> </div>
-
-            <div class="gamemodes">
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Creative - 1.png" />
-                </div>
+                <b> Changes </b>
+                <ul>
+                    <li>
+                        Added Partner rank.
+                    </li>
+                    <li>
+                        Added some advanced options for staff members.
+                    </li>
+                    <li>
+                        Chat formatting has been improved and now supports placeholders, hover and click events.
+                    </li>
+                </ul>
+                <br>
                 
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Creative - 2.png" />
-                </div>
+                <b> Fixes </b>
+                <ul>
+                    <li>
+                        Fixed an issue where player's real username was displayed in chat instead of their nickname.
+                    </li>
+                </ul>
+                <br>
+
+                <b> Published: </b> 17 March 2021
+
+                <br><br><br>
             </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+
+            <?php
+            include("../../php/sidebar.php");
+            ?>
+
         </div>
 
     </div>

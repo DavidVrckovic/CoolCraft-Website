@@ -1,10 +1,31 @@
 
 
+
+<!-- General news / CoolCraft Pass Season 0 -->
+<div class="gn" id="gn-lets_make_the_most">
+    <div class="update_image">
+        <a class="update_banner" href="general_news/coolcraft_pass_season_0.php">
+            <img alt="Update banner" class="update_banner" src="../images/news/CoolCraft Pass Season 0.png" />
+        </a>
+    </div>
+
+    <div class="update_text">
+        <a class="update_title" href="general_news/coolcraft_pass_season_0.php">
+            <b> CoolCraft Pass Season 0 </b>
+        </a>
+        <br>
+        <a class="update_date" href="general_news/coolcraft_pass_season_0.php">
+            27 March 2022
+        </a>
+    </div>
+</div>
+
+
 <!-- Updates / 1.4.0 -->
 <div class="update" id="update-1_4_0">
     <div class="update_image">
         <a class="update_banner" href="updates/1_4_0.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 5.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Parkour Lobby - 1.png" />
         </a>
     </div>
 
@@ -24,7 +45,7 @@
 <div class="update" id="update-1_3_11">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_11.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 4.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Prison Spawn - 1.png" />
         </a>
     </div>
 
@@ -44,7 +65,7 @@
 <div class="gn" id="gn-lets_make_the_most">
     <div class="update_image">
         <a class="update_banner" href="general_news/lets_make_the_most.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 6.png" />
         </a>
     </div>
 
@@ -64,7 +85,7 @@
 <div class="gn" id="gn-no_updates_for_some_time">
     <div class="update_image">
         <a class="update_banner" href="general_news/no_updates_for_some_time.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 8.png" />
         </a>
     </div>
 
@@ -84,7 +105,7 @@
 <div class="update" id="update-1_3_10">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_10.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 1.png" />
         </a>
     </div>
 
@@ -104,7 +125,7 @@
 <div class="update" id="update-1_3_9">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_9.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 9.png" />
         </a>
     </div>
 
@@ -124,7 +145,7 @@
 <div class="update" id="update-1_3_8">
     <div class="update_image">
         <a class="update_banner" href="updates/1_3_8.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
+            <img alt="Update banner" class="update_banner" src="../images/BedWars - Castle Raiders - 1.png" />
         </a>
     </div>
 
@@ -135,46 +156,6 @@
         <br>
         <a class="update_date" href="updates/1_3_8.php">
             28 February 2021
-        </a>
-    </div>
-</div>
-
-
-<!-- Updates / 1.3.7 -->
-<div class="update" id="update-1_3_7">
-    <div class="update_image">
-        <a class="update_banner" href="updates/1_3_7.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
-        </a>
-    </div>
-
-    <div class="update_text">
-        <a class="update_title" href="updates/1_3_7.php">
-            <b> Update 1.3.7 </b>
-        </a>
-        <br>
-        <a class="update_date" href="updates/1_3_7.php">
-            5 February 2021
-        </a>
-    </div>
-</div>
-
-
-<!-- Updates / 1.3.6 -->
-<div class="update" id="update-1_3_6">
-    <div class="update_image">
-        <a class="update_banner" href="updates/1_3_6.php">
-            <img alt="Update banner" class="update_banner" src="../images/Hub Lobby - 3.png" />
-        </a>
-    </div>
-
-    <div class="update_text">
-        <a class="update_title" href="updates/1_3_6.php">
-            <b> Update 1.3.6 </b>
-        </a>
-        <br>
-        <a class="update_date" href="updates/1_3_6.php">
-            8 January 2021
         </a>
     </div>
 </div>
