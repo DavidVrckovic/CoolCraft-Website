@@ -37,6 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['user_lastlogin'] = $user_data['lastlogin'];
                 $_SESSION['user_regdate'] = $user_data['regdate'];
 
+                // Set a cookie
+                setcookie("login", $_SESSION['user_username'], time()+60*60*24*30, "/");
+
                 // Go to index
                 header("Location: ../index.php");
                 exit();

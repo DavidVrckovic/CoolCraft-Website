@@ -26,7 +26,7 @@ if ($directory_level == 0) {
     $nav_options_icon_darkmode = "images/navigation/options_icon_white.png";
     $nav_store_icon_darkmode = "images/navigation/store_icon_white.png";
 
-    if (!isset($_SESSION['loggedin'])) {
+    if (!isset($_SESSION['loggedin']) && !isset($_COOKIE['login'])) {
         $nav_auth = "login.php";
     } else {
         $nav_auth = "logout";
@@ -84,7 +84,7 @@ if ($directory_level == 0) {
     $nav_options_icon_darkmode = "../images/navigation/options_icon_white.png";
     $nav_store_icon_darkmode = "../images/navigation/store_icon_white.png";
 
-    if (!isset($_SESSION['loggedin'])) {
+    if (!isset($_SESSION['loggedin']) && !isset($_COOKIE['login'])) {
         $nav_auth = "../login.php";
     } else {
         $nav_auth = "../logout";
@@ -142,7 +142,7 @@ if ($directory_level == 0) {
     $nav_options_icon_darkmode = "../../images/navigation/options_icon_white.png";
     $nav_store_icon_darkmode = "../../images/navigation/store_icon_white.png";
 
-    if (!isset($_SESSION['loggedin'])) {
+    if (!isset($_SESSION['loggedin']) && !isset($_COOKIE['login'])) {
         $nav_auth = "../../login.php";
     } else {
         $nav_auth = "../../logout";

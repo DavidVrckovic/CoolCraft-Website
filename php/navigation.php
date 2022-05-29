@@ -98,12 +98,18 @@
                 echo '<a href="' . $nav_account . '">'
                 . $_SESSION['user_username']
                 . '</a>';
+            } else if (isset($_COOKIE['login'])) {
+                echo '<a href="' . $nav_account . '">'
+                . $_COOKIE['login']
+                . '</a>';
             }
             ?>
 
             <a href="<?php echo $nav_auth; ?>">
                 <?php
                 if (isset($_SESSION['loggedin'])) {
+                    echo "Logout";
+                } else if (isset($_COOKIE['login'])) {
                     echo "Logout";
                 } else {
                     echo "Login";
@@ -112,11 +118,11 @@
             </a>
 
             <a href="">
-                Hr/En
+                Hr / En
             </a>
 
             <a href="" id="lightdarkmode">
-                Light/Dark
+                Light / Dark
             </a>
 
         </div>
