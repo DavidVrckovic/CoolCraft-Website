@@ -202,7 +202,7 @@ include("php/links.php");
                     <div class="description" id="description-joinnow">
                         We can't wait to see you play and explore! Join us now!
                         <br>
-                        Click here to copy IP
+                        <a id="copy-text-btn" href="javascript:void(0)">Click here</a> to copy IP
                     </div>
 
                 </div>
@@ -246,6 +246,7 @@ include("php/links.php");
     <?php
     include("php/back_to_top.php");
     ?>
+    <script src="scripts/copy-to-clipboard.js"></script>
 </body>
 
 </html>
