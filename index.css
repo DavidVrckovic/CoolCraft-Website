@@ -58,6 +58,13 @@ div.gamemode_description {
     text-align: center;
 }
 
+/* Copy button */
+a#copy-text-btn,
+a#copy-text-btn :hover{
+    color: white;
+    font-weight: bold;
+}
+
 /* Support */
 div#section-support a,
 div#section-support a:hover,

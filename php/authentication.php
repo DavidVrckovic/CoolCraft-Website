@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 // Set a cookie
                 setcookie("login", $_SESSION['user_username'], time()+60*60*24*30, "/");
 
-                // Go to index
+                // Redirect to the index page
                 header("Location: ../index.php");
                 exit();
             } else {
@@ -58,5 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         header("Location: ../login.php?error=invalid_credentials");
         exit();
     }
+} else {
+    exit();
 }
 ?>

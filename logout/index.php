@@ -9,6 +9,6 @@ if (isset($_COOKIE['login'])) {
     setcookie("login", "", time()-3600, "/");
 }
 
-// Redirect to the login page
+// Redirect to the index page
 header("Location: ../index.php");
 ?>

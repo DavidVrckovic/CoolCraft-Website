@@ -120,9 +120,10 @@ include("php/links.php");
                     }
                     ?>
 
-                    <button class="login" type="submit">
+                    <button class="login" id="login" type="submit">
                         Login
                     </button>
+                    <a href="#login"></a>
                 </form>
             </div>
 
