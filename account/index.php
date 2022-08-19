@@ -50,7 +50,7 @@ include("../php/links.php");
     <?php
     $nav_faq = "../faq";
     $nav_gamemodes = "../gamemodes";
-    $nav_home = "../index.php";
+    $nav_home = "../";
     $nav_info = "../info";
     $nav_news = "../news";
     $nav_store = "../store";

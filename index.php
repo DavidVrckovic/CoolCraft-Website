@@ -18,7 +18,7 @@ include("php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Home </title>
+    <title> CoolCraft - Minecraft server network </title>
     <link href="images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -189,7 +189,7 @@ include("php/links.php");
 
                     <div class="section_line" id="section_line-trailer"> </div>
 
-                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="trailer" frameborder="0" src="https://www.youtube.com/embed/fSEJwfOHS8E" title="Trailer"></iframe>
+                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="trailer" frameborder="0" src="https://www.youtube.com/embed/7jIcHdK2ZJU" title="Trailer"></iframe>
 
                 </div>
             </div>

@@ -41,21 +41,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 setcookie("login", $_SESSION['user_username'], time()+60*60*24*30, "/");
 
                 // Redirect to the index page
-                header("Location: ../index.php");
+                header("Location: ../");
                 exit();
             } else {
-                header("Location: ../login.php?error=wrong_password");
+                // If the entered password does not match the DB
+                // Redirect to the login page with a "wrong password" error
+                header("Location: ../login/?error=wrong_password");
                 exit();
             }
         } else {
-            header("Location: ../login.php?error=unknown_username");
+            // If the entered username is not in the DB
+            // Redirect to the login page with a "unknown username" error
+            header("Location: ../login/?error=unknown_username");
             exit();
         }
 
         // Close connection to the MySQL DB server
         mysqli_close($db_connection);
     } else {
-        header("Location: ../login.php?error=invalid_credentials");
+        // Redirect to the login page with a "invalid credentials" error
+        header("Location: ../login/?error=invalid_credentials");
         exit();
     }
 } else {

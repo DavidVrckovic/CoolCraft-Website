@@ -18,7 +18,7 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Applications </title>
+    <title> CoolCraft | Game modes </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -29,7 +29,7 @@ include("../php/links.php");
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="../styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/content.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
     <link href="../styles/back_to_top.css" rel="stylesheet" type="text/css" />
@@ -46,7 +46,7 @@ include("../php/links.php");
     $nav_faq = "../faq";
     $nav_home = "../";
     $nav_info = "../info";
-    $nav_gamemodes = "../gamemodes";
+    $nav_gamemodes = "";
     $nav_news = "../news";
     $nav_store = "../store";
 
@@ -57,11 +57,11 @@ include("../php/links.php");
 
     <!-- Section -->
     <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 4.png" />
+        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
         <div class="inner_section" id="inner_section-introduction">
 
             <h1 class="title" id="title-introduction">
-                Applications
+                Staff
             </h1>
 
         </div>
@@ -73,34 +73,22 @@ include("../php/links.php");
         <!-- MAIN -->
         <div class="main">
 
-            <h1 class="main_title" id="main_title-general_info">
-                Application links
+            <h1 class="main_title" id="main_title-documents">
+                Documents
             </h1>
 
-            <div class="main_title_line" id="main_title_line-general_info"> </div>
+            <div class="main_title_line" id="main_title_line-documents"> </div>
 
-            <div class="main_text" id="main_text-general_info">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScXBxyyUpLP-y6N2J1_QHXVXi77U1EBH4SlzKZHe3uMme7nxA/viewform" target="_blank">
-                    Builder
+            <div class="main_text" id="main_text-documents">
+                <a href="https://docs.google.com/document/d/1FLoi5s_RJoiseoZR9Uqy3JIKc9rGCAK0jVNQCjCd2Rk/edit?usp=sharing" target="_blank">
+                    CoolCraft Documentation
                 </a>
                 <br>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg47HE48jhQYHxv7S3pqN9RUVIC1y5Q16ULi6QdPMxj20n8A/viewform" target="_blank">
-                    Helper
+                <a href="networkmanager" target="_self">
+                    Network Manager
                 </a>
                 <br>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdy1S9ZdRjsWnI5Xzm00YoLhQTL_2jIUkS-hWfcPbvDgDoNTA/viewform" target="_blank">
-                    Content Creator
-                </a>
             </div>
-
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="sidebar">
-
-            <?php
-            include("../php/sidebar.php");
-            ?>
 
         </div>
 

@@ -10,5 +10,5 @@ if (isset($_COOKIE['login'])) {
 }
 
 // Redirect to the index page
-header("Location: ../index.php");
+header("Location: ../");
 ?>

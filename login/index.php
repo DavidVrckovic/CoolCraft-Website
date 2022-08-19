@@ -4,13 +4,13 @@ session_start();
 
 // If the user is logged in, redirect to the index page
 if (isset($_SESSION['loggedin'])) {
-    header("Location: index.php");
+    header("Location: ../");
     exit();
 }
 
 // Links
-$directory_level = 0;
-include("php/links.php");
+$directory_level = 1;
+include("../php/links.php");
 ?>
 
 
@@ -25,7 +25,7 @@ include("php/links.php");
 
     <!-- Title and Favicon -->
     <title> CoolCraft | Login </title>
-    <link href="images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
+    <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
@@ -34,14 +34,13 @@ include("php/links.php");
 
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="login/index.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/index.css" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
-    <link href="styles/back_to_top.css" rel="stylesheet" type="text/css" />
-    <link href="styles/dark_mode.css" rel="stylesheet" type="text/css" />
-    <link href="styles/footer.css" rel="stylesheet" type="text/css" />
-    <link href="styles/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/back_to_top.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
 </head>
 
 
@@ -49,14 +48,14 @@ include("php/links.php");
 <body>
     <!-- Header and Navigation -->
     <?php
-    $nav_faq = "faq";
-    $nav_gamemodes = "gamemodes";
-    $nav_home = "index.php";
-    $nav_info = "info";
-    $nav_news = "news";
-    $nav_store = "store";
+    $nav_faq = "../faq";
+    $nav_gamemodes = "../gamemodes";
+    $nav_home = "../";
+    $nav_info = "../info";
+    $nav_news = "../news";
+    $nav_store = "../store";
 
-    include("php/navigation.php");
+    include("../php/navigation.php");
     ?>
 
 
@@ -69,7 +68,7 @@ include("php/links.php");
 
             <!-- Section -->
             <div class="section" id="section-introduction">
-                <img alt="Banner image" class="section" id="section_banner-introduction" src="images/Hub Lobby - 5.png" />
+                <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
                 <div class="inner_section" id="inner_section-introduction">
 
                     <h1 class="title" id="title-introduction">
@@ -81,7 +80,7 @@ include("php/links.php");
 
             <!-- Login form -->
             <div class="form">
-                <form action="php/authentication.php" class="login" method="POST">
+                <form action="../php/authentication.php" class="login" method="POST">
                     <h1>
                         Login
                     </h1>
@@ -135,12 +134,12 @@ include("php/links.php");
 
     <!-- Footer -->
     <?php
-    include("php/footer.php");
+    include("../php/footer.php");
     ?>
 
     <!-- Other -->
     <?php
-    include("php/back_to_top.php");
+    include("../php/back_to_top.php");
     ?>
 </body>
 
