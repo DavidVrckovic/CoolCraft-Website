@@ -1,9 +1,9 @@
 <?php
 // Start the session
 session_start();
-?>
 
-<?php
+
+
 /* Localhost MySQL server 
 $db_hostname = "localhost";
 $db_username = "root";
@@ -48,7 +48,8 @@ if ($required_db == "login") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 } else if ($required_db = "networkmanager") {
@@ -57,7 +58,8 @@ if ($required_db == "login") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 } else if ($required_db = "skywars") {
@@ -66,7 +68,8 @@ if ($required_db == "login") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 }
@@ -78,7 +81,8 @@ if ($required_db = "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 
@@ -86,7 +90,8 @@ if ($required_db = "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 
@@ -94,7 +99,8 @@ if ($required_db = "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 
@@ -102,7 +108,8 @@ if ($required_db = "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 
@@ -110,7 +117,8 @@ if ($required_db = "all") {
     
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        header("Location: ../login/?error=mysql_connection");
         exit();
     }
 }

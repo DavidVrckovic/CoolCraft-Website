@@ -116,6 +116,11 @@ include("../php/links.php");
                         if ($_GET['error'] == "unknown_username") {
                             echo '<p class="unknown_username" style="color: red;"> The provided username is incorrect. </p>';
                         }
+                        if (isset($_SESSION['error'])) {
+                            if ($_GET['error'] == "mysql_connection") {
+                                echo '<p class="unknown_username" style="color: red;">' . $_SESSION['error'] . '</p>';
+                            }
+                        }
                     }
                     ?>
 

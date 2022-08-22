@@ -2,8 +2,14 @@
 $required_db = "login";
 include("mysql_connection.php");
 
+// Check if there is an error with a MySQL connection
+if (isset($_SESSION['error'])) {
+    header("Location: ../login/?error=mysql_connection");
+    exit();
+}
+
 // Check if the request method is of type POST
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == "POST") { 
 
     // Check if $_POST super global variable is not null
     // Fixes "Undefined array key" error
