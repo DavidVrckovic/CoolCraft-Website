@@ -18,7 +18,7 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width">
 
     <!-- Title and Favicon -->
-    <title> CoolCraft | Game modes </title>
+    <title> CoolCraft | Staff </title>
     <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
 
     <!-- External sources -->
@@ -46,7 +46,7 @@ include("../php/links.php");
     $nav_faq = "../faq";
     $nav_home = "../";
     $nav_info = "../info";
-    $nav_gamemodes = "";
+    $nav_gamemodes = "../gamemodes";
     $nav_news = "../news";
     $nav_store = "../store";
 
@@ -84,7 +84,7 @@ include("../php/links.php");
                     CoolCraft Documentation
                 </a>
                 <br>
-                <a href="networkmanager" target="_self">
+                <a href="networkmanager/dashboard/dashboard.php" target="_blank">
                     Network Manager
                 </a>
                 <br>

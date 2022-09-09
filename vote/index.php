@@ -45,7 +45,7 @@ include("../php/links.php");
     <?php
     $nav_faq = "../faq";
     $nav_home = "../";
-    $nav_info = "";
+    $nav_info = "../info";
     $nav_gamemodes = "../gamemodes";
     $nav_news = "../news";
     $nav_store = "../store";

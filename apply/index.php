@@ -80,17 +80,21 @@ include("../php/links.php");
             <div class="main_title_line" id="main_title_line-general_info"> </div>
 
             <div class="main_text" id="main_text-general_info">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScXBxyyUpLP-y6N2J1_QHXVXi77U1EBH4SlzKZHe3uMme7nxA/viewform" target="_blank">
-                    Builder
-                </a>
-                <br>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg47HE48jhQYHxv7S3pqN9RUVIC1y5Q16ULi6QdPMxj20n8A/viewform" target="_blank">
-                    Helper
-                </a>
-                <br>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdy1S9ZdRjsWnI5Xzm00YoLhQTL_2jIUkS-hWfcPbvDgDoNTA/viewform" target="_blank">
-                    Content Creator
-                </a>
+                <p>
+                    <a class="application_link" href="https://docs.google.com/forms/d/e/1FAIpQLScXBxyyUpLP-y6N2J1_QHXVXi77U1EBH4SlzKZHe3uMme7nxA/viewform" target="_blank">
+                        Builder
+                    </a>
+                </p>
+                <p>
+                    <a class="application_link" href="https://docs.google.com/forms/d/e/1FAIpQLSfg47HE48jhQYHxv7S3pqN9RUVIC1y5Q16ULi6QdPMxj20n8A/viewform" target="_blank">
+                        Helper
+                    </a>
+                </p>
+                <p>
+                    <a class="application_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdy1S9ZdRjsWnI5Xzm00YoLhQTL_2jIUkS-hWfcPbvDgDoNTA/viewform" target="_blank">
+                        Content Creator
+                    </a>
+                </p>
             </div>
 
         </div>
