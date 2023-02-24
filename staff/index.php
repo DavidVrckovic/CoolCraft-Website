@@ -88,6 +88,10 @@ include("../php/links.php");
                     Network Manager
                 </a>
                 <br>
+                <a href="https://docs.google.com/document/d/1PWADfyil6hzipTNgCvNXhWZHxMC0NQMLmqQclSMU4AM/edit?usp=sharing" target="_blank">
+                    Marketing Plan
+                </a>
+                <br>
             </div>
 
         </div>

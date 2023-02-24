@@ -64,6 +64,12 @@
     </a>
 </p>
 
+<p>
+    <a class="voting_link" href="https://minestatus.net/server/vote/play.coolcraft.me" target="_blank">
+        Minestatus
+    </a>
+</p>
+
 
 
 <!-- WITH LOGOS
