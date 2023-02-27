@@ -15,42 +15,35 @@ include("../php/links.php");
 <head>
     <!-- Meta tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Davy">
+    <meta name="description" content="A website for the Minecraft server network CoolCraft.">
+    <meta name="keywords" content="CoolCraft, Cool, Craft, Minecraft, Mine, Server, Network, Web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title and Favicon -->
-    <title> CoolCraft | FAQ </title>
-    <link href="../images/icons/coolcraft_icon.png" rel="icon" type="image/png" />
+    <!-- Title & Favicon -->
+    <title> CoolCraft > FAQ </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
 
     <!-- External sources -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/index.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/content-sidebar.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
 
     <!-- Specific CSS files -->
-    <link href="../styles/back_to_top.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/dark_mode.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/footer.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 
 
 <body>
-    <!-- Header and Navigation -->
+    <!-- Header & Navigation -->
     <?php
-    $nav_faq = "";
-    $nav_home = "../";
-    $nav_info = "../info";
-    $nav_gamemodes = "../gamemodes";
-    $nav_news = "../news";
-    $nav_store = "../store";
-
-    include("../php/navigation.php");
+    include($directory_prefix . "Parts/navigation.php");
     ?>
 
 
@@ -189,13 +182,16 @@ include("../php/links.php");
 
     <!-- Footer -->
     <?php
-    include("../php/footer.php");
+    include($directory_prefix . "Parts/footer.php");
     ?>
 
     <!-- Other -->
     <?php
-    echo '<script src="../scripts/dropdown.js"></script>';
-    include("../php/back_to_top.php");
+    include($directory_prefix . "Parts/back_to_top.php");
+
+    echo '
+        <script src="' . $copy_to_clipboard_script . '"></script>
+    ';
     ?>
 </body>
 
