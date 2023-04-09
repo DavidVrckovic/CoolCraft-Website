@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -15,7 +16,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,21 +27,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Login </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Login </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -54,80 +53,91 @@ include("../php/links.php");
 
 
 
-    <!-- CONTENT -->
-    <div class="content">
+    <!-- MAIN -->
+    <main class="cflex">
 
-        <!-- MAIN -->
-        <div class="main">
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
-            <!-- Section -->
-            <div class="section" id="section-introduction">
-                <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
-                <div class="inner_section" id="inner_section-introduction">
+            <!-- Background image -->
+            <img alt="Authentification" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 5.png">
 
-                    <h1 class="title" id="title-introduction">
-                        Authentification
-                    </h1>
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
 
-                </div>
-            </div>
+                <!-- Title -->
+                <h1 class="title">
+                    Authentification
+                </h1>
 
-            <!-- Login form -->
-            <div class="form">
-                <form action="../php/authentication.php" class="login" method="POST">
-                    <h1>
-                        Login
-                    </h1>
-                    <p>
-                        Please fill the information below to log into your account.
-                    </p>
+            </article>
 
-                    <hr>
+        </section>
 
-                    <label class="input_title" for="input_username">
-                        Username
-                    </label>
-                    <input class="input_field" id="input_username" name="username" placeholder="Enter username" type="text" required>
+        <!-- SECTION -->
+        <section class="form has_bg_color">
 
-                    <!--<label for="input_email">
-                        <b>Email</b>
-                    </label>
-                    <input id="input_email" name="email" placeholder="Enter email" type="text" required>-->
+            <!-- Auth form -->
+            <form action="../php/authentication.php" class="auth" method="POST">
 
-                    <label class="input_title" for="input_password">
-                        Password
-                    </label>
-                    <input class="input_field" id="input_password" name="password" placeholder="Enter password" type="password" required>
+                <!-- Title -->
+                <h2 class="title">
+                    Login
+                </h2>
 
-                    <?php
-                    if (isset($_GET['error'])) {
-                        if ($_GET['error'] == "invalid_credentials") {
-                            echo '<p class="invalid_credentials" style="color: red;"> The provided credentials are incorrect. </p>';
-                        }
-                        if ($_GET['error'] == "wrong_password") {
-                            echo '<p class="wrong_password" style="color: red;"> The provided password is incorrect. </p>';
-                        }
-                        if ($_GET['error'] == "unknown_username") {
-                            echo '<p class="unknown_username" style="color: red;"> The provided username is incorrect. </p>';
-                        }
-                        if (isset($_SESSION['error'])) {
-                            if ($_GET['error'] == "mysql_connection") {
-                                echo '<p class="unknown_username" style="color: red;">' . $_SESSION['error'] . '</p>';
-                            }
+                <!-- Text -->
+                <p class="text">
+                    Please fill the information below to log into your account.
+                </p>
+
+                <!-- Line -->
+                <hr class="form width_100">
+
+                <!-- Input title -->
+                <label class="input_title" for="input_username">
+                    Username
+                </label>
+
+                <!-- Input field -->
+                <input class="input_field" id="input_username" name="username" placeholder="Enter your username" type="text" required>
+
+                <!-- Input title -->
+                <label class="input_title" for="input_password">
+                    Password
+                </label>
+
+                <!-- Input field -->
+                <input class="input_field" id="input_password" name="password" placeholder="Enter your password" type="password" required>
+
+                <?php
+                if (isset($_GET['error'])) {
+                    if ($_GET['error'] == "invalid_credentials") {
+                        echo '<p class="invalid_credentials" style="color: red;"> The provided credentials are incorrect. </p>';
+                    }
+                    if ($_GET['error'] == "wrong_password") {
+                        echo '<p class="wrong_password" style="color: red;"> The provided password is incorrect. </p>';
+                    }
+                    if ($_GET['error'] == "unknown_username") {
+                        echo '<p class="unknown_username" style="color: red;"> The provided username is incorrect. </p>';
+                    }
+                    if (isset($_SESSION['error'])) {
+                        if ($_GET['error'] == "mysql_connection") {
+                            echo '<p class="unknown_username" style="color: red;">' . $_SESSION['error'] . '</p>';
                         }
                     }
-                    ?>
+                }
+                ?>
 
-                    <button class="login" id="login" type="submit">
-                        Login
-                    </button>
-                    <a href="#login"></a>
-                </form>
-            </div>
+                <!-- Submit button -->
+                <button class="login" id="login" type="submit">
+                    Login
+                </button>
 
-        </div>
+            </form>
 
-    </div>
+        </section>
+
+    </main>
 
 
 

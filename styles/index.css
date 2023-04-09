@@ -1,67 +1,315 @@
-div.section {
-    align-items: center;
-    color: white;
+/*
+// CSS variables
+*/
+:root {
+    font-family: 'Lato', sans-serif;
+
+    --primary_color: #ffffff;
+    --secondary_color: #212121;
+
+    --primary_text_color: #000000;
+
+    --primary_link_color: #ff8800;
+    --secondary_link_color: #ff8800;
+    --hover_link_color: #ff6600;
+
+    --dropdown_background: #dddddd;
+    --dropdown_background_hover: #ddddddcc;
+    --dropdown_box_shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    --back_to_top_shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*
+// CSS variables
+// Dark theme
+*/
+.dark_theme {
+    --primary_color: #212121;
+    --secondary_color: #ffffff;
+
+    --primary_text_color: #ffffff;
+
+    --dropdown_background: grey;
+    --dropdown_background_hover: #808080cc;
+    --dropdown_box_shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+
+    --back_to_top_shadow: 0px 0px 16px 4px rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* Makes a document fit the whole screen */
+body {
+    margin: 0;
+}
+
+
+
+/*
+// General positioning for most elements
+*/
+.flex {
     display: flex;
-    position: static;
-    text-align: center;
 }
 
-img.section {
-    display: block;
-    filter: brightness(70%);
-    object-fit: cover;
-    user-select: none;
-    width: 100%;
+.cflex {
+    display: flex;
+    flex-direction: column;
 }
 
-div.inner_section {
+.crflex {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.rrflex {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.wflex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrflex {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.align_center {
     align-items: center;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    position: absolute;
+}
+
+.justify_center {
+    justify-content: center;
+}
+
+.text_center {
     text-align: center;
+}
+
+.everything_center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gap_0p5 {
+    gap: 0.5%;
+}
+
+.gap_1 {
+    gap: 1%;
+}
+
+.gap_1p5 {
+    gap: 1.5%;
+}
+
+.gap_2 {
+    gap: 2%;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.height_fullscreen {
+    height: 100svh;
+}
+
+.width_90 {
+    width: 90%;
+}
+
+.width_95 {
+    width: 95%;
+}
+
+.width_100 {
     width: 100%;
 }
 
-div.inner_section.text {
-    background-color: var(--primary-color);
-    color: var(--text);
+
+
+/*
+// General styles for most elements
+*/
+.has_bg_color {
+    background-color: var(--primary_color);
+    color: var(--primary_text_color);
 }
 
-div.section.text{
-    background-color: var(--primary-color);
+.has_bg_img {
+    position: relative;
+
+    background-color: var(--primary_color);
+    color: #ffffff;
 }
 
+.bg {
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.margin_1 {
+    margin: 1%;
+}
+
+.margin_2 {
+    margin: 2%;
+}
+
+.margin_3 {
+    margin: 3%;
+}
+
+.padding_1 {
+    padding: 1%;
+}
+
+.padding_2 {
+    padding: 2%;
+}
+
+.padding_3 {
+    padding: 3%;
+}
+
+.unselectable {
+    user-select: none;
+}
+
+.white {
+    background-color: #d1d1e0;
+}
+
+
+
+/* SECTION and ASIDE */
+section.content {
+    gap: 20px;
+    padding: 3%;
+}
+
+div.content {
+    padding: 3%;
+    gap: 4.5vw;
+}
+
+section.main,
+aside.sidebar {
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+/* Background image */
+img.section_bg {
+    filter: brightness(70%);
+    user-select: none;
+}
+
+
+
+/* Inner section */
+article.inner {
+    max-width: 95%;
+    width: 100%;
+    
+    z-index: 0;
+}
+
+
+
+/* Title */
 h1.title {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    text-align: center;
+    font-size: calc(1vw + 20px);
+    margin: 0.5em 0;
 }
 
-a.title,
-a.title:hover {
-    color: white;
+h2.title {
+    font-size: calc(1vw + 14px);
+    margin: 0
+}
+
+h3.title {
+    font-size: calc(1vw + 8px);
+    margin: 0;
+}
+
+h4.title {
+    font-size: calc(1vw + 6px);
+    margin: 0;
+}
+
+
+
+/* Text */
+.title_text {
+    font-size: calc(1vw + 10px);
+}
+
+.text {
+    font-size: calc(1vw + 4px);
+}
+
+
+
+/* List */
+.list {
+    padding-inline-start: 30px;
+}
+
+
+
+/* Link */
+a.link {
+    color: var(--primary_link_color);
     text-decoration: none;
 }
 
-div.section_line {
-    background-color: #d1d1e0;
-    height: 1px;
-    margin: auto;
-    margin-bottom: 20px;
+a.link:hover {
+    color: var(--hover_link_color);
+    text-decoration: underline;
 }
 
-div.section_line.orange {
-    background-color: #ff8800;
-    height: 1px;
-    margin: auto;
-    margin-bottom: 20px;
+a.link_over_bg_img {
+    height: 100%;
+    width: 100%;
+
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1;
 }
 
-div.description {
-    font-family: 'Lato', sans-serif;
-    font-weight: normal;
-    text-align: center;
+a.link_over_bg_img:hover {
+    background-color: #00000040;
+}
+
+
+
+/* Iframe */
+iframe {
+    border: none;
+    margin: 1.2em;
 }
 
 
@@ -70,114 +318,121 @@ div.description {
 // RESPONSIVENESS
 // Depending on the screen width
 */
-@media screen and (min-width: 1201px) {
-    .section {
-        height: 30vw;
+@media only screen and (min-width: 1200px) {
+
+    /* General positioning for most elements */
+    .height_normal {
+        height: calc(20vw + 130px);
     }
 
-    h1.title {
-        font-size: 34px;
+    .height_small {
+        height: 16vw;
     }
 
-    div.section_line {
-        width: 500px;
+    /* SECTION and ASIDE */
+    div.content section.main {
+        flex: 73%;
     }
 
-    div.description {
-        font-size: 24px;
-    }
-}
-
-
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
-    .section {
-        height: 34vw;
-    }
-
-    h1.title {
-        font-size: 29px;
-    }
-
-    div.section_line {
-        width: 450px;
-    }
-
-    div.description {
-        font-size: 21px;
+    div.content aside.sidebar {
+        flex: 27%;
     }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1000px) {
-    .section {
-        height: 38vw;
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* General positioning for most elements */
+    .height_normal {
+        height: calc(22.5vw + 160px);
     }
 
-    h1.title {
-        font-size: 24px;
+    .height_small {
+        height: 18vw;
     }
 
-    div.section_line {
-        width: 400px;
+    /* SECTION and ASIDE */
+    div.content section.main {
+        flex: 68%;
     }
 
-    div.description {
-        font-size: 18px;
+    div.content aside.sidebar {
+        flex: 32%;
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 800px) {
-    .section {
-        height: 42vw;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* General positioning for most elements */
+    .height_normal {
+        height: calc(25vw + 180px);
     }
 
-    h1.title {
-        font-size: 3vw;
+    .height_small {
+        height: 20vw;
     }
 
-    div.section_line {
-        width: 50vw;
+    /* SECTION and ASIDE */
+    div.content section.main {
+        flex: 63%;
     }
 
-    div.description {
-        font-size: 2.2vw;
+    div.content aside.sidebar {
+        flex: 37%;
     }
 }
 
-@media screen and (min-width: 401px) and (max-width: 600px) {
-    .section {
-        height: 46vw;
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+
+    /* General positioning for most elements */
+    .height_normal {
+        height: calc(27.5vw + 190px);
     }
 
-    h1.title {
-        font-size: 4vw;
+    .height_small {
+        height: 22vw;
     }
 
-    div.section_line {
-        width: 60vw;
+    /* Text */
+    .title_text {
+        font-size: calc(2vw + 6px);
     }
 
-    div.description {
-        font-size: 3.5vw;
+    .text {
+        font-size: calc(2vw + 2px);
+    }
+
+    /* SECTION and ASIDE */
+    div.content {
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 400px) {
-    .section {
-        height: 50vw;
+@media only screen and (max-width: 600px) {
+
+    /* General positioning for most elements */
+    .height_normal {
+        height: calc(30vw + 200px);
     }
 
-    h1.title {
-        font-size: 4vw;
+    .height_small {
+        height: 24vw;
     }
 
-    div.section_line {
-        width: 70vw;
+    /* Text */
+    .title_text {
+        font-size: calc(3vw + 4px);
     }
 
-    div.description {
-        font-size: 3.5vw;
+    .text {
+        font-size: calc(3vw + 1px);
+    }
+
+    /* SECTION and ASIDE */
+    div.content {
+        flex-wrap: wrap;
     }
 }
+
 
 
 /* Dark mode (Selected default method) */

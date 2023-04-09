@@ -12,7 +12,7 @@ $db_name = "testing";
 /* */
 
 /* Remote MySQL server */
-$db_config = parse_ini_file("../protected/config.ini");
+$db_config = parse_ini_file("../Protected/config.ini");
 
 $login_db_hostname = $db_config['login_db_hostname'];
 $login_db_username = $db_config['login_db_username'];

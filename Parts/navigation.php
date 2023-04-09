@@ -1,91 +1,78 @@
 <header>
-    <nav class="nav left">
-        <a href="<?php echo ($nav_home); ?>">
-            <img alt="Server icon" class="logo nav_img" src="<?php echo ($header_image); ?>" />
-        </a>
-    </nav>
+    <!-- Left Navigation -->
+    <nav class="logo">
 
-    <nav class="nav center">
-        <div class="nav_links">
-
-            <div class="button-img">
-                <div class="nav home">
-                    <a href="<?php echo ($nav_home); ?>">
-                        <img alt="Home icon" class="nav_img" id="homelightdark" src="<?php echo ($nav_home_icon); ?>" />
-                        <img alt="Home icon" class="img-home nav_img" src="<?php echo ($nav_home_icon_hover); ?>" title="Home" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="button-img">
-                <div class="nav info">
-                    <a href="<?php echo ($nav_info); ?>">
-                        <img alt="Info icon" class="nav_img" id="infolightdark" src="<?php echo ($nav_info_icon); ?>" />
-                        <img alt="Info icon" class="img-info nav_img" src="<?php echo ($nav_info_icon_hover); ?>" title="Info" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="button-img">
-                <div class="nav gamemodes">
-                    <a href="<?php echo ($nav_gamemodes); ?>">
-                        <img alt="Gamemodes icon" class="nav_img" id="gamemodeslightdark" src="<?php echo ($nav_gamemodes_icon); ?>" />
-                        <img alt="Gamemodes icon" class="img-gamemodes nav_img" src="<?php echo ($nav_gamemodes_icon_hover); ?>" title="Game modes" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="button-img">
-                <div class="nav news">
-                    <a href="<?php echo ($nav_news); ?>">
-                        <img alt="News icon" class="nav_img" id="newslightdark" src="<?php echo ($nav_news_icon); ?>" />
-                        <img alt="News icon" class="img-news nav_img" src="<?php echo ($nav_news_icon_hover); ?>" title="News" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="button-img">
-                <div class="nav faq">
-                    <a href="<?php echo ($nav_faq); ?>">
-                        <img alt="FAQ icon" class="nav_img" id="faqlightdark" src="<?php echo ($nav_faq_icon); ?>" />
-                        <img alt="FAQ icon" class="img-faq nav_img" src="<?php echo ($nav_faq_icon_hover); ?>" title="FAQ" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="button-img">
-                <div class="nav store">
-                    <a href="<?php echo ($nav_store); ?>">
-                        <img alt="Store icon" class="nav_img" id="storelightdark" src="<?php echo ($nav_store_icon); ?>" />
-                        <img alt="Store icon" class="img-store nav_img" src="<?php echo ($nav_store_icon_hover); ?>" title="Store" />
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </nav>
-
-    <div class="nav options">
-        <a>
-            <img alt="Options icon" class="nav_img" id="optionslightdark" src="<?php echo ($nav_options_icon); ?>" />
-            <img alt="Options icon" class="img-options nav_img" id="optionshover" src="<?php echo ($nav_options_icon_hover); ?>" />
+        <!-- Navigation link -->
+        <a class="nav_link" href="<?php echo ($nav_home); ?>">
+            <img alt="Home" class="nav_link_img" src="<?php echo ($header_image); ?>" />
         </a>
 
-        <div class="nav options-dropdown-content">
-            
+    </nav>
+
+    <!-- Center Navigation -->
+    <nav class="links">
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img" href="<?php echo ($nav_home); ?>">
+            <img alt="Home" class="nav_link_img" id="nav_home" src="<?php echo ($nav_home_icon); ?>" />
+            <img alt="Home" class="nav_link_img is_hover" src="<?php echo ($nav_home_icon_gold); ?>" title="Home" />
+        </a>
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img" href="<?php echo ($nav_info); ?>">
+            <img alt="Info" class="nav_link_img" id="nav_info" src="<?php echo ($nav_info_icon); ?>" />
+            <img alt="Info" class="nav_link_img is_hover" src="<?php echo ($nav_info_icon_gold); ?>" title="Info" />
+        </a>
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img" href="<?php echo ($nav_gamemodes); ?>">
+            <img alt="Gamemodes" class="nav_link_img" id="nav_gamemodes" src="<?php echo ($nav_gamemodes_icon); ?>" />
+            <img alt="Gamemodes" class="nav_link_img is_hover" src="<?php echo ($nav_gamemodes_icon_gold); ?>" title="Game modes" />
+        </a>
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img" href="<?php echo ($nav_news); ?>">
+            <img alt="News" class="nav_link_img" id="nav_news" src="<?php echo ($nav_news_icon); ?>" />
+            <img alt="News" class="nav_link_img is_hover" src="<?php echo ($nav_news_icon_gold); ?>" title="News" />
+        </a>
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img" href="<?php echo ($nav_faq); ?>">
+            <img alt="FAQ" class="nav_link_img" id="nav_faq" src="<?php echo ($nav_faq_icon); ?>" />
+            <img alt="FAQ" class="nav_link_img is_hover" src="<?php echo ($nav_faq_icon_gold); ?>" title="FAQ" />
+        </a>
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img" href="<?php echo ($nav_store); ?>">
+            <img alt="Store" class="nav_link_img" id="nav_store" src="<?php echo ($nav_store_icon); ?>" />
+            <img alt="Store" class="nav_link_img is_hover" src="<?php echo ($nav_store_icon_gold); ?>" title="Store" />
+        </a>
+
+    </nav>
+
+    <!-- Right Navigation -->
+    <nav class="options">
+
+        <!-- Navigation link -->
+        <a class="nav_link has_2_img">
+            <img alt="Options" class="nav_link_img" id="nav_options" src="<?php echo ($nav_options_icon); ?>" />
+            <img alt="Options" class="nav_link_img is_hover" id="optionshover" src="<?php echo ($nav_options_icon_gold); ?>" />
+        </a>
+
+        <!-- Options Dropdown menu -->
+        <div class="options dropdown">
+
             <?php
             if (isset($_SESSION['loggedin'])) {
-                echo '<a href="' . $nav_account . '">'
-                . $_SESSION['user_username']
-                . '</a>';
-            } else if (isset($_COOKIE['login'])) {
-                echo '<a href="' . $nav_account . '">'
-                . $_COOKIE['login']
-                . '</a>';
+                echo '
+                    <a class="dropdown_link" href="' . $nav_account . '">
+                        ' . $_SESSION['user_username'] . '
+                    </a>
+                ';
             }
             ?>
 
-            <a href="<?php echo $nav_auth; ?>">
+            <a class="dropdown_link" href="<?php echo $nav_auth; ?>">
                 <?php
                 if (isset($_SESSION['loggedin'])) {
                     echo "Logout";
@@ -97,16 +84,17 @@
                 ?>
             </a>
 
-            <a href="">
+            <a class="dropdown_link" href="">
                 Hr / En
             </a>
 
-            <a href="" id="lightdarkmode">
+            <a class="dropdown_link" href="" id="lightdarkmode">
                 Light / Dark
             </a>
 
         </div>
-    </div>
+
+    </nav>
 
     <script src="<?php echo ($nav_script); ?>"></script>
 </header>

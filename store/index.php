@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Store </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Store </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,17 +47,12 @@ include("../php/links.php");
 
 
 
-    <!-- CONTENT -->
-    <div class="content">
+    <!-- MAIN -->
+    <main>
 
-        <!-- MAIN -->
-        <div class="main">
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture" class="store" src="https://coolcraftmc.buycraft.net" title="CoolCraft Store"></iframe>
 
-        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="store" frameborder="0" src="https://coolcraftmc.buycraft.net/" title="CoolCraft Store"></iframe>
-
-        </div>
-
-    </div>
+    </main>
 </body>
 
 </html>

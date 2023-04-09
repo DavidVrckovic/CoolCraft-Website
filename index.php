@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,28 +22,24 @@ include("php/links.php");
 
     <!-- Title & Favicon -->
     <title> CoolCraft - Minecraft server network </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
 
 <body>
-    <!-- Scripts -->
-    <script src="scripts/content_switcher.js"></script>
-
     <!-- Header & Navigation -->
     <?php
     include($directory_prefix . "Parts/navigation.php");
@@ -51,184 +47,169 @@ include("php/links.php");
 
 
 
-    <!-- CONTENT -->
-    <div class="content">
+    <!-- MAIN -->
+    <main class="cflex">
 
-        <!-- MAIN -->
-        <div class="main">
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_normal" id="welcome_section">
 
-            <!-- Section -->
-            <div class="section" id="section-introduction" v-on:click="change">
-                <img alt="Banner image" class="section" id="section_banner-introduction" :src="introduction_image" />
-                <div class="inner_section" id="inner_section-introduction">
+            <!-- Background image -->
+            <img alt="Section background image" class="section_bg bg" id="welcome_section_bg_img" src="Images/Hub Lobby - 1.png">
 
-                    <h1 class="title" id="title-introduction">
-                        What is CoolCraft?
-                    </h1>
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="welcome_inner">
 
-                    <div class="section_line" id="section_line-introduction"> </div>
+                <!-- Title -->
+                <h1 class="title">
+                    What is CoolCraft?
+                </h1>
 
-                    <div class="description" id="description-introduction">
+                <!-- Line -->
+                <hr class="line cc">
+
+                <!-- Text -->
+                <div class="title_text">
+
+                    <p class="title_text">
                         CoolCraft is a Minecraft server network with many different game modes for you to check out!
-                        <br>
+                    </p>
+
+                    <p class="title_text">
                         You will find a variety of gameplay and activities for you and your friends.
-                    </div>
+                    </p>
 
                 </div>
-            </div>
 
-            <!-- Section -->
-            <div class="section text" id="section-gamemodes">
-                <div class="inner_section text" id="inner_section-gamemodes">
+            </article>
 
-                    <h1 class="title" id="title-gamemodes">
-                        Game modes
-                    </h1>
+        </section>
 
-                    <div class="section_line" id="section_line-gamemodes"> </div>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_color height_normal" id="trailer_section">
 
-                    <div class="description" id="description-gamemodes">
-                        <a href="faq">Click here</a> to check out the list of game modes available to play.
-                        <br>
-                    </div>
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="trailer_inner">
 
-                    <ul class="section_list" id="section_list-gamemodes">
-                        <li class="switch" id="left_switch">
-                            <div class="left" v-on:click="goleft">
-                                <button class="switch"> &#8592; </button>
-                            </div>
-                        </li>
-                        <a class="gamemode_link" id="serverlinks" :href="link1">
-                            <li class="gamemode" id="gamemode1">
-                                <div id="server1">
-                                    <div class="gamemode_icon">
-                                        <img alt="Icon" class="select_gamemode" id="image1" :src="image1" />
-                                    </div>
-                                    <div class="gamemode_name">
-                                        {{ ime1 }}
-                                    </div>
-                                    <div class="gamemode_description">
-                                        {{ desc1 }}
-                                    </div>
-                                </div>
-                            </li>
-                        </a>
-                        <a class="gamemode_link" id="serverlinks" :href="link2">
-                            <li class="gamemode" id="gamemode2">
-                                <div id="server2">
-                                    <div class="gamemode_icon">
-                                        <img alt="Icon" class="select_gamemode" id="image2" :src="image2" />
-                                    </div>
-                                    <div class="gamemode_name">
-                                        {{ ime2 }}
-                                    </div>
-                                    <div class="gamemode_description">
-                                        {{ desc2 }}
-                                    </div>
-                                </div>
-                            </li>
-                        </a>
-                        <a class="gamemode_link" id="serverlinks" :href="link3">
-                            <li class="gamemode" id="gamemode3">
-                                <div id="server3">
-                                    <div class="gamemode_icon">
-                                        <img alt="Icon" class="select_gamemode" id="image3" :src="image3" />
-                                    </div>
-                                    <div class="gamemode_name">
-                                        {{ ime3 }}
-                                    </div>
-                                    <div class="gamemode_description">
-                                        {{ desc3 }}
-                                    </div>
-                                </div>
-                            </li>
-                        </a>
-                        <li class="switch" id="right_switch">
-                            <div class="right" v-on:click="goright">
-                                <button class="switch"> &#8594; </button>
-                            </div>
-                        </li>
-                    </ul>
+                <!-- Title -->
+                <h1 class="title">
+                    Watch the trailer
+                </h1>
 
-                </div>
-            </div>
+                <!-- Line -->
+                <hr class="line cc">
 
-            <!-- Section -->
-            <div class="section" id="section-motivation">
-                <img alt="Banner image" class="section" id="section_banner-motivation" src="images/Minigames Lobby - 1.png" />
-                <div class="inner_section" id="inner_section-motivation">
+                <!-- YouTube Video Trailer -->
+                <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture" class="trailer" src="https://www.youtube.com/embed/7jIcHdK2ZJU" title="Trailer"></iframe>
 
-                    <h1 class="title" id="title-motivation">
-                        Why CoolCraft?
-                    </h1>
+            </article>
 
-                    <div class="section_line" id="section_line-motivation"> </div>
+        </section>
 
-                    <div class="description" id="description-motivation">
-                        We are always trying to put more features in, add more servers and improve the experience overall.
-                        <br>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_normal" id="why_section">
+
+            <!-- Background image -->
+            <img alt="Section background image" class="section_bg bg" id="why_section_bg_img" src="Images/Minigames Lobby - 1.png">
+
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="why_inner">
+
+                <!-- Title -->
+                <h1 class="title">
+                    Why CoolCraft?
+                </h1>
+
+                <!-- Line -->
+                <hr class="line cc">
+
+                <!-- Text -->
+                <div class="title_text">
+
+                    <p class="title_text">
+                        We are always trying to put more features in, add more game modes and improve the experience overall!
+                    </p>
+
+                    <p class="title_text">
                         We have a very helpful team that is making everything simple, enjoyable and polished.
-                    </div>
+                    </p>
 
                 </div>
-            </div>
 
-            <!-- Section -->
-            <div class="section text" id="section-trailer">
-                <div class="inner_section text" id="inner_section-trailer">
+            </article>
 
-                    <h1 class="title" id="title-trailer">
-                        Watch the trailer
-                    </h1>
+        </section>
 
-                    <div class="section_line" id="section_line-trailer"> </div>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_color height_normal" id="support_section">
 
-                    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="trailer" frameborder="0" src="https://www.youtube.com/embed/7jIcHdK2ZJU" title="Trailer"></iframe>
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="support_inner">
 
-                </div>
-            </div>
+                <!-- Title -->
+                <h1 class="title">
+                    Need support?
+                </h1>
 
-            <!-- Section -->
-            <div class="section" id="section-joinnow">
-                <img alt="Banner image" class="section" id="section_banner-joinnow" src="images/SkyBlock Spawn - 1.png" />
-                <div class="inner_section" id="inner_section-joinnow">
+                <!-- Line -->
+                <hr class="line cc">
 
-                    <div class="description" id="description-joinnow">
-                        We can't wait to see you play and explore! Join us now!
-                        <br>
-                        <a id="copy-text-btn" href="javascript:void(0)">
-                            Click here</a> to copy IP
-                    </div>
+                <!-- Text -->
+                <div class="title_text">
 
-                </div>
-            </div>
+                    <p class="title_text">
+                        <a class="link" href="faq">Click here</a> to check out our FAQ where you might find answers to common issues and questions.
+                    </p>
 
-            <!-- Section -->
-            <div class="section text" id="section-support">
-                <div class="inner_section text" id="inner_section-support">
-
-                    <h1 class="title" id="title-support">
-                        Need support?
-                    </h1>
-
-                    <div class="section_line" id="section_line-support"> </div>
-
-                    <div class="description" id="description-support">
-                        <a href="faq">Click here</a> to check out our FAQ where you might find answers to common issues and questions.
-                        <br><br>
+                    <p class="title_text">
                         You can always contact us directly if you have questions or suggestions! To do so, follow these links:
-                        <a href="https://discord.com/invite/nnvvCr7" target="_blank"> Discord</a>,
-                        <a href="https://twitter.com/coolcraft_net" target="_blank"> Twitter</a> or
-                        <a href="https://facebook.com/coolcraftmc" target="_blank">Facebook</a>.
-                        <br>
-                    </div>
+                        <a class="link" href="https://discord.com/invite/nnvvCr7" target="_blank"> Discord</a>,
+                        <a class="link" href="https://twitter.com/coolcraft_net" target="_blank"> Twitter</a> or
+                        <a class="link" href="https://facebook.com/coolcraftmc" target="_blank">Facebook</a>.
+                    </p>
 
                 </div>
-            </div>
 
-        </div>
+            </article>
 
-    </div>
+        </section>
+
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_normal" id="join_section">
+
+            <!-- Background image -->
+            <img alt="Section background image" class="section_bg bg" id="join_section_bg_img" src="Images/SkyWars Lobby - 1.png">
+
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="join_inner">
+
+                <!-- Title -->
+                <h1 class="title">
+                    What are you waiting for?
+                </h1>
+
+                <!-- Line -->
+                <hr class="line cc">
+
+                <!-- Text -->
+                <div class="title_text">
+
+                    <p class="title_text">
+                        We can't wait to see you play and explore! Join us now!
+                    </p>
+
+                    <p class="title_text">
+                        <a class="link" href="javascript:void(0)" id="copy-text-btn">
+                            Click here to copy IP
+                        </a>
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
 
 
 

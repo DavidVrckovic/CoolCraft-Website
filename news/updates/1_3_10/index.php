@@ -4,8 +4,8 @@
 session_start();
 
 // Links
-$directory_level = 1;
-include("../php/links.php");
+$directory_level = 3;
+include("../../../php/links.php");
 ?>
 
 
@@ -21,7 +21,7 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft | Info </title>
+    <title> CoolCraft | News | Update 1.3.10 </title>
     <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
@@ -54,14 +54,14 @@ include("../php/links.php");
         <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
             <!-- Background image -->
-            <img alt="Information and details" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 4.png">
+            <img alt="Update 1.3.10" class="section_bg bg" id="intro_section_bg_img" src="../../../Images/Hub Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="intro_inner">
 
                 <!-- Title -->
                 <h1 class="title">
-                    Information and details
+                    Update 1.3.10
                 </h1>
 
             </article>
@@ -79,7 +79,7 @@ include("../php/links.php");
 
                     <!-- Title -->
                     <h2 class="title">
-                        General info
+                        Patch notes
                     </h2>
 
                     <!-- Line -->
@@ -87,18 +87,26 @@ include("../php/links.php");
 
                     <!-- Text -->
                     <p class="text">
-                        CoolCraft is a Minecraft server network with many different game modes for you to check out! You can find a variety of gameplay and activities for you and your friends.
+                        <b> Changes: </b>
                     </p>
 
-                    <p class="text">
-                        We support the following Minecraft versions: <b>1.8 and above</b>.
-                    </p>
-
-                    <img alt="GIF" class="website_banner" src="../images/CoolCraft Website Banner.gif">
-
-                    <p class="text">
-                        We are always trying to put more features in, add more servers and improve the experience overall. If you find any issues, feel free to report them to us.
-                    </p>
+                    <ul class="text">
+                        <li>
+                            Added new Hub lobby.
+                        </li>
+                        <li>
+                            Added sound effects to join items.
+                        </li>
+                        <li>
+                            Authentication now uses MySQL to store data.
+                        </li>
+                        <li>
+                            Auctions have been improved.
+                        </li>
+                        <li>
+                            Small adjustments to menus.
+                        </li>
+                    </ul>
 
                 </article>
 
@@ -107,7 +115,7 @@ include("../php/links.php");
 
                     <!-- Title -->
                     <h2 class="title">
-                        Available game modes
+                        Details
                     </h2>
 
                     <!-- Line -->
@@ -115,32 +123,7 @@ include("../php/links.php");
 
                     <!-- Text -->
                     <p class="text">
-                        Currently available game modes are:
-                    </p>
-
-                    <ul class="text">
-                        <li>
-                            <b>Survival</b>
-                        </li>
-                        <li>
-                            <b>Factions</b>
-                        </li>
-                        <li>
-                            <b>SkyBlock</b>
-                        </li>
-                        <li>
-                            <b>Prison</b>
-                        </li>
-                        <li>
-                            <b>Creative</b>
-                        </li>
-                        <li>
-                            <b>Minigames</b> including <b>BedWars</b>, <b>SkyWars</b>, <b>TNTRun</b>, <b>Duels</b>, <b>Parkour</b> and <b>UHC</b>
-                        </li>
-                    </ul>
-
-                    <p class="text">
-                        Learn more about each game mode <a class="link" href="../gamemodes">here</a>.
+                        <b> Published: </b> 4 April 2021
                     </p>
 
                 </article>

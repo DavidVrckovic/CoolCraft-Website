@@ -1,7 +1,6 @@
-var faq = document.getElementsByClassName("faq_title");
-var i;
+var faq = document.getElementsByClassName("question");
 
-for (i = 0; i < faq.length; i++) {
+for (var i = 0; i < faq.length; i++) {
     faq[i].addEventListener("click", function () {
         /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
         this.classList.toggle("faq_active");

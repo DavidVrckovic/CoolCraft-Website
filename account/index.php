@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 include("../php/account.php");
 
@@ -14,7 +15,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,21 +26,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Account </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Account </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -53,73 +52,93 @@ include("../php/links.php");
 
 
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 4.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Your account
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
-        </div>
-    </div>
+            <!-- Background image -->
+            <img alt="Your account" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 4.png">
 
-    <!-- CONTENT -->
-    <div class="content">
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
 
-        <!-- MAIN -->
-        <div class="main">
+                <!-- Title -->
+                <h1 class="title">
+                    Your account
+                </h1>
 
-            <h1 class="main_title" id="main_title-general_info">
-                General info
-            </h1>
+            </article>
 
-            <div class="main_title_line" id="main_title_line-general_info"> </div>
+        </section>
 
-            <?php
-            if (isset($_SESSION['loggedin'])) {
-                if ($lp_db_results && mysqli_num_rows($lp_db_results) > 0) {
-                    while ($row = mysqli_fetch_array($lp_db_results)) {
-                        if ($row['primary_group'] == "default" || $row['primary_group'] == "player") {
-                            $rank = "Player";
-                        } else {
-                            $rank = $row['primary_group'];
-                        }
-                        echo '
+        <!-- SECTION -->
+        <section class="content cflex" id="main_section">
+
+            <!-- Inner section -->
+            <article class="general">
+
+                <!-- Title -->
+                <h2 class="title">
+                    General info
+                </h2>
+
+                <!-- Line -->
+                <hr class="line width_100">
+
+                <!-- Text -->
+                <?php
+                if (isset($_SESSION['loggedin'])) {
+                    if ($lp_db_results && mysqli_num_rows($lp_db_results) > 0) {
+                        while ($row = mysqli_fetch_array($lp_db_results)) {
+                            if ($row['primary_group'] == "default" || $row['primary_group'] == "player") {
+                                $rank = "Player";
+                            } else {
+                                $rank = $row['primary_group'];
+                            }
+                            echo '
                             <div class="main_text" id="main_text-rank">
                                 Username: ' . $_SESSION['user_username'] . '
                                 <br>
                                 Rank: ' . $rank . '
                             </div>
                         ';
-                    }
-                } else {
-                    echo '
+                        }
+                    } else {
+                        echo '
                         <div class="main_text" id="main_text-rank">
                             Username: ' . $_SESSION['user_username'] . '
                             <br>
                             Rank: Player
                         </div>
                     ';
+                    }
                 }
-            }
-            ?>
+                ?>
 
-            <h1 class="main_title" id="main_title-general_info">
-                Stats
-            </h1>
+            </article>
 
-            <div class="main_title_line" id="main_title_line-general_info"> </div>
+            <!-- Inner section -->
+            <article class="general">
 
-            <?php
-            if (isset($_SESSION['loggedin'])) {
-                if ($sw_db_results && mysqli_num_rows($sw_db_results) > 0) {
-                    while ($row = mysqli_fetch_array($sw_db_results)) {
-                        echo '
+                <!-- Title -->
+                <h2 class="title">
+                    Stats
+                </h2>
+
+                <!-- Line -->
+                <hr class="line width_100">
+
+                <!-- Text -->
+                <?php
+                if (isset($_SESSION['loggedin'])) {
+                    if ($sw_db_results && mysqli_num_rows($sw_db_results) > 0) {
+                        while ($row = mysqli_fetch_array($sw_db_results)) {
+                            echo '
                             <div class="gamemode" id="gamemode-survival">
                                 <div class="gamemode_image">
-                                    <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png" />
+                                    <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
                                     <div class="gamemode_text">
                                         Wins: ' . $row["wins"] . '
                                         <br>
@@ -135,25 +154,27 @@ include("../php/links.php");
                                 </div>
                             </div>
                         ';
-                    }
-                } else {
-                    echo '
+                        }
+                    } else {
+                        echo '
                         <div class="gamemode" id="gamemode-survival">
                             <div class="gamemode_image">
-                                <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png" />
+                                <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
                                 <div class="gamemode_text">
                                     No data
                                 </div>
                             </div>
                         </div>
                     ';
+                    }
                 }
-            }
-            ?>
+                ?>
 
-        </div>
+            </article>
 
-    </div>
+        </section>
+
+    </main>
 
 
 

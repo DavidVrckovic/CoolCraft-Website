@@ -349,5 +349,13 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# Ignore folder "protected"
-protected/
+
+
+##################
+# MANUALLY ADDED #
+
+# Ignore folder "Protected"
+Protected/
+
+# Ignore folder "staff/networkmanager"
+staff/networkmanager

@@ -1,303 +1,101 @@
-/* OLD NAVIGATION
-
-div.header {
-    text-align: center;
-}
-
-div.header a {
-    color: #ffd800;
-    font-family: Verdana;
-    text-decoration: none;
-    text-shadow: 1px 1px #121212;
-}
-
-div.header a:hover {
-    font-family: Verdana;
-    text-decoration: none;
-    animation-name: title_appear;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-}
-
-@keyframes title_appear {
-    from {
-        color: #ffd800;
-        text-shadow: 1px 1px #121212;
-    }
-
-    to {
-        color: #ff8800;
-        text-shadow: 1px 1px #121212;
-    }
-}
-
-
-
-ul.nav {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-ul.nav li {
-    float: left;
-}
-
-ul.nav li a.active {
-    background-color: #ff8000;
-    color: white;
-    display: block;
-    font-family: Verdana;
-    font-weight: normal;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-ul.nav li a.inactive {
-    background-color: #262626f0;
-    color: white;
-    display: block;
-    font-family: Verdana;
-    font-weight: normal;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-ul.nav li a.active:hover {
-    background-color: #ff8000f0 !important;
-    font-family: Verdana;
-    font-weight: normal;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-ul.nav li a.inactive:hover {
-    background-color: #121212f0 !important;
-    font-family: Verdana;
-    font-weight: normal;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-}*/
-
-
-/*
-RESPONSIVENESS
-Depending on the screen width
-*/
-/*@media screen and (min-width: 1201px) {
-    div.header {
-        font-size: 42px;
-    }
-}
-
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
-    div.header {
-        font-size: 42px;
-    }
-}
-
-@media screen and (min-width: 901px) {
-    div.header {
-        font-size: 42px;
-    }
-
-    nav ul li {
-        width: 12.5%;
-    }
-
-    ul.nav li a {
-        font-size: 18px;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 800px) {
-    div.header {
-        font-size: 36px;
-    }
-
-    nav ul li {
-        width: 12.5%;
-    }
-
-    ul.nav li a {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 401px) and (max-width: 600px) {
-    div.header {
-        font-size: 36px;
-    }
-
-    nav ul li {
-        width: 25%;
-    }
-
-    ul.nav li a {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    div.header {
-        font-size: 30px;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
-
-    ul.nav li a {
-        font-size: 14px;
-    }
-}
-
-*/
-
-
-
-:root {
-    --primary-color: white;
-    --secondary-color: #212121;
-
-    --text: black;
-    --dropbackground: #ddd;
-    --dropboxshadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dark-theme {
-    --primary-color: #212121;
-    --secondary-color: white;
-
-    --text: white;
-    --dropbackground: grey;
-    --dropboxshadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
-}
-
-
-
-header * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary-color);
-}
-
+/* Header */
 header {
     align-items: center;
-    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
-    padding: 20px 7%;
+    padding: 10px 2%;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 100;
+
+    background-color: var(--primary_color);
+    border-bottom: 2px solid var(--secondary_color);
 }
 
-img.logo {
-    cursor: pointer;
-}
-
-div.nav_links {
-    background-color: var(--primary-color);
-    list-style: none;
-}
-
-div.nav_links div.button-img {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-div.nav_links a {
-    transition: all 0.3s ease 0ms;
-}
-
-div.nav_links div.button-img a:hover {
-    color: orange;
-}
-
-nav.nav.center {
-    background-color: #ABBAEA;
-}
-
-img.nav_img {
-    height: 50px;
-    width: 50px;
-}
-
-div.nav {
-    cursor: pointer;
+header * {
+    background-color: var(--primary_color);
 }
 
 
 
-div.nav.faq,
-div.nav.gamemodes,
-div.nav.home,
-div.nav.info,
-div.nav.news,
-div.nav.options,
-div.nav.store {
-    width: 50px;
-    height: 50px;
+/* Navigation */
+nav.links {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+nav.options {
     position: relative;
+}
+
+
+
+/* Navigation link */
+nav a.nav_link,
+img.nav_link_img {
     display: inline-block;
+    height: 32px;
+    width: 32px;
+
+    cursor: pointer;
+    text-decoration: none;
 }
 
-div.nav.faq .img-faq,
-div.nav.gamemodes .img-gamemodes,
-div.nav.home .img-home,
-div.nav.info .img-info,
-div.nav.news .img-news,
-div.nav.options .img-options,
-div.nav.store .img-store {
+a.has_2_img {
+    display: inline-block;
+    position: relative;
+}
+
+a.has_2_img img.is_hover {
     display: none;
+    left: 0px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
 }
 
-div.nav.faq:hover .img-faq,
-div.nav.gamemodes:hover .img-gamemodes,
-div.nav.home:hover .img-home,
-div.nav.info:hover .img-info,
-div.nav.news:hover .img-news,
-div.nav.options:hover .img-options,
-div.nav.store:hover .img-store {
+a.has_2_img:hover img.is_hover {
     display: inline;
 }
 
 
 
-div.nav.options-dropdown-content {
+/* Options Dropdown menu */
+nav.options:hover div.options.dropdown {
+    display: block;
+}
+
+div.options.dropdown {
     display: none;
+    min-width: 180px;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: var(--dropboxshadow);
+    right: 0px;
     z-index: 1;
+
+    box-shadow: var(--dropdown_box_shadow);
 }
 
-div.nav.options-dropdown-content a {
-    color: var(--text);
+div.options.dropdown a.dropdown_link {
+    display: block;
+    font-size: 14px;
     padding: 12px 16px;
+
+    color: var(--primary_text_color);
     text-decoration: none;
-    display: block;
-    font-family: 'Lato', sans-serif;
 }
 
-div.nav.options:hover .options-dropdown-content {
-    display: block;
+div.options.dropdown a.dropdown_link:hover {
+    background-color: var(--dropdown_background);
 }
 
-div.nav.options-dropdown-content a:hover {
-    background-color: var(--dropbackground);
+
+
+/*
+// RESPONSIVENESS
+// Depending on the screen width
+*/
+@media screen and (max-width: 600px) {
+    nav.links {
+        display: none;
+    }
 }

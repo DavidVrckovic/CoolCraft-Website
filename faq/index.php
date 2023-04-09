@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > FAQ </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | FAQ </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,135 +47,161 @@ include("../php/links.php");
 
 
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 4.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Frequently asked questions
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
+
+            <!-- Background image -->
+            <img alt="Frequently asked questions" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 5.png">
+
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
+
+                <!-- Title -->
+                <h1 class="title">
+                    Frequently asked questions
+                </h1>
+
+            </article>
+
+        </section>
+
+        <!-- CONTENT -->
+        <div class="content flex has_bg_color">
+
+            <!-- SECTION -->
+            <section class="main cflex" id="main_section">
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        General questions
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Question -->
+                    <div class="question">
+
+                        <h3 class="title">
+                            How do I connect to CoolCraft?
+                        </h3>
+
+                    </div>
+
+                    <!-- Answer -->
+                    <div class="answer text">
+
+                        <ol class="list">
+                            <li>
+                                Open your Minecraft client
+                            </li>
+                            <li>
+                                Select "Multiplayer".
+                            </li>
+                            <li>
+                                Click on "Add Server".
+                            </li>
+                            <li>
+                                Under "Server Address" enter the following: <b>coolcraft.me</b>
+                            </li>
+                            <li>
+                                Click on "Done" and double click on the server in the list.
+                            </li>
+                        </ol>
+
+                        <img alt="" class="faq_answer_img" src="../images/faq/FAQ - How to connect.png">
+
+                    </div>
+
+                </article>
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Server-related questions
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Question -->
+                    <div class="question">
+
+                        <h3 class="title">
+                            How do I play a specific game mode on CoolCraft?
+                        </h3>
+
+                    </div>
+
+                    <!-- Answer -->
+                    <div class="answer text">
+
+                        <ol class="list">
+                            <li>
+                                If on Hub, right click while holding a compass named "Server Selector" in you hand.
+                            </li>
+                            <li>
+                                Click on the icon which represents the server you want to play. You can hover over them to see more information.
+                            </li>
+                        </ol>
+
+                        <ol class="list">
+                            <li>
+                                If on other servers, type the command /servers in chat.
+                            </li>
+                            <li>
+                                Click on the icon which represents the server you want to play. You can hover over them to see more information.
+                            </li>
+                        </ol>
+
+                        <img alt="" class="faq_answer_img" src="../images/faq/FAQ - Server menu - 1.png">
+
+                    </div>
+
+                    <!-- Question -->
+                    <div class="question">
+
+                        <h3 class="title">
+                            How do I choose the right game mode to play?
+                        </h3>
+
+                    </div>
+
+                    <!-- Answer -->
+                    <div class="answer text">
+
+                        <p>
+                            This depends on your playstyle. We recommend that you try every game mode and figure out which one fits you the best. Read the description of every game mode and it might help you decide.
+                        </p>
+
+                        <img alt="" class="faq_answer_img" src="../images/faq/FAQ - Server menu - 2.png">
+
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- ASIDE -->
+            <aside class="sidebar cflex" id="sidebar_section">
+
+                <?php
+                include($directory_prefix . "Parts/sidebar.php");
+                ?>
+
+            </aside>
 
         </div>
-    </div>
 
-    <!-- CONTENT -->
-    <div class="content">
-
-        <!-- MAIN -->
-        <div class="main">
-
-            <h1 class="main_title" id="main_title-general_info">
-                General questions
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-general_info"> </div>
-
-            <!-- FAQ Question -->
-            <div class="faq_question">
-
-                <!-- Question -->
-                <div class="faq_title">
-                    How do I connect to CoolCraft?
-                </div>
-
-                <!-- Answer -->
-                <div class="faq_answer">
-                    <ol>
-                        <li>
-                            Open your Minecraft client
-                        </li>
-                        <li>
-                            Select "Multiplayer".
-                        </li>
-                        <li>
-                            Click on "Add Server".
-                        </li>
-                        <li>
-                            Under "Server Address" enter the following: <b>coolcraft.me</b>
-                        </li>
-                        <li>
-                            Click on "Done" and double click on the server in the list.
-                        </li>
-                    </ol>
-                    <br>
-                    <img alt="FAQ answer image" class="faq_answer_img" src="../images/faq/FAQ - How to connect.png" />
-                    <br>
-                </div>
-
-            </div>
-
-
-
-            <h1 class="main_title" id="main_title-available_gamemodes">
-                Server-related questions
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-available_gamemodes"> </div>
-
-            <!-- FAQ Question -->
-            <div class="faq_question">
-
-                <!-- Question -->
-                <div class="faq_title">
-                    How do I play a specific game mode on CoolCraft?
-                </div>
-
-                <!-- Answer -->
-                <div class="faq_answer">
-                    <ol>
-                        <li>
-                            If on Hub, right click while holding a compass named "Server Selector" in you hand.
-                        </li>
-                        <li>
-                            Click on the icon which represents the server you want to play. You can hover over them to see more information.
-                        </li>
-                    </ol>
-                    <br>
-                    <ol>
-                        <li>
-                            If on other servers, type the command /servers in chat.
-                        </li>
-                        <li>
-                            Click on the icon which represents the server you want to play. You can hover over them to see more information.
-                        </li>
-                    </ol>
-                    <img alt="FAQ answer image" class="faq_answer_img" src="../images/faq/FAQ - Server menu - 1.png" />
-                    <br>
-                </div>
-
-            </div>
-
-            <!-- FAQ Question -->
-            <div class="faq_question">
-
-                <!-- Question -->
-                <div class="faq_title">
-                    How do I choose the right game mode to play?
-                </div>
-
-                <!-- Answer -->
-                <div class="faq_answer">
-                    This depends on your playstyle. We recommend that you try every game mode and figure out which one fits you the best. Read the description of every game mode and it might help you decide.
-                    <br>
-                    <img alt="FAQ answer image" class="faq_answer_img" src="../images/faq/FAQ - Server menu - 2.png" />
-                    <br>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="sidebar">
-
-            <?php
-            include("../php/sidebar.php");
-            ?>
-
-        </div>
-
-    </div>
+    </main>
 
 
 
@@ -191,6 +216,7 @@ include("../php/links.php");
 
     echo '
         <script src="' . $copy_to_clipboard_script . '"></script>
+        <script src="' . $dropdown_script . '"></script>
     ';
     ?>
 </body>

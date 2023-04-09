@@ -1,35 +1,35 @@
-let darkMode = localStorage.getItem('dark-theme');
+let darkMode = localStorage.getItem('Dark theme');
 
 const darkModeToggle = document.querySelector('#lightdarkmode');
 
 const enableDarkMode = () => {
     // 1. Add the class to the body
-    document.body.classList.add('dark-theme');
+    document.body.classList.add('dark_theme');
     // 2. Update darkMode in localStorage
-    localStorage.setItem('dark-theme', 'enabled');
+    localStorage.setItem('Dark theme', 'enabled');
 
-    gamemodeslightdark.src = nav_gamemodes_icon_darkmode;
-    faqlightdark.src = nav_faq_icon_darkmode;
-    homelightdark.src = nav_home_icon_darkmode;
-    infolightdark.src = nav_info_icon_darkmode;
-    optionslightdark.src = nav_options_icon_darkmode;
-    newslightdark.src = nav_news_icon_darkmode;
-    storelightdark.src = nav_store_icon_darkmode;
+    nav_gamemodes.src = nav_gamemodes_icon_darkmode;
+    nav_faq.src = nav_faq_icon_darkmode;
+    nav_home.src = nav_home_icon_darkmode;
+    nav_info.src = nav_info_icon_darkmode;
+    nav_options.src = nav_options_icon_darkmode;
+    nav_news.src = nav_news_icon_darkmode;
+    nav_store.src = nav_store_icon_darkmode;
 }
 
 const disableDarkMode = () => {
     // 1. Remove the class from the body
-    document.body.classList.remove('dark-theme');
+    document.body.classList.remove('dark_theme');
     // 2. Update darkMode in localStorage 
-    localStorage.setItem('dark-theme', null);
+    localStorage.setItem('Dark theme', null);
 
-    gamemodeslightdark.src = nav_gamemodes_icon;
-    faqlightdark.src = nav_faq_icon;
-    homelightdark.src = nav_home_icon;
-    infolightdark.src = nav_info_icon;
-    optionslightdark.src = nav_options_icon;
-    newslightdark.src = nav_news_icon;
-    storelightdark.src = nav_store_icon;
+    nav_gamemodes.src = nav_gamemodes_icon;
+    nav_faq.src = nav_faq_icon;
+    nav_home.src = nav_home_icon;
+    nav_info.src = nav_info_icon;
+    nav_options.src = nav_options_icon;
+    nav_news.src = nav_news_icon;
+    nav_store.src = nav_store_icon;
 }
 
 // If the user already visited and enabled darkMode
@@ -41,7 +41,7 @@ if (darkMode === 'enabled') {
 // When someone clicks the button
 darkModeToggle.addEventListener('click', () => {
     // get their darkMode setting
-    darkMode = localStorage.getItem('dark-theme');
+    darkMode = localStorage.getItem('Dark theme');
 
     // if it not current enabled, enable it
     if (darkMode !== 'enabled') {

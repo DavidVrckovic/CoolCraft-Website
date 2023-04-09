@@ -1,14 +1,18 @@
-// Get the button by ID
-var mybutton = document.getElementById("back_to_top");
+// Get the button by Class name
+var back_to_top_button = document.getElementsByClassName("back_to_top");
 
 // When the user scrolls down 60px from the top of the page, show the button
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        mybutton.style.display = "block";
+        for (var i = 0; i < back_to_top_button.length; i += 1) {
+            back_to_top_button[i].style.display = 'block';
+        }
     } else {
-        mybutton.style.display = "none";
+        for (var i = 0; i < back_to_top_button.length; i += 1) {
+            back_to_top_button[i].style.display = 'none';
+        }
     }
 }
 

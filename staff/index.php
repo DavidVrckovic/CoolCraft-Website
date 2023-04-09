@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Staff </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Staff </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,48 +47,87 @@ include("../php/links.php");
 
 
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Staff
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
+
+            <!-- Background image -->
+            <img alt="Staff" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 5.png">
+
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
+
+                <!-- Title -->
+                <h1 class="title">
+                    Staff
+                </h1>
+
+            </article>
+
+        </section>
+
+        <!-- CONTENT -->
+        <div class="content flex has_bg_color">
+
+            <!-- SECTION -->
+            <section class="main cflex" id="main_section">
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Documents
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="https://docs.google.com/document/d/1FLoi5s_RJoiseoZR9Uqy3JIKc9rGCAK0jVNQCjCd2Rk/edit?usp=sharing" target="_blank">
+                            CoolCraft Documentation
+                        </a>
+
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="https://docs.google.com/spreadsheets/d/1bxkgT3V09BkWHuBpaEmkwjtb67ZSYJk9gwlmhFT0JJE/edit?usp=sharing" target="_blank">
+                            CoolCraft Spreadsheet
+                        </a>
+
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="networkmanager/dashboard/dashboard.php" target="_blank">
+                            Network Manager
+                        </a>
+
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="https://docs.google.com/document/d/1PWADfyil6hzipTNgCvNXhWZHxMC0NQMLmqQclSMU4AM/edit?usp=sharing" target="_blank">
+                            Marketing Plan
+                        </a>
+
+                    </p>
+
+                </article>
+
+            </section>
 
         </div>
-    </div>
 
-    <!-- CONTENT -->
-    <div class="content">
-
-        <!-- MAIN -->
-        <div class="main">
-
-            <h1 class="main_title" id="main_title-documents">
-                Documents
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-documents"> </div>
-
-            <div class="main_text" id="main_text-documents">
-                <a href="https://docs.google.com/document/d/1FLoi5s_RJoiseoZR9Uqy3JIKc9rGCAK0jVNQCjCd2Rk/edit?usp=sharing" target="_blank">
-                    CoolCraft Documentation
-                </a>
-                <br>
-                <a href="networkmanager/dashboard/dashboard.php" target="_blank">
-                    Network Manager
-                </a>
-                <br>
-                <a href="https://docs.google.com/document/d/1PWADfyil6hzipTNgCvNXhWZHxMC0NQMLmqQclSMU4AM/edit?usp=sharing" target="_blank">
-                    Marketing Plan
-                </a>
-                <br>
-            </div>
-
-        </div>
-
-    </div>
+    </main>
 
 
 

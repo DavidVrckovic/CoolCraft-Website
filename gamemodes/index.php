@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Game modes </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Game modes </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,103 +47,171 @@ include("../php/links.php");
 
 
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 5.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Game modes
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
-        </div>
-    </div>
+            <!-- Background image -->
+            <img alt="Game modes" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 5.png">
 
-    <!-- CONTENT -->
-    <div class="content">
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
 
-        <!-- MAIN -->
-        <div class="main">
+                <!-- Title -->
+                <h1 class="title">
+                    Game modes
+                </h1>
 
-            <h1 class="main_title" id="main_title-gamemodes">
-                Game modes
-            </h1>
+            </article>
 
-            <div class="main_title_line" id="main_title_line-gamemodes"> </div>
+        </section>
 
-            <div class="gamemodes">
+        <!-- SECTION -->
+        <section class="gamemodes everything_center has_bg_color" id="main_section">
 
-                <div class="gamemode" id="gamemode-survival">
-                    <a class="gamemode_banner" href="survival">
-                        <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Survival Spawn - 1.png" />
-                            <div class="gamemode_text">
-                                Survival
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <!-- Block section -->
+            <article class="gamemode everything_center has_bg_img">
 
-                <div class="gamemode" id="gamemode-factions">
-                    <a class="gamemode_banner" href="factions">
-                        <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Factions Spawn - 1.png" />
-                            <div class="gamemode_text">
-                                Factions
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <!-- Background image -->
+                <img alt="Survival" class="cc_bg bg" src="../Images/Survival Spawn - 1.png">
 
-                <div class="gamemode" id="gamemode-skyblock">
-                    <a class="gamemode_banner" href="skyblock">
-                        <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyBlock Spawn - 1.png" />
-                            <div class="gamemode_text">
-                                SkyBlock
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <!-- Clickable block -->
+                <a class="link_over_bg_img cflex everything_center" href="survival">
 
-                <div class="gamemode" id="gamemode-prison">
-                    <a class="gamemode_banner" href="prison">
-                        <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Prison Spawn - 1.png" />
-                            <div class="gamemode_text">
-                                Prison
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <!-- Title -->
+                    <h2 class="title">
+                        Survival
+                    </h2>
 
-                <div class="gamemode" id="gamemode-creative">
-                    <a class="gamemode_banner" href="creative">
-                        <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Creative - 1.png" />
-                            <div class="gamemode_text">
-                                Creative
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <!-- Text -->
+                    <p class="text">
+                        Click for more info
+                    </p>
 
-                <div class="gamemode" id="gamemode-minigames">
-                    <a class="gamemode_banner" href="minigames">
-                        <div class="gamemode_image">
-                            <img alt="Game mode banner" class="gamemode_banner" src="../images/Minigames Lobby - 1.png" />
-                            <div class="gamemode_text">
-                                Minigames
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                </a>
 
-            </div>
+            </article>
 
-        </div>
+            <!-- Block section -->
+            <article class="gamemode everything_center has_bg_img">
 
-    </div>
+                <!-- Background image -->
+                <img alt="Factions" class="cc_bg bg" src="../Images/Factions Spawn - 1.png">
+
+                <!-- Clickable block -->
+                <a class="link_over_bg_img cflex everything_center" href="factions">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Factions
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Click for more info
+                    </p>
+
+                </a>
+
+            </article>
+
+            <!-- Block section -->
+            <article class="gamemode everything_center has_bg_img">
+
+                <!-- Background image -->
+                <img alt="SkyBlock" class="cc_bg bg" src="../Images/SkyBlock Spawn - 1.png">
+
+                <!-- Clickable block -->
+                <a class="link_over_bg_img cflex everything_center" href="skyblock">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        SkyBlock
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Click for more info
+                    </p>
+
+                </a>
+
+            </article>
+
+            <!-- Block section -->
+            <article class="gamemode everything_center has_bg_img">
+
+                <!-- Background image -->
+                <img alt="Prison" class="cc_bg bg" src="../Images/Prison Spawn - 1.png">
+
+                <!-- Clickable block -->
+                <a class="link_over_bg_img cflex everything_center" href="prison">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Prison
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Click for more info
+                    </p>
+
+                </a>
+
+            </article>
+
+            <!-- Block section -->
+            <article class="gamemode everything_center has_bg_img">
+
+                <!-- Background image -->
+                <img alt="Creative" class="cc_bg bg" src="../Images/Creative - 1.png">
+
+                <!-- Clickable block -->
+                <a class="link_over_bg_img cflex everything_center" href="creative">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Creative
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Click for more info
+                    </p>
+
+                </a>
+
+            </article>
+
+            <!-- Block section -->
+            <article class="gamemode everything_center has_bg_img">
+
+                <!-- Background image -->
+                <img alt="Minigames" class="cc_bg bg" src="../Images/Minigames Lobby - 1.png">
+
+                <!-- Clickable block -->
+                <a class="link_over_bg_img cflex everything_center" href="minigames">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Minigames
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Click for more info
+                    </p>
+
+                </a>
+
+            </article>
+
+        </section>
+
+    </main>
 
 
 

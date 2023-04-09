@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Applications </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Applications </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,60 +47,87 @@ include("../php/links.php");
 
 
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 4.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Applications
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
+
+            <!-- Background image -->
+            <img alt="Applications" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 4.png">
+
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
+
+                <!-- Title -->
+                <h1 class="title">
+                    Applications
+                </h1>
+
+            </article>
+
+        </section>
+
+        <!-- CONTENT -->
+        <div class="content flex has_bg_color">
+
+            <!-- SECTION -->
+            <section class="main cflex" id="main_section">
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Application links
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="builder" target="_blank">
+                            Builder
+                        </a>
+
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="helper" target="_blank">
+                            Helper
+                        </a>
+
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+
+                        <a class="link" href="content_creator" target="_blank">
+                            Content Creator
+                        </a>
+
+                    </p>
+
+                </article>
+
+            </section>
+
+            <!-- ASIDE -->
+            <aside class="sidebar cflex" id="sidebar_section">
+
+                <?php
+                include($directory_prefix . "Parts/sidebar.php");
+                ?>
+
+            </aside>
 
         </div>
-    </div>
 
-    <!-- CONTENT -->
-    <div class="content">
-
-        <!-- MAIN -->
-        <div class="main">
-
-            <h1 class="main_title" id="main_title-general_info">
-                Application links
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-general_info"> </div>
-
-            <div class="main_text" id="main_text-general_info">
-                <p>
-                    <a class="application_link" href="https://docs.google.com/forms/d/e/1FAIpQLScXBxyyUpLP-y6N2J1_QHXVXi77U1EBH4SlzKZHe3uMme7nxA/viewform" target="_blank">
-                        Builder
-                    </a>
-                </p>
-                <p>
-                    <a class="application_link" href="https://docs.google.com/forms/d/e/1FAIpQLSfg47HE48jhQYHxv7S3pqN9RUVIC1y5Q16ULi6QdPMxj20n8A/viewform" target="_blank">
-                        Helper
-                    </a>
-                </p>
-                <p>
-                    <a class="application_link" href="https://docs.google.com/forms/d/e/1FAIpQLSdy1S9ZdRjsWnI5Xzm00YoLhQTL_2jIUkS-hWfcPbvDgDoNTA/viewform" target="_blank">
-                        Content Creator
-                    </a>
-                </p>
-            </div>
-
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="sidebar">
-
-            <?php
-            include("../php/sidebar.php");
-            ?>
-
-        </div>
-
-    </div>
+    </main>
 
 
 

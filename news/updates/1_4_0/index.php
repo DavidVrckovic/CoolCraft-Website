@@ -4,8 +4,8 @@
 session_start();
 
 // Links
-$directory_level = 1;
-include("../php/links.php");
+$directory_level = 3;
+include("../../../php/links.php");
 ?>
 
 
@@ -21,7 +21,7 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft | Info </title>
+    <title> CoolCraft | News | Update 1.4.0 </title>
     <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
@@ -54,14 +54,14 @@ include("../php/links.php");
         <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
             <!-- Background image -->
-            <img alt="Information and details" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 4.png">
+            <img alt="Update 1.4.0" class="section_bg bg" id="intro_section_bg_img" src="../../../Images/Parkour Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="intro_inner">
 
                 <!-- Title -->
                 <h1 class="title">
-                    Information and details
+                    Update 1.4.0
                 </h1>
 
             </article>
@@ -79,7 +79,7 @@ include("../php/links.php");
 
                     <!-- Title -->
                     <h2 class="title">
-                        General info
+                        Patch notes
                     </h2>
 
                     <!-- Line -->
@@ -87,18 +87,39 @@ include("../php/links.php");
 
                     <!-- Text -->
                     <p class="text">
-                        CoolCraft is a Minecraft server network with many different game modes for you to check out! You can find a variety of gameplay and activities for you and your friends.
+                        <b> Changes: </b>
                     </p>
+
+                    <ul class="text">
+                        <li>
+                            Added Minecraft 1.17 and 1.17.1 version support.
+                        </li>
+                        <li>
+                            Added interactive boards.
+                        </li>
+                        <li>
+                            Added Parkour minigame.
+                        </li>
+                        <li>
+                            UHC has been reworked from scratch.
+                        </li>
+                        <li>
+                            You can now get the links for applications in game by typing the command /apply.
+                        </li>
+                        <li>
+                            Removed NPCs. Interactive boards are a replacement. They will still be used for other things, such as BedWars.
+                        </li>
+                    </ul>
 
                     <p class="text">
-                        We support the following Minecraft versions: <b>1.8 and above</b>.
+                        <b> Fixes: </b>
                     </p>
 
-                    <img alt="GIF" class="website_banner" src="../images/CoolCraft Website Banner.gif">
-
-                    <p class="text">
-                        We are always trying to put more features in, add more servers and improve the experience overall. If you find any issues, feel free to report them to us.
-                    </p>
+                    <ul class="text">
+                        <li>
+                            Fixed an issue where health regenerated too quickly during a BedWars match.
+                        </li>
+                    </ul>
 
                 </article>
 
@@ -107,7 +128,7 @@ include("../php/links.php");
 
                     <!-- Title -->
                     <h2 class="title">
-                        Available game modes
+                        Details
                     </h2>
 
                     <!-- Line -->
@@ -115,32 +136,7 @@ include("../php/links.php");
 
                     <!-- Text -->
                     <p class="text">
-                        Currently available game modes are:
-                    </p>
-
-                    <ul class="text">
-                        <li>
-                            <b>Survival</b>
-                        </li>
-                        <li>
-                            <b>Factions</b>
-                        </li>
-                        <li>
-                            <b>SkyBlock</b>
-                        </li>
-                        <li>
-                            <b>Prison</b>
-                        </li>
-                        <li>
-                            <b>Creative</b>
-                        </li>
-                        <li>
-                            <b>Minigames</b> including <b>BedWars</b>, <b>SkyWars</b>, <b>TNTRun</b>, <b>Duels</b>, <b>Parkour</b> and <b>UHC</b>
-                        </li>
-                    </ul>
-
-                    <p class="text">
-                        Learn more about each game mode <a class="link" href="../gamemodes">here</a>.
+                        <b> Published: </b> 16 July 2021
                     </p>
 
                 </article>

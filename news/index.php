@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > News </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | News </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,49 +47,51 @@ include("../php/links.php");
 
 
 
-    <!-- CONTENT Banner -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 3.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                News and updates
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
-        </div>
-    </div>
+            <!-- Background image -->
+            <img alt="News and Updates" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 3.png">
 
-    <!-- CONTENT -->
-    <div class="content">
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
 
-        <!-- MAIN -->
-        <div class="main">
+                <!-- Title -->
+                <h1 class="title">
+                    News and Updates
+                </h1>
 
-            <h1 class="main_title" id="main_title-info">
-                <b> News and updates </b>
-            </h1>
+            </article>
 
-            <div class="main_title_line" id="main_title_line-info"> </div>
+        </section>
 
-            <div class="news" id="news">
+        <!-- CONTENT -->
+        <div class="content flex has_bg_color">
+
+            <!-- SECTION -->
+            <section class="main cflex" id="intro_section">
 
                 <?php
-                include("../php/news.php");
+                include($directory_prefix . "Parts/news.php");
                 ?>
 
-            </div>
+            </section>
+
+            <!-- ASIDE -->
+            <aside class="sidebar cflex" id="sidebar_section">
+
+                <?php
+                include($directory_prefix . "Parts/sidebar.php");
+                ?>
+
+            </aside>
+
         </div>
 
-        <!-- SIDEBAR -->
-        <div class="sidebar" id="sidebar">
-
-            <?php
-            include("../php/sidebar.php");
-            ?>
-
-        </div>
-
-    </div>
+    </main>
 
 
 

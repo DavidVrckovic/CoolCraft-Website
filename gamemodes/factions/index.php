@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Game modes > Factions </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Factions </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,64 +47,71 @@ include("../../php/links.php");
 
 
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Factions Spawn - 1.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Factions
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
-        </div>
-    </div>
+            <!-- Background image -->
+            <img alt="Game modes: Factions" class="section_bg bg" id="intro_section_bg_img" src="../../images/Factions Spawn - 1.png">
 
-    <!-- CONTENT -->
-    <div class="content">
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
 
-        <!-- MAIN -->
-        <div class="main">
+                <!-- Title -->
+                <h1 class="title">
+                    Game modes: Factions
+                </h1>
 
-            <h1 class="main_title" id="main_title-gamemode_info">
-                Info
-            </h1>
+            </article>
 
-            <div class="main_title_line" id="main_title_line-gamemode_info"> </div>
+        </section>
 
-            <div class="main_text" id="main_text-info">
-                <b>Factions</b> is a competitive PvP game mode that lets players team up by creating and joining different factions. Players within the same faction work together to gather resources, build bases, protect their land, recruit new members and raid other factions.
-            </div>
+        <!-- SECTION -->
+        <section class="content cflex has_bg_color" id="content_section">
 
-            <h1 class="main_title" id="main_title-gamemode_images">
-                Images
-            </h1>
+            <!-- Inner section -->
+            <article class="general">
 
-            <div class="main_title_line" id="main_title_line-gamemode_images"> </div>
+                <!-- Title -->
+                <h2 class="title">
+                    Description
+                </h2>
 
-            <div class="gamemodes">
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Factions Spawn - 1.png" />
-                </div>
+                <!-- Line -->
+                <hr class="line width_100">
 
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Factions Spawn - 2.png" />
-                </div>
+                <!-- Text -->
+                <p class="text">
+                    <b>Factions</b> is a competitive PvP game mode that lets players team up by creating and joining different factions. Players within the same faction work together to gather resources, build bases, protect their land, recruit new members and raid other factions.
+                </p>
 
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Factions Spawn - 3.png" />
-                </div>
+            </article>
 
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Factions Spawn - 4.png" />
-                </div>
+            <!-- Inner section -->
+            <article class="general">
 
-                <div class="gamemode" id="gamemode-survival">
-                    <img alt="Game mode banner" class="gamemode_banner" src="../../images/Factions Spawn - 5.png" />
-                </div>
-            </div>
-        </div>
+                <!-- Title -->
+                <h2 class="title">
+                    Images
+                </h2>
 
-    </div>
+                <!-- Line -->
+                <hr class="line width_100">
+
+                <!-- Images -->
+                <img alt="1" class="gamemode_banner" src="../../images/Factions Spawn - 1.png" style="padding: 1% 1% 0 0; width: 32%;">
+                <img alt="2" class="gamemode_banner" src="../../images/Factions Spawn - 2.png" style="padding: 1% 1% 0 0; width: 32%;">
+                <img alt="3" class="gamemode_banner" src="../../images/Factions Spawn - 3.png" style="padding: 1% 1% 0 0; width: 32%;">
+                <img alt="4" class="gamemode_banner" src="../../images/Factions Spawn - 4.png" style="padding: 1% 1% 0 0; width: 32%;">
+                <img alt="5" class="gamemode_banner" src="../../images/Factions Spawn - 5.png" style="padding: 1% 1% 0 0; width: 32%;">
+
+            </article>
+
+        </section>
+
+    </main>
 
 
 

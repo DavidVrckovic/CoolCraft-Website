@@ -15,54 +15,66 @@ if ($directory_level == 0) {
 
 
 // Title & Favicon
-$favicon_image = $directory_prefix . "images/icons/coolcraft_icon.png";
+$favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
 // CSS files
-$authentication_css = $directory_prefix . "styles/authentication.css";
-$back_to_top_css = $directory_prefix . "styles/back_to_top.css";
-$footer_css = $directory_prefix . "styles/footer.css";
-$index_css = $directory_prefix . "styles/index.css";
-$navigation_css = $directory_prefix . "styles/navigation.css";
+$authentication_css = $directory_prefix . "Styles/authentication.css";
+$back_to_top_css = $directory_prefix . "Styles/back_to_top.css";
+$footer_css = $directory_prefix . "Styles/footer.css";
+$index_css = $directory_prefix . "Styles/index.css";
+$navigation_css = $directory_prefix . "Styles/navigation.css";
+$theme_css = $directory_prefix . "Styles/theme.css";
+
+$coolcraft_css = $directory_prefix . "Styles/coolcraft.css";
 
 
 
 // Header & Navigation
-$header_image = $directory_prefix . "images/icons/coolcraft_icon.png";
+$header_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
 $nav_faq = $directory_prefix . "faq";
-$nav_faq_icon = $directory_prefix . "images/navigation/faq_icon_black.png";
-$nav_faq_icon_gold = $directory_prefix . "images/navigation/faq_icon_gold.png";
-$nav_faq_icon_white = $directory_prefix . "images/navigation/faq_icon_white.png";
+$nav_faq_icon = $directory_prefix . "Images/Navigation/faq_icon_black.png";
+$nav_faq_icon_black = $directory_prefix . "Images/Navigation/faq_icon_black.png";
+$nav_faq_icon_gold = $directory_prefix . "Images/Navigation/faq_icon_gold.png";
+$nav_faq_icon_white = $directory_prefix . "Images/Navigation/faq_icon_white.png";
 
 $nav_gamemodes = $directory_prefix . "gamemodes";
-$nav_gamemodes_icon = $directory_prefix . "images/navigation/gamemodes_icon_black.png";
-$nav_gamemodes_icon_gold = $directory_prefix . "images/navigation/gamemodes_icon_gold.png";
-$nav_gamemodes_icon_white = $directory_prefix . "images/navigation/gamemodes_icon_white.png";
+$nav_gamemodes_icon = $directory_prefix . "Images/Navigation/gamemodes_icon_black.png";
+$nav_gamemodes_icon_black = $directory_prefix . "Images/Navigation/gamemodes_icon_black.png";
+$nav_gamemodes_icon_gold = $directory_prefix . "Images/Navigation/gamemodes_icon_gold.png";
+$nav_gamemodes_icon_white = $directory_prefix . "Images/Navigation/gamemodes_icon_white.png";
 
 $nav_home = $directory_prefix . "";
-$nav_home_icon = $directory_prefix . "images/navigation/home_icon_black.png";
-$nav_home_icon_gold = $directory_prefix . "images/navigation/home_icon_gold.png";
-$nav_home_icon_white = $directory_prefix . "images/navigation/home_icon_white.png";
+$nav_home_icon = $directory_prefix . "Images/Navigation/home_icon_black.png";
+$nav_home_icon_black = $directory_prefix . "Images/Navigation/home_icon_black.png";
+$nav_home_icon_gold = $directory_prefix . "Images/Navigation/home_icon_gold.png";
+$nav_home_icon_white = $directory_prefix . "Images/Navigation/home_icon_white.png";
 
 $nav_info = $directory_prefix . "info";
-$nav_info_icon = $directory_prefix . "images/navigation/info_icon_black.png";
-$nav_info_icon_gold = $directory_prefix . "images/navigation/info_icon_gold.png";
-$nav_info_icon_white = $directory_prefix . "images/navigation/info_icon_white.png";
+$nav_info_icon = $directory_prefix . "Images/Navigation/info_icon_black.png";
+$nav_info_icon_black = $directory_prefix . "Images/Navigation/info_icon_black.png";
+$nav_info_icon_gold = $directory_prefix . "Images/Navigation/info_icon_gold.png";
+$nav_info_icon_white = $directory_prefix . "Images/Navigation/info_icon_white.png";
 
 $nav_news = $directory_prefix . "news";
-$nav_news_icon = $directory_prefix . "images/navigation/news_icon_black.png";
-$nav_news_icon_gold = $directory_prefix . "images/navigation/news_icon_gold.png";
-$nav_news_icon_white = $directory_prefix . "images/navigation/news_icon_white.png";
+$nav_news_icon = $directory_prefix . "Images/Navigation/news_icon_black.png";
+$nav_news_icon_black = $directory_prefix . "Images/Navigation/news_icon_black.png";
+$nav_news_icon_gold = $directory_prefix . "Images/Navigation/news_icon_gold.png";
+$nav_news_icon_white = $directory_prefix . "Images/Navigation/news_icon_white.png";
 
 $nav_options = $directory_prefix . "options";
-$nav_options_icon = $directory_prefix . "images/navigation/options_icon_black.png";
-$nav_options_icon_gold = $directory_prefix . "images/navigation/options_icon_gold.png";
-$nav_options_icon_white = $directory_prefix . "images/navigation/options_icon_white.png";
+$nav_options_icon = $directory_prefix . "Images/Navigation/options_icon_black.png";
+$nav_options_icon_black = $directory_prefix . "Images/Navigation/options_icon_black.png";
+$nav_options_icon_gold = $directory_prefix . "Images/Navigation/options_icon_gold.png";
+$nav_options_icon_white = $directory_prefix . "Images/Navigation/options_icon_white.png";
 
 $nav_store = $directory_prefix . "store";
-$nav_store_icon = $directory_prefix . "images/navigation/store_icon_black.png";
-$nav_store_icon_gold = $directory_prefix . "images/navigation/store_icon_gold.png";
-$nav_store_icon_white = $directory_prefix . "images/navigation/store_icon_white.png";
+$nav_store_icon = $directory_prefix . "Images/Navigation/store_icon_black.png";
+$nav_store_icon_black = $directory_prefix . "Images/Navigation/store_icon_black.png";
+$nav_store_icon_gold = $directory_prefix . "Images/Navigation/store_icon_gold.png";
+$nav_store_icon_white = $directory_prefix . "Images/Navigation/store_icon_white.png";
+
+$nav_apply = $directory_prefix . "apply";
 
 
 
@@ -77,7 +89,7 @@ if (!isset($_SESSION['loggedin']) && !isset($_COOKIE['login'])) {
 
 
 // Navigation Script
-$nav_script = $directory_prefix . "scripts/navigation.js";
+$nav_script = $directory_prefix . "Scripts/navigation.js";
 
 echo "
     <script>
@@ -102,11 +114,16 @@ echo "
 
 
 // Back to top
-$back_to_top_image = $directory_prefix . "images/Back to top/Back to top - White.png";
-$back_to_top_script = $directory_prefix . "scripts/back_to_top.js";
+$back_to_top_image = $directory_prefix . "Images/Back to top/Back to top - White.png";
+$back_to_top_script = $directory_prefix . "Scripts/back_to_top.js";
 
 
 
 // Copy to clipboard
-$copy_to_clipboard_script = "scripts/copy_to_clipboard.js";
+$copy_to_clipboard_script = $directory_prefix . "Scripts/copy_to_clipboard.js";
+
+
+
+// Dropdown
+$dropdown_script = $directory_prefix . "Scripts/dropdown.js";
 ?>

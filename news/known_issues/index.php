@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // Start the session
 session_start();
@@ -9,7 +10,6 @@ include("../../php/links.php");
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,21 +21,20 @@ include("../../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Known issues </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Known issues </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -48,87 +47,117 @@ include("../../php/links.php");
 
 
 
-    <!-- CONTENT Banner -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../../images/Parkour Lobby - 1.png" />
-        <div class="inner_section" id="inner_section-introduction">
+    <!-- MAIN -->
+    <main class="cflex">
 
-            <h1 class="title" id="title-introduction">
-                Known issues
-            </h1>
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
+
+            <!-- Background image -->
+            <img alt="Known issues" class="section_bg bg" id="intro_section_bg_img" src="../../Images/Parkour Lobby - 1.png">
+
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
+
+                <!-- Title -->
+                <h1 class="title">
+                    Known issues
+                </h1>
+
+            </article>
+
+        </section>
+
+        <!-- CONTENT -->
+        <div class="content flex has_bg_color">
+
+            <!-- SECTION -->
+            <section class="main cflex" id="main_section">
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Issues with no solution
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Text -->
+                    <p class="text">
+                        <b> When on a game mode that supports Minecraft version 1.19.4, upon connecting to any lower-version game mode, chunks will not load. </b>
+                    </p>
+
+                    <ul class="text">
+                        <li>
+                            What you can do to fix: Connect to another lower-version game mode and chunks will load correctly.
+                        </li>
+                    </ul>
+
+                    <p class="text">
+                        <b> Interactive boards are glitchy on lower Minecraft versions. </b>
+                    </p>
+
+                    <ul class="text">
+                        <li>
+                            How to avoid: Use Minecraft version 1.19.4 or above.
+                        </li>
+                    </ul>
+
+                </article>
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Issues with solutions available
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Text -->
+                    <p class="text">
+                        No issues.
+                    </p>
+
+                </article>
+
+                <!-- Inner section -->
+                <article class="general">
+
+                    <!-- Title -->
+                    <h2 class="title">
+                        Issues in the process of fixing
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Text -->
+                    <p class="text">
+                        No issues.
+                    </p>
+
+                </article>
+
+            </section>
+
+            <!-- ASIDE -->
+            <aside class="sidebar cflex" id="sidebar_section">
+
+                <?php
+                include($directory_prefix . "Parts/sidebar.php");
+                ?>
+
+            </aside>
 
         </div>
-    </div>
 
-    <!-- CONTENT -->
-    <div class="content">
-
-        <!-- MAIN -->
-        <div class="main">
-
-            <h1 class="main_title" id="main_title-issues1">
-                <b> Issues with no solution </b>
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-issues1"> </div>
-
-            <div class="main_text" id="main_text-issues1">
-                <b> When on a game mode that supports Minecraft version 1.19.2, upon connecting to any lower-version game mode, chunks will not load. </b>
-                <br><br>
-                <ul>
-                    <li>
-                        What you can do to fix: Connect to another lower-version game mode and chunks will load correctly.
-                    </li>
-                </ul>
-                <br>
-
-                <b> Interactive boards are glitchy on lower Minecraft versions. </b>
-                <br><br>
-                <ul>
-                    <li>
-                        How to avoid: Use Minecraft version 1.19.2 or above.
-                    </li>
-                </ul>
-                <br>
-
-                <br><br>
-            </div>
-
-            <h1 class="main_title" id="main_title-issues2">
-                <b> Issues with solutions available </b>
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-issues2"> </div>
-
-            <div class="main_text" id="main_text-issues2">
-                <b> No issues. </b>
-
-                <br><br>
-            </div>
-
-            <h1 class="main_title" id="main_title-issues3">
-                <b> Issues in the process of fixing </b>
-            </h1>
-
-            <div class="main_title_line" id="main_title_line-issues3"> </div>
-
-            <div class="main_text" id="main_text-issues3">
-                <b> No issues. </b>
-
-                <br><br>
-            </div>
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="sidebar" id="sidebar">
-
-            <?php
-            include("../../php/sidebar.php");
-            ?>
-
-        </div>
-
-    </div>
+    </main>
 
 
 
