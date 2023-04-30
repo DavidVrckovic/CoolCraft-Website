@@ -18,7 +18,7 @@ if ($directory_level == 0) {
 $favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
 // CSS files
-$authentication_css = $directory_prefix . "Styles/authentication.css";
+$auth_css = $directory_prefix . "Styles/auth.css";
 $back_to_top_css = $directory_prefix . "Styles/back_to_top.css";
 $footer_css = $directory_prefix . "Styles/footer.css";
 $index_css = $directory_prefix . "Styles/index.css";

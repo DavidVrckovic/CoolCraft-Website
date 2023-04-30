@@ -14,10 +14,10 @@ $db_name = "testing";
 /* Remote MySQL server */
 $db_config = parse_ini_file("../Protected/config.ini");
 
-$login_db_hostname = $db_config['login_db_hostname'];
-$login_db_username = $db_config['login_db_username'];
-$login_db_password = $db_config['login_db_password'];
-$login_db_name = $db_config['login_db_name'];
+$auth_db_hostname = $db_config['auth_db_hostname'];
+$auth_db_username = $db_config['auth_db_username'];
+$auth_db_password = $db_config['auth_db_password'];
+$auth_db_name = $db_config['auth_db_name'];
 
 $bw_db_hostname = $db_config['bw_db_hostname'];
 $bw_db_username = $db_config['bw_db_username'];
@@ -44,7 +44,7 @@ $sw_db_name = $db_config['sw_db_name'];
 // Check which DB is required
 if ($required_db == "login") {
     // Open connection to the MySQL DB server
-    $db_connection = mysqli_connect($login_db_hostname, $login_db_username, $login_db_password, $login_db_name);
+    $db_connection = mysqli_connect($auth_db_hostname, $auth_db_username, $auth_db_password, $auth_db_name);
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
@@ -52,7 +52,9 @@ if ($required_db == "login") {
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
-} else if ($required_db = "networkmanager") {
+}
+
+if ($required_db == "networkmanager") {
     // Open connection to the MySQL DB server
     $db_connection = mysqli_connect($nm_db_hostname, $nm_db_username, $nm_db_password, $nm_db_name);
 
@@ -62,7 +64,9 @@ if ($required_db == "login") {
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
-} else if ($required_db = "skywars") {
+}
+
+if ($required_db == "skywars") {
     // Open connection to the MySQL DB server
     $db_connection = mysqli_connect($sw_db_hostname, $sw_db_username, $sw_db_password, $sw_db_name);
 
@@ -74,10 +78,9 @@ if ($required_db == "login") {
     }
 }
 
-
-if ($required_db = "all") {
+if ($required_db == "all") {
     // Open connection to the MySQL DB servers
-    $login_db_connection = mysqli_connect($login_db_hostname, $login_db_username, $login_db_password, $login_db_name);
+    $auth_db_connection = mysqli_connect($auth_db_hostname, $auth_db_username, $auth_db_password, $auth_db_name);
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {

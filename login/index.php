@@ -78,7 +78,7 @@ include("../php/links.php");
         <section class="form has_bg_color">
 
             <!-- Auth form -->
-            <form action="../php/authentication.php" class="auth" method="POST">
+            <form action="../php/auth.php" class="auth" method="POST">
 
                 <!-- Title -->
                 <h2 class="title">
