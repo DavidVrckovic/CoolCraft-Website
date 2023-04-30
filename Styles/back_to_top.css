@@ -1,0 +1,25 @@
+button.back_to_top {
+    bottom: 20px;
+    display: none;
+    padding: 6px;
+    position: fixed;
+    right: 30px;
+    z-index: 99;
+
+    background-color: #ff8800;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--back_to_top_shadow);
+    cursor: pointer;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+button.back_to_top:hover {
+    background-color: #ec7702 !important;
+}
+
+img.back_to_top {
+    width: 26px;
+    height: 26px;
+}

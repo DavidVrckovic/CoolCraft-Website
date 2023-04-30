@@ -1,0 +1,101 @@
+/* Header */
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2%;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+
+    background-color: var(--primary_color);
+    border-bottom: 2px solid var(--secondary_color);
+}
+
+header * {
+    background-color: var(--primary_color);
+}
+
+
+
+/* Navigation */
+nav.links {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+nav.options {
+    position: relative;
+}
+
+
+
+/* Navigation link */
+nav a.nav_link,
+img.nav_link_img {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.has_2_img {
+    display: inline-block;
+    position: relative;
+}
+
+a.has_2_img img.is_hover {
+    display: none;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+}
+
+a.has_2_img:hover img.is_hover {
+    display: inline;
+}
+
+
+
+/* Options Dropdown menu */
+nav.options:hover div.options.dropdown {
+    display: block;
+}
+
+div.options.dropdown {
+    display: none;
+    min-width: 180px;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+
+    box-shadow: var(--dropdown_box_shadow);
+}
+
+div.options.dropdown a.dropdown_link {
+    display: block;
+    font-size: 14px;
+    padding: 12px 16px;
+
+    color: var(--primary_text_color);
+    text-decoration: none;
+}
+
+div.options.dropdown a.dropdown_link:hover {
+    background-color: var(--dropdown_background);
+}
+
+
+
+/*
+// RESPONSIVENESS
+// Depending on the screen width
+*/
+@media screen and (max-width: 600px) {
+    nav.links {
+        display: none;
+    }
+}
