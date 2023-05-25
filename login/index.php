@@ -3,8 +3,10 @@
 // Start the session
 session_start();
 
-// If the user is logged in, redirect to the index page
-if (isset($_SESSION['loggedin'])) {
+// Check if a user is logged in within the session
+if (isset($_SESSION["loggedin"])) {
+
+    // Redirect a user to the index page
     header("Location: ../");
     exit();
 }
@@ -110,20 +112,18 @@ include("../php/links.php");
                 <input class="input_field" id="input_password" name="password" placeholder="Enter your password" type="password" required>
 
                 <?php
-                if (isset($_GET['error'])) {
-                    if ($_GET['error'] == "invalid_credentials") {
-                        echo '<p class="invalid_credentials" style="color: red;"> The provided credentials are incorrect. </p>';
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "invalid_credentials") {
+                        echo '<p class="error" style="color: red;"> The provided credentials are incorrect. </p>';
                     }
-                    if ($_GET['error'] == "wrong_password") {
-                        echo '<p class="wrong_password" style="color: red;"> The provided password is incorrect. </p>';
+                    if ($_GET["error"] == "wrong_password") {
+                        echo '<p class="error" style="color: red;"> The provided password is incorrect. </p>';
                     }
-                    if ($_GET['error'] == "unknown_username") {
-                        echo '<p class="unknown_username" style="color: red;"> The provided username is incorrect. </p>';
+                    if ($_GET["error"] == "unknown_username") {
+                        echo '<p class="error" style="color: red;"> The provided username is incorrect. </p>';
                     }
-                    if (isset($_SESSION['error'])) {
-                        if ($_GET['error'] == "mysql_connection") {
-                            echo '<p class="unknown_username" style="color: red;">' . $_SESSION['error'] . '</p>';
-                        }
+                    if (isset($_SESSION["error"]) && $_GET["error"] == "db_connection") {
+                        echo '<p class="error" style="color: red;">' . $_SESSION["error"] . '</p>';
                     }
                 }
                 ?>
