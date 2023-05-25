@@ -1,4 +1,24 @@
 <?php
+// Check if a user is not logged in within the session
+if (!isset($_SESSION["loggedin"])) {
+
+    // Check if a user is logged in locally (if a cookie is set)
+    if (isset($_COOKIE["loggedin"])) {
+        
+        // Update the session with the local data (cookies)
+        session_regenerate_id();
+        $_SESSION["loggedin"] = TRUE;
+        $_SESSION["user_id"] = $_COOKIE["user_id"];
+        $_SESSION["user_username"] = $_COOKIE["user_username"];
+        $_SESSION["user_email"] = $_COOKIE["user_email"];
+        $_SESSION["user_lastlogin"] = $_COOKIE["user_lastlogin"];
+        $_SESSION["user_regdate"] = $_COOKIE["user_regdate"];
+        $_SESSION["user_password"] = $_COOKIE["user_password"];
+    }
+}
+
+
+
 // Determine the prefix for file locations
 if ($directory_level == 0) {
     $directory_prefix = "";
@@ -79,7 +99,7 @@ $nav_apply = $directory_prefix . "apply";
 
 
 // Options dropdown menu
-if (!isset($_SESSION['loggedin']) && !isset($_COOKIE['login'])) {
+if (!isset($_SESSION["loggedin"], $_COOKIE["loggedin"])) {
     $nav_auth = $directory_prefix . "login";
 } else {
     $nav_auth = $directory_prefix . "logout";
