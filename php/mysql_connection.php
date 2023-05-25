@@ -4,87 +4,125 @@ session_start();
 
 
 
-/* Localhost MySQL server 
-$db_hostname = "localhost";
-$db_username = "root";
-$db_password = "";
-$db_name = "testing";
-/* */
+// Parse the DB server data from the file
+$database = parse_ini_file("../Protected/config.ini", true);
 
-/* Remote MySQL server */
-$db_config = parse_ini_file("../Protected/config.ini");
-
-$auth_db_hostname = $db_config['auth_db_hostname'];
-$auth_db_username = $db_config['auth_db_username'];
-$auth_db_password = $db_config['auth_db_password'];
-$auth_db_name = $db_config['auth_db_name'];
-
-$bw_db_hostname = $db_config['bw_db_hostname'];
-$bw_db_username = $db_config['bw_db_username'];
-$bw_db_password = $db_config['bw_db_password'];
-$bw_db_name = $db_config['bw_db_name'];
-
-$lp_db_hostname = $db_config['lp_db_hostname'];
-$lp_db_username = $db_config['lp_db_username'];
-$lp_db_password = $db_config['lp_db_password'];
-$lp_db_name = $db_config['lp_db_name'];
-
-$nm_db_hostname = $db_config['nm_db_hostname'];
-$nm_db_username = $db_config['nm_db_username'];
-$nm_db_password = $db_config['nm_db_password'];
-$nm_db_name = $db_config['nm_db_name'];
-
-$sw_db_hostname = $db_config['sw_db_hostname'];
-$sw_db_username = $db_config['sw_db_username'];
-$sw_db_password = $db_config['sw_db_password'];
-$sw_db_name = $db_config['sw_db_name'];
-/* */
 
 
 // Check which DB is required
-if ($required_db == "login") {
-    // Open connection to the MySQL DB server
-    $db_connection = mysqli_connect($auth_db_hostname, $auth_db_username, $auth_db_password, $auth_db_name);
+if ($required_db == "auth") {
 
-    // Check connection to the MySQL DB server
+    // Open connection to the DB server
+    $db_connection = mysqli_connect(
+        $database["auth database"]["db hostname"],
+        $database["auth database"]["db username"],
+        $database["auth database"]["db password"],
+        $database["auth database"]["db database"]
+    );
+
+    // Check if there is a connection error with the DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
-        header("Location: ../login/?error=mysql_connection");
-        exit();
+
+        // Save the error info
+        $_SESSION["error"] = "Failed to connect to the DB server: " . mysqli_connect_error();
     }
 }
 
-if ($required_db == "networkmanager") {
-    // Open connection to the MySQL DB server
-    $db_connection = mysqli_connect($nm_db_hostname, $nm_db_username, $nm_db_password, $nm_db_name);
 
-    // Check connection to the MySQL DB server
+
+// Check which DB is required
+if ($required_db == "bedwars") {
+
+    // Open connection to the DB server
+    $db_connection = mysqli_connect(
+        $database["bedwars database"]["db hostname"],
+        $database["bedwars database"]["db username"],
+        $database["bedwars database"]["db password"],
+        $database["bedwars database"]["db database"]
+    );
+
+    // Check if there is a connection error with the DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
-        header("Location: ../login/?error=mysql_connection");
-        exit();
+
+        // Save the error info
+        $_SESSION["error"] = "Failed to connect to the DB server: " . mysqli_connect_error();
     }
 }
 
+
+
+// Check which DB is required
+if ($required_db == "luckperms") {
+
+    // Open connection to the DB server
+    $db_connection = mysqli_connect(
+        $database["luckperms database"]["db hostname"],
+        $database["luckperms database"]["db username"],
+        $database["luckperms database"]["db password"],
+        $database["luckperms database"]["db database"]
+    );
+
+    // Check if there is a connection error with the DB server
+    if (mysqli_connect_errno()) {
+
+        // Save the error info
+        $_SESSION["error"] = "Failed to connect to the DB server: " . mysqli_connect_error();
+    }
+}
+
+
+
+// Check which DB is required
+if ($required_db == "network manager") {
+
+    // Open connection to the DB server
+    $db_connection = mysqli_connect(
+        $database["network manager database"]["db hostname"],
+        $database["network manager database"]["db username"],
+        $database["network manager database"]["db password"],
+        $database["network manager database"]["db database"]
+    );
+
+    // Check if there is a connection error with the DB server
+    if (mysqli_connect_errno()) {
+
+        // Save the error info
+        $_SESSION["error"] = "Failed to connect to the DB server: " . mysqli_connect_error();
+    }
+}
+
+
+
+// Check which DB is required
 if ($required_db == "skywars") {
-    // Open connection to the MySQL DB server
-    $db_connection = mysqli_connect($sw_db_hostname, $sw_db_username, $sw_db_password, $sw_db_name);
 
-    // Check connection to the MySQL DB server
+    // Open connection to the DB server
+    $db_connection = mysqli_connect(
+        $database["skywars database"]["db hostname"],
+        $database["skywars database"]["db username"],
+        $database["skywars database"]["db password"],
+        $database["skywars database"]["db database"]
+    );
+
+    // Check if there is a connection error with the DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
-        header("Location: ../login/?error=mysql_connection");
-        exit();
+
+        // Save the error info
+        $_SESSION["error"] = "Failed to connect to the DB server: " . mysqli_connect_error();
     }
 }
 
+
+
+// Check which DB is required
 if ($required_db == "all") {
+
     // Open connection to the MySQL DB servers
     $auth_db_connection = mysqli_connect($auth_db_hostname, $auth_db_username, $auth_db_password, $auth_db_name);
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION["error"] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
@@ -93,7 +131,7 @@ if ($required_db == "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION["error"] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
@@ -102,7 +140,7 @@ if ($required_db == "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION["error"] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
@@ -111,19 +149,21 @@ if ($required_db == "all") {
 
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION["error"] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
 
     $sw_db_connection = mysqli_connect($sw_db_hostname, $sw_db_username, $sw_db_password, $sw_db_name);
-    
+
     // Check connection to the MySQL DB server
     if (mysqli_connect_errno()) {
-        $_SESSION['error'] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
+        $_SESSION["error"] = "Failed to connect to the MySQL server: " . mysqli_connect_error();
         header("Location: ../login/?error=mysql_connection");
         exit();
     }
 }
 
 ?>
+
+<hr>
