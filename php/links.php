@@ -111,7 +111,7 @@ if (!isset($_SESSION["loggedin"], $_COOKIE["loggedin"])) {
 // Navigation Script
 $nav_script = $directory_prefix . "Scripts/navigation.js";
 
-echo "
+$nav_icons = "
     <script>
         var nav_faq_icon = '$nav_faq_icon';
         var nav_gamemodes_icon = '$nav_gamemodes_icon';
