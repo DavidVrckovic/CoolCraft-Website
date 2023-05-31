@@ -1,3 +1,8 @@
+<?php
+echo $nav_icons;
+?>
+
+
 <header>
     <!-- Left Navigation -->
     <nav class="logo">
