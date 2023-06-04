@@ -1,7 +1,13 @@
 <!DOCTYPE html>
+
+
+
 <?php
-// Start the session
-session_start();
+// Links
+$directory_level = 1;
+include("../php/links.php");
+
+
 
 // Check if a user is logged in within the session
 if (isset($_SESSION["loggedin"])) {
@@ -10,10 +16,6 @@ if (isset($_SESSION["loggedin"])) {
     header("Location: ../");
     exit();
 }
-
-// Links
-$directory_level = 1;
-include("../php/links.php");
 ?>
 
 
