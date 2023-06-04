@@ -22,21 +22,6 @@ if (!isset($_SESSION["loggedin"])) {
 
 
 
-// Determine the prefix for file locations
-if ($directory_level == 0) {
-    $directory_prefix = "";
-} else if ($directory_level == 1) {
-    $directory_prefix = "../";
-} else if ($directory_level == 2) {
-    $directory_prefix = "../../";
-} else if ($directory_level == 3) {
-    $directory_prefix = "../../../";
-} else if ($directory_level == 4) {
-    $directory_prefix = "../../../../";
-}
-
-
-
 // Title & Favicon
 $favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
