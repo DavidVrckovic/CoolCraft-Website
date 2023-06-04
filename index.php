@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<?php
-// Start the session
-session_start();
 
+
+
+<?php
 // Links
 $directory_level = 0;
 include("php/links.php");
