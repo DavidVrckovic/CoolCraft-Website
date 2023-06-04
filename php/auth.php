@@ -1,6 +1,11 @@
 <?php
-$required_db = "auth";
-include("mysql_connection.php");
+// Start the session
+session_start();
+
+
+
+// Include the DB functions
+include("db_connection.php");
 
 
 
@@ -14,7 +19,7 @@ if (!($_SERVER["REQUEST_METHOD"] == "POST")) {
 
 
 
-// Check if $_POST super global variable is not set to NULL
+// Check if $_POST super global variables are set to NULL
 // Fixes "Undefined array key" error
 if (!isset($_POST["username"], $_POST["password"])) {
 
@@ -25,6 +30,17 @@ if (!isset($_POST["username"], $_POST["password"])) {
 
 
 
+// Set the required DB name and query
+$db_name = "auth database";
+$db_query = "SELECT * FROM authme WHERE realname LIKE '" . $_POST["username"] . "' LIMIT 1";
+
+
+
+// Call the function and save the results in a variable
+$db_results = db_get_results($db_name, $db_query);
+
+
+
 // Check if there is an error with the DB connection
 if (isset($_SESSION["error"])) {
 
@@ -32,12 +48,6 @@ if (isset($_SESSION["error"])) {
     header("Location: ../login/?error=db_connection");
     exit();
 }
-
-
-
-// Select and save results of searched data from the DB server
-$db_query = "SELECT * FROM authme WHERE realname LIKE '" . $_POST["username"] . "' LIMIT 1";
-$db_results = mysqli_query($db_connection, $db_query);
 
 
 
@@ -53,11 +63,6 @@ if (!($db_results && mysqli_num_rows($db_results) > 0)) {
 
 // Fetch the searched data from the DB server
 $user_data = mysqli_fetch_assoc($db_results);
-
-
-
-// Close connection to the DB server
-mysqli_close($db_connection);
 
 
 

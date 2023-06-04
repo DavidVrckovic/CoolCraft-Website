@@ -1,71 +1,165 @@
 <?php
-$required_db = "all";
-include("mysql_connection.php");
+// Include the DB functions
+include("db_connection.php");
 
-// Check if $_GET super global variable is not null
-// Fixes "Undefined array key" error
-if (isset($_SESSION['loggedin'])) {
 
-    // Get searched data with $_GET
-    $login_search = $_SESSION['user_username'];
-    $login_search = mysqli_real_escape_string($login_db_connection, $login_search);
 
-    $lp_search = $_SESSION['user_username'];
-    $lp_search = mysqli_real_escape_string($lp_db_connection, $lp_search);
+// Check if a user is not logged in within the session
+if (!isset($_SESSION["loggedin"])) {
 
-    $nm_search = $_SESSION['user_username'];
-    $nm_search = mysqli_real_escape_string($nm_db_connection, $nm_search);
-
-    $sw_search = $_SESSION['user_username'];
-    $sw_search = mysqli_real_escape_string($sw_db_connection, $sw_search);
-
-    // Select searched data from the MySQL DB server
-    $login_db_query = "SELECT * FROM authme WHERE realname LIKE '" . $login_search . "'";
-    $login_db_results = mysqli_query($login_db_connection, $login_db_query);
-
-    // Select searched data from the MySQL DB server
-    $lp_db_query = "SELECT * FROM luckperms_players WHERE username LIKE '%" . $lp_search . "%'";
-    $lp_db_results = mysqli_query($lp_db_connection, $lp_db_query);
-
-    // Select searched data from the MySQL DB server
-    $nm_db_query = "SELECT * FROM nm_players WHERE username LIKE '" . $nm_search . "'";
-    $nm_db_results = mysqli_query($nm_db_connection, $nm_db_query);
-
-    // Select searched data from the MySQL DB server
-    $sw_db_query = "SELECT * FROM sw_player WHERE player_name LIKE '" . $sw_search . "'";
-    $sw_db_results = mysqli_query($sw_db_connection, $sw_db_query);
+    // Redirect a user to the login page
+    header("Location: ../login");
+    exit();
 }
 
-else if (isset($_COOKIE['login'])) {
 
-    // Get searched data with $_GET
-    $login_search = $_COOKIE['login'];
-    $login_search = mysqli_real_escape_string($login_db_connection, $login_search);
 
-    $lp_search = $_COOKIE['login'];
-    $lp_search = mysqli_real_escape_string($lp_db_connection, $lp_search);
+function lp_db_get_results()
+{
+    // Set the required DB name and query
+    $db_name = "luckperms database";
+    $db_query = "SELECT * FROM luckperms_players WHERE username LIKE '%" . db_escape_string($db_name, $_SESSION["user_username"]) . "%'";
 
-    $nm_search = $_COOKIE['login'];
-    $nm_search = mysqli_real_escape_string($nm_db_connection, $nm_search);
 
-    $sw_search = $_COOKIE['login'];
-    $sw_search = mysqli_real_escape_string($sw_db_connection, $sw_search);
 
-    // Select searched data from the MySQL DB server
-    $login_db_query = "SELECT * FROM authme WHERE realname LIKE '" . $login_search . "'";
-    $login_db_results = mysqli_query($login_db_connection, $login_db_query);
+    // Call the function and save the results in a variable
+    $db_results = db_get_results($db_name, $db_query);
 
-    // Select searched data from the MySQL DB server
-    $lp_db_query = "SELECT * FROM luckperms_players WHERE username LIKE '%" . $lp_search . "%'";
-    $lp_db_results = mysqli_query($lp_db_connection, $lp_db_query);
 
-    // Select searched data from the MySQL DB server
-    $nm_db_query = "SELECT * FROM nm_players WHERE username LIKE '" . $nm_search . "'";
-    $nm_db_results = mysqli_query($nm_db_connection, $nm_db_query);
 
-    // Select searched data from the MySQL DB server
-    $sw_db_query = "SELECT * FROM sw_player WHERE player_name LIKE '" . $sw_search . "'";
-    $sw_db_results = mysqli_query($sw_db_connection, $sw_db_query);
+    // Check if there is an error with the DB connection
+    if (isset($_SESSION["error"])) {
 
+        // Redirect a user to the login page with a "database connection" error
+        header("Location: ../account/?error=db_connection&database=lp");
+        exit();
+    }
+
+    // Return the DB query results
+    return $db_results;
+}
+
+
+
+function nm_db_get_results()
+{
+    // Set the required DB name and query
+    $db_name = "network manager database";
+    $db_query = "SELECT * FROM nm_players WHERE username LIKE '" . db_escape_string($db_name, $_SESSION["user_username"]) . "'";
+
+
+
+    // Call the function and save the results in a variable
+    $db_results = db_get_results($db_name, $db_query);
+
+
+
+    // Check if there is an error with the DB connection
+    if (isset($_SESSION["error"])) {
+
+        // Redirect a user to the login page with a "database connection" error
+        header("Location: ../account/?error=db_connection&database=nm");
+        exit();
+    }
+
+    // Return the DB query results
+    return $db_results;
+}
+
+
+
+function sw_db_get_results()
+{
+    // Set the required DB name and query
+    $db_name = "skywars database";
+    $db_query = "SELECT * FROM sw_player WHERE player_name LIKE '" . db_escape_string($db_name, $_SESSION["user_username"]) . "'";
+
+
+
+    // Call the function and save the results in a variable
+    $db_results = db_get_results($db_name, $db_query);
+
+
+
+    // Check if there is an error with the DB connection
+    if (isset($_SESSION["error"])) {
+
+        // Redirect a user to the login page with a "database connection" error
+        header("Location: ../account/?error=db_connection&database=sw");
+        exit();
+    }
+
+    // Return the DB query results
+    return $db_results;
+}
+
+
+
+function output_general_info_lp(mysqli_result|bool $db_results)
+{
+    if ($db_results && mysqli_num_rows($db_results) > 0) {
+        while ($row = mysqli_fetch_array($db_results)) {
+            if ($row["primary_group"] == "default" || $row["primary_group"] == "player") {
+                $rank = "Player";
+            } else {
+                $rank = $row["primary_group"];
+            }
+            echo ('
+                <div class="main_text" id="main_text-rank">
+                    Username: ' . $_SESSION["user_username"] . '
+                    <br>
+                    Rank: ' . $rank . '
+                </div>
+            ');
+        }
+    } else {
+        echo ('
+            <div class="main_text" id="main_text-rank">
+                Username: ' . $_SESSION["user_username"] . '
+                <br>
+                Rank: Player
+            </div>
+        ');
+    }
+}
+
+
+
+function output_skywars_stats(mysqli_result|bool $db_results)
+{
+    if ($db_results && mysqli_num_rows($db_results) > 0) {
+        while ($row = mysqli_fetch_array($db_results)) {
+            echo ('
+                <div class="gamemode" id="gamemode-survival">
+                    <div class="gamemode_image">
+                        <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
+                        <div class="gamemode_text">
+                            Wins: ' . $row["wins"] . '
+                            <br>
+                            Losses: ' . $row["losses"] . '
+                            <br>
+                            Kills: ' . $row["kills"] . '
+                            <br>
+                            Deaths: ' . $row["deaths"] . '
+                            <br>
+                            XP: ' . $row["xp"] . '
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            ');
+        }
+    } else {
+        echo ('
+            <div class="gamemode" id="gamemode-survival">
+                <div class="gamemode_image">
+                    <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
+                    <div class="gamemode_text">
+                        No data
+                    </div>
+                </div>
+            </div>
+        ');
+    }
 }
 ?>
