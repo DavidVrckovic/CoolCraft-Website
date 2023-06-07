@@ -17,6 +17,7 @@ if (!isset($_SESSION["loggedin"])) {
         $_SESSION["user_lastlogin"] = $_COOKIE["user_lastlogin"];
         $_SESSION["user_regdate"] = $_COOKIE["user_regdate"];
         $_SESSION["user_password"] = $_COOKIE["user_password"];
+        $_SESSION["user_uuid"] = $_COOKIE["user_uuid"];
     }
 }
 
