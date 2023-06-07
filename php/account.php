@@ -4,16 +4,6 @@ include("db_connection.php");
 
 
 
-// Check if a user is not logged in within the session
-if (!isset($_SESSION["loggedin"])) {
-
-    // Redirect a user to the login page
-    header("Location: ../login");
-    exit();
-}
-
-
-
 function lp_db_get_results()
 {
     // Set the required DB name and query
@@ -45,7 +35,7 @@ function nm_db_get_results()
 {
     // Set the required DB name and query
     $db_name = "network manager database";
-    $db_query = "SELECT * FROM nm_players WHERE username LIKE '" . db_escape_string($db_name, $_SESSION["user_username"]) . "'";
+    $db_query = "SELECT * FROM nm_players WHERE username LIKE '" . $_SESSION["user_username"] . "' LIMIT 1";
 
 
 
@@ -97,28 +87,32 @@ function sw_db_get_results()
 
 function output_general_info_lp(mysqli_result|bool $db_results)
 {
+
+    // Check if there are any results in the DB
     if ($db_results && mysqli_num_rows($db_results) > 0) {
-        while ($row = mysqli_fetch_array($db_results)) {
-            if ($row["primary_group"] == "default" || $row["primary_group"] == "player") {
-                $rank = "Player";
-            } else {
-                $rank = $row["primary_group"];
+
+        // Go through the DB rows
+        while ($db_row = mysqli_fetch_array($db_results)) {
+
+            // Check if the primary group is default
+            if ($db_row["primary_group"] == "default") {
+
+                // Change the primary group to Player
+                $db_row["primary_group"] = "Player";
             }
+
+            // Output the data
             echo ('
-                <div class="main_text" id="main_text-rank">
-                    Username: ' . $_SESSION["user_username"] . '
-                    <br>
-                    Rank: ' . $rank . '
-                </div>
+                <p class="text">
+                    Rank: ' . ucfirst($db_row["primary_group"]) . '
+                </p>
             ');
         }
     } else {
         echo ('
-            <div class="main_text" id="main_text-rank">
-                Username: ' . $_SESSION["user_username"] . '
-                <br>
-                Rank: Player
-            </div>
+            <p class="text">
+                Rank: unknown
+            </p>
         ');
     }
 }
@@ -127,22 +121,27 @@ function output_general_info_lp(mysqli_result|bool $db_results)
 
 function output_skywars_stats(mysqli_result|bool $db_results)
 {
+    // Check if there are any results in the DB
     if ($db_results && mysqli_num_rows($db_results) > 0) {
-        while ($row = mysqli_fetch_array($db_results)) {
+
+        // Go through the DB rows
+        while ($db_row = mysqli_fetch_array($db_results)) {
+
+            // Output the data
             echo ('
                 <div class="gamemode" id="gamemode-survival">
                     <div class="gamemode_image">
                         <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
                         <div class="gamemode_text">
-                            Wins: ' . $row["wins"] . '
+                            Wins: ' . $db_row["wins"] . '
                             <br>
-                            Losses: ' . $row["losses"] . '
+                            Losses: ' . $db_row["losses"] . '
                             <br>
-                            Kills: ' . $row["kills"] . '
+                            Kills: ' . $db_row["kills"] . '
                             <br>
-                            Deaths: ' . $row["deaths"] . '
+                            Deaths: ' . $db_row["deaths"] . '
                             <br>
-                            XP: ' . $row["xp"] . '
+                            XP: ' . $db_row["xp"] . '
                             <br>
                         </div>
                     </div>
@@ -162,4 +161,3 @@ function output_skywars_stats(mysqli_result|bool $db_results)
         ');
     }
 }
-?>

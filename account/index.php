@@ -86,7 +86,7 @@ include("../php/account.php");
         </section>
 
         <!-- SECTION -->
-        <section class="content cflex" id="main_section">
+        <section class="content cflex has_bg_color" id="main_section">
 
             <!-- Inner section -->
             <article class="general">
@@ -100,6 +100,32 @@ include("../php/account.php");
                 <hr class="line width_100">
 
                 <!-- Text -->
+                <p class="text">
+                    Username: <?php echo ($_SESSION["user_username"]); ?>
+                </p>
+
+                <p class="text">
+                    Email: <?php echo ($_SESSION["user_email"]); ?>
+                </p>
+
+                <p class="text">
+                    UUID: <?php echo ($_SESSION["user_uuid"]); ?>
+                </p>
+
+                <p class="text">
+                    Last login:
+                    <?php // Dividing by 1000 because of milliseconds
+                    echo (date("d F Y \a\\t h:i:s", $_SESSION["user_lastlogin"] / 1000));
+                    ?>
+                </p>
+
+                <p class="text">
+                    Registration date:
+                    <?php // Dividing by 1000 because of milliseconds
+                    echo (date("d F Y \a\\t h:i:s", $_SESSION["user_regdate"] / 1000));
+                    ?>
+                </p>
+
                 <?php
                 if (isset($_SESSION["error"]) && $_GET["error"] == "db_connection" && $_GET["database"] == "lp") {
                     echo ('
