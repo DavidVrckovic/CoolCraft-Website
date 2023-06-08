@@ -304,6 +304,24 @@ a.link_over_bg_img:hover {
     background-color: #00000040;
 }
 
+a.search_link {
+    display: block;
+    font-size: 14px;
+    padding: 12px 16px;
+
+    color: var(--primary_text_color);
+    text-decoration: none;
+}
+
+a.search_link:hover {
+    background-color: var(--dropdown_background);
+}
+
+input.search {
+    margin: 0;
+    width: 300px;
+}
+
 
 
 /* Iframe */

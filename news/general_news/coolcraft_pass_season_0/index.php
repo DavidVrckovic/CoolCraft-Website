@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<?php
-// Start the session
-session_start();
 
-// Links
-$directory_level = 3;
-include("../../../php/links.php");
+
+
+<?php
+// Determine the prefix for file locations
+$directory_prefix = "../../../";
+
+// Include the links file
+include($directory_prefix . "php/links.php");
 ?>
 
 
@@ -138,9 +140,9 @@ include("../../../php/links.php");
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
 
-    echo '
+    echo ('
         <script src="' . $copy_to_clipboard_script . '"></script>
-    ';
+    ');
     ?>
 </body>
 

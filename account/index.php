@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<?php
-include("../php/account.php");
 
-// If the user is not logged in, redirect to the login page
-if (!isset($_SESSION['loggedin']) && !isset($_COOKIE['login'])) {
-    header("Location: ../login.php");
+
+
+<?php
+// Determine the prefix for file locations
+$directory_prefix = "../";
+
+// Include the links file
+include($directory_prefix . "php/links.php");
+
+
+
+// Check if a user is not logged in within the session
+if (!isset($_SESSION["loggedin"])) {
+
+    // Redirect a user to the login page
+    header("Location: ../login");
     exit();
 }
 
-// Links
-$directory_level = 1;
-include("../php/links.php");
+
+
+// Include the account script
+include("../php/account.php");
 ?>
 
 
@@ -74,7 +86,7 @@ include("../php/links.php");
         </section>
 
         <!-- SECTION -->
-        <section class="content cflex" id="main_section">
+        <section class="content cflex has_bg_color" id="main_section">
 
             <!-- Inner section -->
             <article class="general">
@@ -88,32 +100,41 @@ include("../php/links.php");
                 <hr class="line width_100">
 
                 <!-- Text -->
+                <p class="text">
+                    Username: <?php echo ($_SESSION["user_username"]); ?>
+                </p>
+
+                <p class="text">
+                    Email: <?php echo ($_SESSION["user_email"]); ?>
+                </p>
+
+                <p class="text">
+                    UUID: <?php echo ($_SESSION["user_uuid"]); ?>
+                </p>
+
+                <p class="text">
+                    Last login:
+                    <?php // Dividing by 1000 because of milliseconds
+                    echo (date("d F Y \a\\t h:i:s", $_SESSION["user_lastlogin"] / 1000));
+                    ?>
+                </p>
+
+                <p class="text">
+                    Registration date:
+                    <?php // Dividing by 1000 because of milliseconds
+                    echo (date("d F Y \a\\t h:i:s", $_SESSION["user_regdate"] / 1000));
+                    ?>
+                </p>
+
                 <?php
-                if (isset($_SESSION['loggedin'])) {
-                    if ($lp_db_results && mysqli_num_rows($lp_db_results) > 0) {
-                        while ($row = mysqli_fetch_array($lp_db_results)) {
-                            if ($row['primary_group'] == "default" || $row['primary_group'] == "player") {
-                                $rank = "Player";
-                            } else {
-                                $rank = $row['primary_group'];
-                            }
-                            echo '
-                            <div class="main_text" id="main_text-rank">
-                                Username: ' . $_SESSION['user_username'] . '
-                                <br>
-                                Rank: ' . $rank . '
-                            </div>
-                        ';
-                        }
-                    } else {
-                        echo '
-                        <div class="main_text" id="main_text-rank">
-                            Username: ' . $_SESSION['user_username'] . '
-                            <br>
-                            Rank: Player
-                        </div>
-                    ';
-                    }
+                if (isset($_SESSION["error"]) && $_GET["error"] == "db_connection" && $_GET["database"] == "lp") {
+                    echo ('
+                        <p class="error">
+                        ' . $_SESSION["error"] . '
+                        </p>
+                    ');
+                } else {
+                    output_general_info_lp(lp_db_get_results());
                 }
                 ?>
 
@@ -132,41 +153,15 @@ include("../php/links.php");
 
                 <!-- Text -->
                 <?php
-                if (isset($_SESSION['loggedin'])) {
-                    if ($sw_db_results && mysqli_num_rows($sw_db_results) > 0) {
-                        while ($row = mysqli_fetch_array($sw_db_results)) {
-                            echo '
-                            <div class="gamemode" id="gamemode-survival">
-                                <div class="gamemode_image">
-                                    <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
-                                    <div class="gamemode_text">
-                                        Wins: ' . $row["wins"] . '
-                                        <br>
-                                        Losses: ' . $row["losses"] . '
-                                        <br>
-                                        Kills: ' . $row["kills"] . '
-                                        <br>
-                                        Deaths: ' . $row["deaths"] . '
-                                        <br>
-                                        XP: ' . $row["xp"] . '
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        ';
-                        }
-                    } else {
-                        echo '
-                        <div class="gamemode" id="gamemode-survival">
-                            <div class="gamemode_image">
-                                <img alt="Game mode banner" class="gamemode_banner" src="../images/SkyWars Lobby - 1.png">
-                                <div class="gamemode_text">
-                                    No data
-                                </div>
-                            </div>
-                        </div>
-                    ';
-                    }
+                if (isset($_SESSION["error"]) && $_GET["error"] == "db_connection" && $_GET["database"] == "sw") {
+                    echo ('
+                        <p class="error">
+                        ' . $_SESSION["error"] . '
+                        </p>
+                    ');
+                } else {
+                    $sw_db_results = false;
+                    output_skywars_stats($sw_db_results);
                 }
                 ?>
 
@@ -187,9 +182,9 @@ include("../php/links.php");
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
 
-    echo '
+    echo ('
         <script src="' . $copy_to_clipboard_script . '"></script>
-    ';
+    ');
     ?>
 </body>
 

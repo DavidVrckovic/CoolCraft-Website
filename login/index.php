@@ -1,7 +1,15 @@
 <!DOCTYPE html>
+
+
+
 <?php
-// Start the session
-session_start();
+// Determine the prefix for file locations
+$directory_prefix = "../";
+
+// Include the links file
+include($directory_prefix . "php/links.php");
+
+
 
 // Check if a user is logged in within the session
 if (isset($_SESSION["loggedin"])) {
@@ -10,10 +18,6 @@ if (isset($_SESSION["loggedin"])) {
     header("Location: ../");
     exit();
 }
-
-// Links
-$directory_level = 1;
-include("../php/links.php");
 ?>
 
 
@@ -150,9 +154,9 @@ include("../php/links.php");
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
 
-    echo '
+    echo ('
         <script src="' . $copy_to_clipboard_script . '"></script>
-    ';
+    ');
     ?>
 </body>
 

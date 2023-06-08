@@ -1,10 +1,13 @@
 <?php
+// Start the session
+session_start();
+
 // Check if a user is not logged in within the session
 if (!isset($_SESSION["loggedin"])) {
 
     // Check if a user is logged in locally (if a cookie is set)
     if (isset($_COOKIE["loggedin"])) {
-        
+
         // Update the session with the local data (cookies)
         session_regenerate_id();
         $_SESSION["loggedin"] = TRUE;
@@ -14,22 +17,8 @@ if (!isset($_SESSION["loggedin"])) {
         $_SESSION["user_lastlogin"] = $_COOKIE["user_lastlogin"];
         $_SESSION["user_regdate"] = $_COOKIE["user_regdate"];
         $_SESSION["user_password"] = $_COOKIE["user_password"];
+        $_SESSION["user_uuid"] = $_COOKIE["user_uuid"];
     }
-}
-
-
-
-// Determine the prefix for file locations
-if ($directory_level == 0) {
-    $directory_prefix = "";
-} else if ($directory_level == 1) {
-    $directory_prefix = "../";
-} else if ($directory_level == 2) {
-    $directory_prefix = "../../";
-} else if ($directory_level == 3) {
-    $directory_prefix = "../../../";
-} else if ($directory_level == 4) {
-    $directory_prefix = "../../../../";
 }
 
 
