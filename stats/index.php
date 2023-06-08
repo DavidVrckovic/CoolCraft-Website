@@ -1,14 +1,32 @@
-<?php
-include("../php/search.php");
+<!DOCTYPE html>
 
-// Links
-$directory_level = 1;
-include("../php/links.php");
+
+
+<?php
+// Determine the prefix for file locations
+$directory_prefix = "../";
+
+// Include the links file
+include($directory_prefix . "php/links.php");
+
+
+
+// Check if a user is not logged in within the session
+if (!isset($_SESSION["loggedin"])) {
+
+    // Redirect a user to the login page
+    header("Location: ../login");
+    exit();
+}
+
+
+
+// Include the search script
+include("../php/search.php");
 ?>
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,21 +38,20 @@ include("../php/links.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title & Favicon -->
-    <title> CoolCraft > Statistics </title>
-    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png" />
+    <title> CoolCraft | Statistics </title>
+    <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- General CSS files -->
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
-    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css" />
-    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($footer_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($navigation_css); ?>" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -45,84 +62,63 @@ include("../php/links.php");
     include($directory_prefix . "Parts/navigation.php");
     ?>
 
+    <script src="../Scripts/ajax_search.js"></script>
 
+    <!-- MAIN -->
+    <main class="cflex">
 
-    <!-- Section -->
-    <div class="section" id="section-introduction">
-        <img alt="Banner image" class="section" id="section_banner-introduction" src="../images/Hub Lobby - 4.png" />
-        <div class="inner_section" id="inner_section-introduction">
+        <!-- SECTION -->
+        <section class="cflex everything_center has_bg_img height_small" id="intro_section">
 
-            <h1 class="title" id="title-introduction">
-                <div class="search">
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" class="search" method="GET">
-                        <input class="search" id="search2" name="q" onkeyup="showResult(this.value)" placeholder="Player name" type="text" value="">
-                        <button class="search" id="submit" type="submit" value="Search">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        <div class="livesearch" id="livesearch"></div>
-                    </form>
-                </div>
-            </h1>
+            <!-- Background image -->
+            <img alt="Statistics" class="section_bg bg" id="intro_section_bg_img" src="../Images/Hub Lobby - 4.png">
 
-        </div>
-    </div>
+            <!-- Inner section -->
+            <article class="inner cflex everything_center" id="intro_inner">
 
-    <!-- CONTENT -->
-    <div class="content">
+                <!-- Title -->
+                <h1 class="title">
+                    Statistics
+                </h1>
 
-        <!-- MAIN -->
-        <div class="main">
+            </article>
 
-            <h1 class="main_title" id="main_title-general_info">
+        </section>
+
+        <!-- SECTION -->
+        <section class="content cflex has_bg_color" id="main_section">
+
+            <!-- Inner section -->
+            <article class="general">
+
+                <!-- Title -->
+                <h2 class="title">
+                    Search
+                </h2>
+
+                <!-- Search form -->
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" autocomplete="off" class="search" method="GET">
+
+                    <input class="search" maxlength="32" name="search" onblur="setTimeout( function() { hideResult(); }, 140)" onfocus="showResult(this.value)" oninput="showResult(this.value)" placeholder="Enter player name" type="text" value="<?php if (isset($_GET["search"])) echo $_GET["search"]; ?>">
+
+                    <div class="live_search" id="live_search"></div>
+
+                </form>
+
+            </article>
+
+            <!-- Inner section -->
+            <article class="general">
+
                 <?php
-                if (isset($_GET['q'])) {
-                    while ($row = mysqli_fetch_array($nm_db_results)) {
-                        echo "<span>" . $row['username'] . "</span> <br>";
-                    }
-                }
+                output_search_results();
                 ?>
-            </h1>
 
-            <div class="main_title_line" id="main_title_line-general_info"> </div>
+            </article>
 
-            <?php
-            if (isset($_GET['q'])) {
-                while ($row = mysqli_fetch_array($lp_db_results)) {
-                    if ($row['primary_group'] == "default" || $row['primary_group'] == "player") {
-                        echo "<span> Rank: Player </span>";
-                    } else {
-                        echo "<span> Rank: " . $row['primary_group'] . "</span>";
-                    }
-                }
-            }
+        </section>
 
-            if (isset($_GET['q'])) {
-                if ($sw_db_results) {
-                    while ($row = mysqli_fetch_array($sw_db_results)) {
-                        echo '
-                        <div class="gamemode" id="gamemode-survival">
-                            <div class="gamemode_image">
-                                <img alt="Game mode banner" class="gamemode_banner" src="../images/Survival Spawn - 1.png" />
-                                <div class="gamemode_text">
-                                    Wins: ' . $row["wins"] . ' <br>
-                                    Losses: ' . $row["losses"] . ' <br>
-                                    Kills: ' . $row["kills"] . ' <br>
-                                    Deaths: ' . $row["deaths"] . ' <br>
-                                    XP: ' . $row["xp"] . ' <br>
-                                </div>
-                            </div>
-                        </div>
-                        ';
-                    }
-                } else {
-                    echo 'User has never player SkyWars.';
-                }
-            } else {
-                echo 'Search for a username to see their stats.';
-            }
-            ?>
-        </div>
-    </div>
+    </main>
 
 
 
@@ -135,9 +131,9 @@ include("../php/links.php");
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
 
-    echo '
+    echo ('
         <script src="' . $copy_to_clipboard_script . '"></script>
-    ';
+    ');
     ?>
 </body>
 

@@ -1,63 +1,268 @@
 <?php
-$required_db = "all";
-include("mysql_connection.php");
+// Include the DB functions
+include("db_connection.php");
 
-// Check if the request method is of type GET
-if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
-    // Check if $_GET super global variable is not null
-    // Fixes "Undefined array key" error
-    if (isset($_GET['q'])) {
 
-        // Get searched data with $_GET
-        $login_search = $_GET['q'];
-        $login_search = mysqli_real_escape_string($login_db_connection, $login_search);
-        
-        $lp_search = $_GET['q'];
-        $lp_search = mysqli_real_escape_string($lp_db_connection, $lp_search);
-        
-        $nm_search = $_GET['q'];
-        $nm_search = mysqli_real_escape_string($nm_db_connection, $nm_search);
+function nm_db_get_results()
+{
+    // Set the required DB name and query
+    $db_name = "network manager database";
+    $db_query = "SELECT * FROM nm_players WHERE username LIKE '" . db_escape_string($db_name, $_GET["search"]) . "' LIMIT 1";
 
-        $sw_search = $_GET['q'];
-        $sw_search = mysqli_real_escape_string($sw_db_connection, $sw_search);
 
-        // Select searched data from the MySQL DB server
-        $login_db_query = "SELECT * FROM authme WHERE realname LIKE '" . $login_search . "'";
-        $login_db_results = mysqli_query($login_db_connection, $login_db_query);
 
-        // Select searched data from the MySQL DB server
-        $lp_db_query = "SELECT * FROM luckperms_players WHERE username LIKE '%" . $lp_search . "%'";
-        $lp_db_results = mysqli_query($lp_db_connection, $lp_db_query);
+    // Call the function and save the results in a variable
+    $db_results = db_get_results($db_name, $db_query);
 
-        // Select searched data from the MySQL DB server
-        $nm_db_query = "SELECT * FROM nm_players WHERE username LIKE '" . $nm_search . "'";
-        $nm_db_results = mysqli_query($nm_db_connection, $nm_db_query);
 
-        // Select searched data from the MySQL DB server
-        $sw_db_query = "SELECT * FROM sw_player WHERE player_name LIKE '" . $sw_search . "'";
-        $sw_db_results = mysqli_query($sw_db_connection, $sw_db_query);
+
+    // Check if there is an error with the DB connection
+    if (isset($_SESSION["error"])) {
+
+        // Redirect a user to the login page with a "database connection" error
+        header("Location: ../stats/?error=db_connection&database=nm");
+        exit();
     }
 
+    // Return the DB query results
+    return $db_results;
+}
+
+
+
+function nm_db_get_results_10()
+{
+    // Set the required DB name and query
+    $db_name = "network manager database";
+    $db_query = "SELECT * FROM nm_players WHERE username LIKE '%" . db_escape_string($db_name, $_GET["query"]) . "%' LIMIT 10";
+
+
+
+    // Call the function and save the results in a variable
+    $db_results = db_get_results($db_name, $db_query);
+
+
+
+    // Check if there is an error with the DB connection
+    if (isset($_SESSION["error"])) {
+
+        // Redirect a user to the login page with a "database connection" error
+        header("Location: ../stats/?error=db_connection&database=nm");
+        exit();
+    }
+
+    // Return the DB query results
+    return $db_results;
+}
+
+
+
+function playtime(int $seconds)
+{
+
+    if ($seconds > 1000 * 60 * 60) {
+        $playtime_value = round($seconds / 60 / 60 / 1000, 2);
+        $playtime_type = "hours";
+    } else if ($seconds > 1000 * 60) {
+        $playtime_value = round($seconds / 60 / 1000, 2);
+        $playtime_type = "minutes";
+    } else if ($seconds > 1000) {
+        $playtime_value = round($seconds / 1000, 2);
+        $playtime_type = "seconds";
+    } else {
+        $playtime_value = $seconds;
+        $playtime_type = "ms";
+    }
+
+    return $playtime_value . " " . $playtime_type;
+}
+
+
+
+function minecraft_version(int $protocol)
+{
+
+    if ($protocol < 47) {
+        return "Unsupported (less than 1.8)";
+    }
+
+    if ($protocol == 47) {
+        return "1.8";
+    }
+
+    if ($protocol >= 48 && $protocol <= 106) {
+        return "1.9 Snapshot";
+    }
+
+    if ($protocol == 107) {
+        return "1.9";
+    }
+
+    if ($protocol == 108) {
+        return "1.9.1";
+    }
+
+    if ($protocol == 109) {
+        return "1.9.2";
+    }
+
+    if ($protocol == 110) {
+        return "1.9.4";
+    }
+
+    if ($protocol >= 111 && $protocol <= 209) {
+        return "1.10 Snapshot";
+    }
+
+    if ($protocol == 210) {
+        return "1.10";
+    }
+
+    if ($protocol >= 315 && $protocol <= 757) {
+        return "1.11 through 1.18.1";
+    }
+
+    if ($protocol == 758) {
+        return "1.18.2";
+    }
+
+    if ($protocol == 759) {
+        return "1.19";
+    }
+
+    if ($protocol == 760) {
+        return "1.19.2";
+    }
+
+    if ($protocol == 761) {
+        return "1.19.3";
+    }
+
+    if ($protocol == 762) {
+        return "1.19.4";
+    }
+
+    if ($protocol == 763) {
+        return "1.20";
+    }
+
+    return "Unknown";
+}
+
+
+
+function player_status(int $status = 0)
+{
+    if ($status == 0) {
+        return "Offline";
+    }
+
+    return "Online";
+}
+
+
+
+function output_search_results()
+{
+
+    if (isset($_SESSION["error"]) && $_GET["error"] == "db_connection" && $_GET["database"] == "nm") {
+        echo ('
+            <p class="error">
+            ' . $_SESSION["error"] . '
+            </p>
+        ');
+    } else {
+        if (isset($_GET["search"])) {
+            $db_results = nm_db_get_results();
+
+            if (!($db_results && mysqli_num_rows($db_results) > 0)) {
+                echo ('
+                    <!-- Text -->
+                    <p class="error">
+                        Player not found.
+                    </p>
+                ');
+            }
+
+            while ($db_row = mysqli_fetch_array($db_results)) {
+                echo ('
+                    <!-- Title -->
+                    <h2 class="title">
+                        Stats
+                    </h2>
+
+                    <!-- Line -->
+                    <hr class="line width_100">
+
+                    <!-- Text -->
+                    <p class="text">
+                        Username: ' . $db_row["username"] . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Country: ' . $db_row["country"] . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Last used Minecraft version: ' . minecraft_version($db_row["version"]) . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        First login: ' . date("d F Y \a\\t h:i:s", $db_row["firstlogin"] / 1000) . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Last login: ' . date("d F Y \a\\t h:i:s", $db_row["lastlogin"] / 1000) . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Last logout: ' . date("d F Y \a\\t h:i:s", $db_row["lastlogout"] / 1000) . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Current status: ' . player_status($db_row["online"]) . '
+                    </p>
+
+                    <!-- Text -->
+                    <p class="text">
+                        Playtime: ' . playtime($db_row["playtime"]) . '
+                    </p>
+                ');
+            }
+        }
+    }
+}
+
+
+
+// Check if the request method is of type GET
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+
     // Check if $_GET super global variable is not null
     // Fixes "Undefined array key" error
-    if (isset($_GET['results'])) {
-        
-        // Get searched data with $_GET
-        // Sent through ajax_search.js
-        $search = $_GET['results'];
-        $search = mysqli_real_escape_string($nm_db_connection, $search);
+    if (isset($_GET["query"])) {
 
-        // Select searched data from the MySQL DB server
-        $db_query = "SELECT username FROM nm_players WHERE username LIKE '%" . $search . "%' LIMIT 10";
-        $db_results = mysqli_query($nm_db_connection, $db_query);
+        $db_results = nm_db_get_results_10();
 
         // Check if at least 1 character is entered in the search bar
-        if (strlen($search) > 1) {
-            
+        if (strlen($_GET["query"]) > 1) {
+
             // Output 10 usernames starting with entered letters
-            while ($row = mysqli_fetch_array($db_results)) {
-                echo '<a href="index.php?q=' . $row["username"] . '">' . $row["username"] . '</a><br>';
+            while ($db_row = mysqli_fetch_array($db_results)) {
+
+                // Output
+                echo ('
+                    <a class="search_link" href="?search=' . $db_row["username"] . '">
+                        ' . $db_row["username"] . '
+                    </a>
+                ');
             }
         }
     }
