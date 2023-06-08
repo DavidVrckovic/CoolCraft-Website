@@ -1,4 +1,4 @@
-button.back_to_top {
+a.back_to_top {
     bottom: 20px;
     display: none;
     padding: 6px;
@@ -11,12 +11,11 @@ button.back_to_top {
     border-radius: 5px;
     box-shadow: var(--back_to_top_shadow);
     cursor: pointer;
-    outline: none;
-    scroll-behavior: smooth;
+    text-decoration: none;
 }
 
-button.back_to_top:hover {
-    background-color: #ec7702 !important;
+a.back_to_top:hover {
+    background-color: #ec7702;
 }
 
 img.back_to_top {

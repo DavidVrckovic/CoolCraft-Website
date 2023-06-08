@@ -1,25 +1,65 @@
-// Get the button by Class name
-var back_to_top_button = document.getElementsByClassName("back_to_top");
+// Function to scroll to the top of the page
+// * Works only if OS animations are enabled
+// * Same effect can be achieved with HTML and CSS only: <a href="#"> with {scroll-behavior: smooth;}
+function back_to_top() {
 
-// When the user scrolls down 60px from the top of the page, show the button
-window.onscroll = function () { scrollFunction() };
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
 
-function scrollFunction() {
+    // Log to console
+    console.log("Clicked on back to top button.");
+}
+
+
+
+// Function to scroll to the top of the page
+// * Works in all cases
+// * Requires JQuery
+function back_to_top_jquery() {
+
+    // Get html and body elements and save them in a variable
+    var body = $("html, body");
+
+    // Scroll to the top of the page with animation
+    body.stop().animate({ scrollTop: 0 }, 500, "swing", function () { });
+
+    // Log to console
+    console.log("Clicked on back to top button.");
+}
+
+
+
+// Function to set the display property of elements after the user scrolls
+function display_on_scroll() {
+
+    // Check if the user has scrolled more than 100 px from the top of the page
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+
+        // Go through all elements
         for (var i = 0; i < back_to_top_button.length; i += 1) {
-            back_to_top_button[i].style.display = 'block';
+
+            // Set the display property of an element
+            back_to_top_button[i].style.display = "block";
         }
     } else {
+
+        // Go through all elements
         for (var i = 0; i < back_to_top_button.length; i += 1) {
-            back_to_top_button[i].style.display = 'none';
+
+            // Set the display property of an element
+            back_to_top_button[i].style.display = "none";
         }
     }
 }
 
-// When the user clicks on the button, scroll to the top of the page
-function backToTop() {
-    var body = $("html, body");
-    body.stop().animate({ scrollTop: 0 }, 500, "swing", function () {
-        console.log("Back to top animation has finished.");
-    });
+
+
+// Get elements by Class Name
+let back_to_top_button = document.getElementsByClassName("back_to_top");
+
+// Check if an element exists
+if (back_to_top_button) {
+
+    // Execute the function when the user scrolls
+    window.onscroll = function () { display_on_scroll() };
 }
