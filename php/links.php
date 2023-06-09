@@ -27,6 +27,7 @@ if (!isset($_SESSION["loggedin"])) {
 $favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
 // CSS files
+$animations_css = $directory_prefix . "Styles/animations.css";
 $auth_css = $directory_prefix . "Styles/auth.css";
 $back_to_top_css = $directory_prefix . "Styles/back_to_top.css";
 $footer_css = $directory_prefix . "Styles/footer.css";

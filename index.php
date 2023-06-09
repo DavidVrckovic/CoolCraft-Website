@@ -32,6 +32,7 @@ include($directory_prefix . "php/links.php");
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($animations_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
     <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">

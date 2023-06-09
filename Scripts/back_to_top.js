@@ -1,7 +1,7 @@
 // Function to scroll to the top of the page
 // * Works only if OS animations are enabled
 // * Same effect can be achieved with HTML and CSS only: <a href="#"> with {scroll-behavior: smooth;}
-function back_to_top() {
+function scroll_to_top() {
 
     // Scroll to the top of the page
     window.scrollTo(0, 0);
@@ -15,7 +15,7 @@ function back_to_top() {
 // Function to scroll to the top of the page
 // * Works in all cases
 // * Requires JQuery
-function back_to_top_jquery() {
+function scroll_to_top_jquery() {
 
     // Get html and body elements and save them in a variable
     var body = $("html, body");
@@ -29,33 +29,42 @@ function back_to_top_jquery() {
 
 
 
-// Function to set the display property of elements after the user scrolls
+// Function to set properties of elements after the user scrolls
 function display_on_scroll() {
 
-    // Check if the user has scrolled more than 100 px from the top of the page
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    // Check if the user has scrolled more than x amount of px from the top of the page
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
 
-        // Go through all elements
-        for (var i = 0; i < back_to_top_button.length; i += 1) {
+        // Check if an element does not have a class
+        if (!back_to_top_button.classList.contains("button_entrance")) {
 
-            // Set the display property of an element
-            back_to_top_button[i].style.display = "block";
+            // Apply properties to elements
+            back_to_top_button.classList.remove("button_exit");
+            back_to_top_button.classList.add("button_entrance");
+            back_to_top_button.style.display = "block";
         }
     } else {
 
-        // Go through all elements
-        for (var i = 0; i < back_to_top_button.length; i += 1) {
+        // Check if an element does have a class
+        if (back_to_top_button.classList.contains("button_entrance")) {
 
-            // Set the display property of an element
-            back_to_top_button[i].style.display = "none";
+            // Apply properties to elements
+            back_to_top_button.classList.remove("button_entrance");
+            back_to_top_button.classList.add("button_exit");
+
+            // Wait x amount of milliseconds
+            setTimeout(() => {
+                // Apply properties to elements
+                back_to_top_button.style.display = "none";
+            }, 300);
         }
     }
 }
 
 
 
-// Get elements by Class Name
-let back_to_top_button = document.getElementsByClassName("back_to_top");
+// Get elements and save them in a variable
+let back_to_top_button = document.getElementById("back_to_top_button");
 
 // Check if an element exists
 if (back_to_top_button) {
