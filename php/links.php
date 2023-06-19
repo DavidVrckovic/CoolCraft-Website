@@ -126,14 +126,4 @@ $nav_icons = "
 // Back to top
 $back_to_top_image = $directory_prefix . "Images/Back to top/Back to top - White.png";
 $back_to_top_script = $directory_prefix . "Scripts/back_to_top.js";
-
-
-
-// Copy to clipboard
-$copy_to_clipboard_script = $directory_prefix . "Scripts/copy_to_clipboard.js";
-
-
-
-// Dropdown
-$dropdown_script = $directory_prefix . "Scripts/dropdown.js";
 ?>
