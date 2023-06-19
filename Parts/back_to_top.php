@@ -6,4 +6,7 @@
 
 </a>
 
+<!-- Copy to clipboard text -->
+<input class="copy_text" id="copy_text" type="text" value="coolcraft.me">
+
 <script src="<?php echo($back_to_top_script); ?>"></script>

@@ -66,9 +66,50 @@ function display_on_scroll() {
 // Get elements and save them in a variable
 let back_to_top_button = document.getElementById("back_to_top_button");
 
-// Check if an element exists
+// Check if elements exist
 if (back_to_top_button) {
 
     // Execute the function when the user scrolls
     window.onscroll = function () { display_on_scroll() };
+}
+
+
+
+
+
+
+// Function to copy text to clipboard
+function copy_to_clipboard(copy_text) {
+
+    // Set an element display to block so that it is visible and selectable
+    copy_text.style.display = "block";
+
+    // Select the value of an element
+    copy_text.select();
+
+    // Copy the selected value
+    document.execCommand("copy");
+
+    // Log to console that copying was successful
+    console.log("Copied to clipboard: " + copy_text.value);
+
+    // Set an element display back to none so that it is invisible
+    copy_text.style.display = "none";
+}
+
+
+
+// Get elements and save them in a variable
+let copy_button = document.querySelector("#copy_button");
+let copy_text = document.querySelector("#copy_text");
+
+
+
+// Check if elements exist
+if (copy_button && copy_text) {
+
+    // Execute the function when the user clicks on the button
+    copy_button.onclick = function () {
+        copy_to_clipboard(copy_text);
+    }
 }

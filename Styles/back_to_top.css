@@ -1,17 +1,26 @@
+/*
+// BACK TO TOP BUTTON
+*/
+
 a.back_to_top {
-    bottom: 20px;
     display: none;
-    padding: 6px;
+
     position: fixed;
+    bottom: 20px;
     right: 30px;
+
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+    box-shadow: var(--back_to_top_shadow);
+
     z-index: 99;
 
     background-color: #ff8800;
-    border: none;
-    border-radius: 5px;
-    box-shadow: var(--back_to_top_shadow);
-    cursor: pointer;
     text-decoration: none;
+
+    cursor: pointer;
 }
 
 a.back_to_top:hover {
@@ -19,6 +28,46 @@ a.back_to_top:hover {
 }
 
 img.back_to_top {
-    width: 26px;
-    height: 26px;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+/*
+// COPY TO CLIPBOARD BUTTON
+*/
+
+button.copy_button {
+    font-size: inherit;
+
+    background-color: transparent;
+    color: var(--primary_link_color);
+
+    border: none;
+}
+
+button.copy_button:hover {
+    background-color: #00000010;
+    color: var(--hover_link_color);
+
+    cursor: pointer;
+}
+
+input#copy_text {
+    display: none;
+
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+
+    margin: 0;
+    border: none;
+    padding: 5px;
+
+    width: 25px;
+    height: 25px;
+
+    background-color: transparent;
+    color: transparent;
 }
