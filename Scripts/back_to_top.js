@@ -84,11 +84,12 @@ function copy_to_clipboard(copy_text) {
     // Set an element display to block so that it is visible and selectable
     copy_text.style.display = "block";
 
-    // Select the value of an element
+    // Select the text field
     copy_text.select();
+    copy_text.setSelectionRange(0, 99999); // For mobile devices
 
-    // Copy the selected value
-    document.execCommand("copy");
+    // Copy the selected value from the text field
+    navigator.clipboard.writeText(copy_text.value);
 
     // Log to console that copying was successful
     console.log("Copied to clipboard: " + copy_text.value);
