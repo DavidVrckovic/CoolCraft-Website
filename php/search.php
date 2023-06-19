@@ -212,17 +212,17 @@ function output_search_results()
 
                     <!-- Text -->
                     <p class="text">
-                        First login: ' . date("d F Y \a\\t h:i:s", $db_row["firstlogin"] / 1000) . '
+                        First login: ' . date("d F Y \a\\t H:i:s", $db_row["firstlogin"] / 1000) . '
                     </p>
 
                     <!-- Text -->
                     <p class="text">
-                        Last login: ' . date("d F Y \a\\t h:i:s", $db_row["lastlogin"] / 1000) . '
+                        Last login: ' . date("d F Y \a\\t H:i:s", $db_row["lastlogin"] / 1000) . '
                     </p>
 
                     <!-- Text -->
                     <p class="text">
-                        Last logout: ' . date("d F Y \a\\t h:i:s", $db_row["lastlogout"] / 1000) . '
+                        Last logout: ' . date("d F Y \a\\t H:i:s", $db_row["lastlogout"] / 1000) . '
                     </p>
 
                     <!-- Text -->
