@@ -6,7 +6,7 @@ function scroll_to_top() {
     // Scroll to the top of the page
     window.scrollTo(0, 0);
 
-    // Log to console
+    // Log to console that backing to top was successful
     console.log("Clicked on back to top button.");
 }
 
@@ -23,7 +23,7 @@ function scroll_to_top_jquery() {
     // Scroll to the top of the page with animation
     body.stop().animate({ scrollTop: 0 }, 500, "swing", function () { });
 
-    // Log to console
+    // Log to console that backing to top was successful
     console.log("Clicked on back to top button.");
 }
 
@@ -43,6 +43,7 @@ function display_on_scroll() {
             back_to_top_button.classList.add("button_entrance");
             back_to_top_button.style.display = "block";
         }
+
     } else {
 
         // Check if an element does have a class
@@ -64,13 +65,15 @@ function display_on_scroll() {
 
 
 // Get elements and save them in a variable
-let back_to_top_button = document.getElementById("back_to_top_button");
+const back_to_top_button = document.getElementById("back_to_top_button");
 
 // Check if elements exist
 if (back_to_top_button) {
 
     // Execute the function when the user scrolls
-    window.onscroll = function () { display_on_scroll() };
+    window.onscroll = () => {
+        display_on_scroll()
+    };
 }
 
 
@@ -79,7 +82,7 @@ if (back_to_top_button) {
 
 
 // Function to copy text to clipboard
-function copy_to_clipboard(copy_text) {
+function copy_text_to_clipboard() {
 
     // Set an element display to block so that it is visible and selectable
     copy_text.style.display = "block";
@@ -101,16 +104,16 @@ function copy_to_clipboard(copy_text) {
 
 
 // Get elements and save them in a variable
-let copy_button = document.querySelector("#copy_button");
-let copy_text = document.querySelector("#copy_text");
+const copy_button = document.querySelector("#copy_button");
+const copy_text = document.querySelector("#copy_text");
 
 
 
 // Check if elements exist
 if (copy_button && copy_text) {
 
-    // Execute the function when the user clicks on the button
-    copy_button.onclick = function () {
-        copy_to_clipboard(copy_text);
+    // Execute the function when the user clicks on an element
+    copy_button.onclick = () => {
+        copy_text_to_clipboard();
     }
 }
