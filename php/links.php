@@ -66,6 +66,12 @@ $nav_info_icon_black = $directory_prefix . "Images/Navigation/info_icon_black.pn
 $nav_info_icon_gold = $directory_prefix . "Images/Navigation/info_icon_gold.png";
 $nav_info_icon_white = $directory_prefix . "Images/Navigation/info_icon_white.png";
 
+$nav_menu = $directory_prefix . "menu";
+$nav_menu_icon = $directory_prefix . "Images/Navigation/menu_icon_black.png";
+$nav_menu_icon_black = $directory_prefix . "Images/Navigation/menu_icon_black.png";
+$nav_menu_icon_gold = $directory_prefix . "Images/Navigation/menu_icon_gold.png";
+$nav_menu_icon_white = $directory_prefix . "Images/Navigation/menu_icon_white.png";
+
 $nav_news = $directory_prefix . "news";
 $nav_news_icon = $directory_prefix . "Images/Navigation/news_icon_black.png";
 $nav_news_icon_black = $directory_prefix . "Images/Navigation/news_icon_black.png";
