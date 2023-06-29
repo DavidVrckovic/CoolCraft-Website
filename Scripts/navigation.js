@@ -1,30 +1,35 @@
+// Get local storage items and save them in a variable
+let theme = localStorage.getItem("Theme");
+
 // Get elements and save them in a variable
 const nav_logo = document.getElementById("nav_logo");
 const nav_options = document.getElementById("nav_options");
 const nav_links = document.getElementById("nav_links");
 
-const nav_menu_link = document.getElementById("nav_menu_link");
-const nav_menu_dialog = document.getElementById("nav_menu_dialog");
+const nav_menu_link = document.querySelector("#nav_menu_link");
+const nav_menu_dialog = document.querySelector("#nav_menu_dialog");
 
-const nav_options_link = document.getElementById("nav_options_link");
-const nav_options_dialog = document.getElementById("nav_options_dialog");
+const nav_faq_img = document.querySelector("#nav_faq_img");
+const nav_faq_img_hover = document.querySelector("#nav_faq_img_hover");
+const nav_gamemodes_img = document.querySelector("#nav_gamemodes_img");
+const nav_gamemodes_img_hover = document.querySelector("#nav_gamemodes_img_hover");
+const nav_home_img = document.querySelector("#nav_home_img");
+const nav_home_img_hover = document.querySelector("#nav_home_img_hover");
+const nav_info_img = document.querySelector("#nav_info_img");
+const nav_info_img_hover = document.querySelector("#nav_info_img_hover");
+const nav_menu_img = document.querySelector("#nav_menu_img");
+const nav_menu_img_hover = document.querySelector("#nav_menu_img_hover");
+const nav_news_img = document.querySelector("#nav_news_img");
+const nav_news_img_hover = document.querySelector("#nav_news_img_hover");
+const nav_options_img = document.querySelector("#nav_options_img");
+const nav_options_img_hover = document.querySelector("#nav_options_img_hover");
+const nav_store_img = document.querySelector("#nav_store_img");
+const nav_store_img_hover = document.querySelector("#nav_store_img_hover");
 
-const nav_faq_img = document.getElementById("nav_faq_img");
-const nav_faq_img_hover = document.getElementById("nav_faq_img_hover");
-const nav_gamemodes_img = document.getElementById("nav_gamemodes_img");
-const nav_gamemodes_img_hover = document.getElementById("nav_gamemodes_img_hover");
-const nav_home_img = document.getElementById("nav_home_img");
-const nav_home_img_hover = document.getElementById("nav_home_img_hover");
-const nav_info_img = document.getElementById("nav_info_img");
-const nav_info_img_hover = document.getElementById("nav_info_img_hover");
-const nav_menu_img = document.getElementById("nav_menu_img");
-const nav_menu_img_hover = document.getElementById("nav_menu_img_hover");
-const nav_news_img = document.getElementById("nav_news_img");
-const nav_news_img_hover = document.getElementById("nav_news_img_hover");
-const nav_options_img = document.getElementById("nav_options_img");
-const nav_options_img_hover = document.getElementById("nav_options_img_hover");
-const nav_store_img = document.getElementById("nav_store_img");
-const nav_store_img_hover = document.getElementById("nav_store_img_hover");
+const nav_options_link = document.querySelector("#nav_options_link");
+const nav_options_dialog = document.querySelector("#nav_options_dialog");
+
+const theme_options = document.querySelector("#theme_options");
 
 
 
@@ -88,13 +93,13 @@ if (nav_menu_link && nav_menu_dialog) {
 
 
 // Function to enable dark theme
-const enable_dark_theme = () => {
+function enable_dark_theme() {
 
     // Add class to the body element
     document.body.classList.add("dark_theme");
 
     // Update the local storage
-    localStorage.setItem("Dark theme", "enabled");
+    localStorage.setItem("Theme", "dark");
 
     // Change icons
     nav_gamemodes_img.src = nav_gamemodes_icon_darkmode;
@@ -106,20 +111,20 @@ const enable_dark_theme = () => {
     nav_store_img.src = nav_store_icon_darkmode;
 
     // Change text
-    dark_theme_toggle.innerHTML = "Light theme";
+    theme_options.innerHTML = "Light theme";
 
 }
 
 
 
 // Function to disable dark theme
-const disable_dark_theme = () => {
+function disable_dark_theme() {
 
     // Remove class from the body element
     document.body.classList.remove("dark_theme");
 
     // Update the local storage
-    localStorage.setItem("Dark theme", null);
+    localStorage.setItem("Theme", null);
 
     // Change icons
     nav_gamemodes_img.src = nav_gamemodes_icon;
@@ -131,31 +136,30 @@ const disable_dark_theme = () => {
     nav_store_img.src = nav_store_icon;
 
     // Change text
-    dark_theme_toggle.innerHTML = "Dark theme";
+    theme_options.innerHTML = "Dark theme";
 
 }
 
 
 
-// Get local storage items and save them in a variable
-let dark_theme = localStorage.getItem("Dark theme");
-
-// Get elements and save them in a variable
-const dark_theme_toggle = document.querySelector("#theme_options");
-
 // Check if the user has already enabled dark theme in previous sessions
-if (dark_theme === "enabled") {
+if (theme === "dark") {
     enable_dark_theme();
 }
 
-dark_theme_toggle.addEventListener("click", () => {
+// Check if elements exist
+if (theme_options) {
 
-    // Update a variable from the local storage
-    dark_theme = localStorage.getItem("Dark theme");
+    theme_options.addEventListener("click", () => {
 
-    if (dark_theme !== "enabled") {
-        enable_dark_theme();
-    } else {
-        disable_dark_theme();
-    }
-});
+        // Update a variable from the local storage
+        theme = localStorage.getItem("Theme");
+
+        if (theme !== "dark") {
+            enable_dark_theme();
+        } else {
+            disable_dark_theme();
+        }
+    });
+
+}
