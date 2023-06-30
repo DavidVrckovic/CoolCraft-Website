@@ -34,14 +34,7 @@ article.gamemode {
 // News
 */
 article.update {
-    display: flex;
-    gap: 25px;
-    height: calc(14vw + 20px);
-}
-
-div.image {
-    display: flex;
-    width: 35%;
+    width: 31%;
 }
 
 a.update {
@@ -56,10 +49,7 @@ a.update:hover {
 img.link_img {
     height: 100%;
     width: 100%;
-}
-
-div.text {
-    width: 65%;
+    aspect-ratio: 16/9;
 }
 
 
@@ -164,6 +154,17 @@ button.login {
 
 button.login:hover {
     opacity: 1;
+}
+
+textarea {
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 15px;
+    width: 100%;
+
+    background: #f1f1f1;
+    border: none;
+    box-sizing: border-box;
 }
 
 

@@ -22,7 +22,7 @@ if (!isset($_SESSION["loggedin"])) {
 
 
 // Include the account script
-include("../php/account.php");
+include($directory_prefix . "php/account.php");
 ?>
 
 
