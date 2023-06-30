@@ -1,5 +1,5 @@
 <!-- Inner section -->
-<article class="update" id="news-coolcraft_pass_season_0">
+<article class="update cflex" id="news-coolcraft_pass_season_0">
 
     <!-- Image block -->
     <div class="image">
@@ -41,7 +41,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="updates-1_4_0">
+<article class="update cflex" id="updates-1_4_0">
 
     <!-- Image block -->
     <div class="image">
@@ -83,7 +83,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="updates-1_3_11">
+<article class="update cflex" id="updates-1_3_11">
 
     <!-- Image block -->
     <div class="image">
@@ -125,7 +125,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="news-lets_make_the_most">
+<article class="update cflex" id="news-lets_make_the_most">
 
     <!-- Image block -->
     <div class="image">
@@ -167,7 +167,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="news-no_updates_for_some_time">
+<article class="update cflex" id="news-no_updates_for_some_time">
 
     <!-- Image block -->
     <div class="image">
@@ -209,7 +209,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="updates-1_3_10">
+<article class="update cflex" id="updates-1_3_10">
 
     <!-- Image block -->
     <div class="image">
@@ -251,7 +251,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="updates-1_3_9">
+<article class="update cflex" id="updates-1_3_9">
 
     <!-- Image block -->
     <div class="image">
@@ -293,7 +293,7 @@
 
 
 <!-- Inner section -->
-<article class="update" id="updates-1_3_8">
+<article class="update cflex" id="updates-1_3_8">
 
     <!-- Image block -->
     <div class="image">

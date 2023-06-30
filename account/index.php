@@ -22,7 +22,7 @@ if (!isset($_SESSION["loggedin"])) {
 
 
 // Include the account script
-include("../php/account.php");
+include($directory_prefix . "php/account.php");
 ?>
 
 
@@ -181,10 +181,6 @@ include("../php/account.php");
     <!-- Other -->
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
-
-    echo ('
-        <script src="' . $copy_to_clipboard_script . '"></script>
-    ');
     ?>
 </body>
 

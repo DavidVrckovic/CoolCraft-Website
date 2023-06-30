@@ -6,6 +6,9 @@
 # Ignore Minecraft plugin files
 [Ss]taff/[Nn]etwork[Mm]anager
 
+# Ignore Visual Studio Code files
+.vscode
+
 
 
 ## Ignore Visual Studio temporary files, build results, and

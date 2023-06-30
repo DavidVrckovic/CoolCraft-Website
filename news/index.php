@@ -8,6 +8,11 @@ $directory_prefix = "../";
 
 // Include the links file
 include($directory_prefix . "php/links.php");
+
+
+
+// Include the news script
+include($directory_prefix . "php/news.php");
 ?>
 
 
@@ -27,11 +32,12 @@ include($directory_prefix . "php/links.php");
     <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($animations_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
     <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
@@ -74,10 +80,18 @@ include($directory_prefix . "php/links.php");
         <div class="content flex has_bg_color">
 
             <!-- SECTION -->
-            <section class="main cflex" id="intro_section">
+            <section class="main wflex" id="intro_section">
 
                 <?php
-                include($directory_prefix . "Parts/news.php");
+                if (isset($_GET["updates"])) {
+                    output_news_updates(news_get_result($_GET["updates"]));
+                } else if (isset($_GET["general_news"])) {
+                    output_news_general_news(news_get_result($_GET["general_news"]));
+                } else if (isset($_GET["type"])) {
+                    output_news(news_get_results($_GET["type"]));
+                } else {
+                    output_news(news_get_results());
+                }
                 ?>
 
             </section>
@@ -105,10 +119,6 @@ include($directory_prefix . "php/links.php");
     <!-- Other -->
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
-
-    echo ('
-        <script src="' . $copy_to_clipboard_script . '"></script>
-    ');
     ?>
 </body>
 

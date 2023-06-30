@@ -32,6 +32,7 @@ include($directory_prefix . "php/links.php");
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($animations_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
     <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
@@ -42,6 +43,7 @@ include($directory_prefix . "php/links.php");
 
 
 <body>
+
     <!-- Header & Navigation -->
     <?php
     include($directory_prefix . "Parts/navigation.php");
@@ -200,9 +202,11 @@ include($directory_prefix . "php/links.php");
                     </p>
 
                     <p class="title_text">
-                        <a class="link" href="javascript:void(0)" id="copy-text-btn">
+
+                        <button class="copy_button" id="copy_button">
                             Click here to copy IP
-                        </a>
+                        </button>
+
                     </p>
 
                 </div>
@@ -223,11 +227,8 @@ include($directory_prefix . "php/links.php");
     <!-- Other -->
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
-
-    echo ('
-        <script src="' . $copy_to_clipboard_script . '"></script>
-    ');
     ?>
+
 </body>
 
 </html>

@@ -27,6 +27,7 @@ if (!isset($_SESSION["loggedin"])) {
 $favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
 // CSS files
+$animations_css = $directory_prefix . "Styles/animations.css";
 $auth_css = $directory_prefix . "Styles/auth.css";
 $back_to_top_css = $directory_prefix . "Styles/back_to_top.css";
 $footer_css = $directory_prefix . "Styles/footer.css";
@@ -64,6 +65,12 @@ $nav_info_icon = $directory_prefix . "Images/Navigation/info_icon_black.png";
 $nav_info_icon_black = $directory_prefix . "Images/Navigation/info_icon_black.png";
 $nav_info_icon_gold = $directory_prefix . "Images/Navigation/info_icon_gold.png";
 $nav_info_icon_white = $directory_prefix . "Images/Navigation/info_icon_white.png";
+
+$nav_menu = $directory_prefix . "menu";
+$nav_menu_icon = $directory_prefix . "Images/Navigation/menu_icon_black.png";
+$nav_menu_icon_black = $directory_prefix . "Images/Navigation/menu_icon_black.png";
+$nav_menu_icon_gold = $directory_prefix . "Images/Navigation/menu_icon_gold.png";
+$nav_menu_icon_white = $directory_prefix . "Images/Navigation/menu_icon_white.png";
 
 $nav_news = $directory_prefix . "news";
 $nav_news_icon = $directory_prefix . "Images/Navigation/news_icon_black.png";
@@ -125,14 +132,4 @@ $nav_icons = "
 // Back to top
 $back_to_top_image = $directory_prefix . "Images/Back to top/Back to top - White.png";
 $back_to_top_script = $directory_prefix . "Scripts/back_to_top.js";
-
-
-
-// Copy to clipboard
-$copy_to_clipboard_script = $directory_prefix . "Scripts/copy_to_clipboard.js";
-
-
-
-// Dropdown
-$dropdown_script = $directory_prefix . "Scripts/dropdown.js";
 ?>

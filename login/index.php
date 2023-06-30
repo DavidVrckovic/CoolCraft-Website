@@ -153,10 +153,6 @@ if (isset($_SESSION["loggedin"])) {
     <!-- Other -->
     <?php
     include($directory_prefix . "Parts/back_to_top.php");
-
-    echo ('
-        <script src="' . $copy_to_clipboard_script . '"></script>
-    ');
     ?>
 </body>
 
