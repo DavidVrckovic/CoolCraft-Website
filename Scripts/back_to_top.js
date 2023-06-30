@@ -1,3 +1,17 @@
+// Get elements and save them in a variable
+const back_to_top_button = document.getElementById("back_to_top_button");
+
+const copy_button = document.querySelector("#copy_button");
+const copy_text = document.querySelector("#copy_text");
+
+const faq_questions = document.querySelectorAll("div.question");
+const faq_answers = document.querySelectorAll("div.answer");
+
+
+
+
+
+
 // Function to scroll to the top of the page
 // * Works only if OS animations are enabled
 // * Same effect can be achieved with HTML and CSS only: <a href="#"> with {scroll-behavior: smooth;}
@@ -8,6 +22,7 @@ function scroll_to_top() {
 
     // Log to console that backing to top was successful
     console.log("Clicked on back to top button.");
+
 }
 
 
@@ -25,6 +40,7 @@ function scroll_to_top_jquery() {
 
     // Log to console that backing to top was successful
     console.log("Clicked on back to top button.");
+
 }
 
 
@@ -42,6 +58,7 @@ function display_on_scroll() {
             back_to_top_button.classList.remove("button_exit");
             back_to_top_button.classList.add("button_entrance");
             back_to_top_button.style.display = "block";
+
         }
 
     } else {
@@ -58,26 +75,21 @@ function display_on_scroll() {
                 // Apply properties to elements
                 back_to_top_button.style.display = "none";
             }, 300);
+
         }
+
     }
+
 }
-
-
-
-// Get elements and save them in a variable
-const back_to_top_button = document.getElementById("back_to_top_button");
 
 // Check if elements exist
 if (back_to_top_button) {
 
-    // Execute the function when the user scrolls
     window.onscroll = () => {
         display_on_scroll()
     };
+
 }
-
-
-
 
 
 
@@ -99,21 +111,41 @@ function copy_text_to_clipboard() {
 
     // Set an element display back to none so that it is invisible
     copy_text.style.display = "none";
+
 }
-
-
-
-// Get elements and save them in a variable
-const copy_button = document.querySelector("#copy_button");
-const copy_text = document.querySelector("#copy_text");
-
-
 
 // Check if elements exist
 if (copy_button && copy_text) {
 
-    // Execute the function when the user clicks on an element
     copy_button.onclick = () => {
         copy_text_to_clipboard();
     }
+
+}
+
+
+
+// Check if elements exist
+if (faq_questions) {
+
+    for (let i = 0; i < faq_questions.length; i++) {
+
+        faq_questions[i].addEventListener("click", () => {
+
+            faq_questions[i].classList.toggle("faq_active");
+
+            if (faq_answers[i].style.display === "block") {
+
+                faq_answers[i].style.display = "none";
+
+            } else {
+
+                faq_answers[i].style.display = "block";
+
+            }
+
+        });
+
+    }
+
 }

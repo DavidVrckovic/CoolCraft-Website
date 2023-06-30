@@ -33,6 +33,9 @@ const theme_options = document.querySelector("#theme_options");
 
 
 
+
+
+
 // Function to open/close the options dialog
 function options_dialog() {
 
@@ -89,9 +92,6 @@ if (nav_menu_link && nav_menu_dialog) {
 
 
 
-
-
-
 // Function to enable dark theme
 function enable_dark_theme() {
 
@@ -114,8 +114,6 @@ function enable_dark_theme() {
     theme_options.innerHTML = "Light theme";
 
 }
-
-
 
 // Function to disable dark theme
 function disable_dark_theme() {
@@ -140,8 +138,6 @@ function disable_dark_theme() {
 
 }
 
-
-
 // Check if the user has already enabled dark theme in previous sessions
 if (theme === "dark") {
     enable_dark_theme();
@@ -160,6 +156,7 @@ if (theme_options) {
         } else {
             disable_dark_theme();
         }
+
     });
 
 }
