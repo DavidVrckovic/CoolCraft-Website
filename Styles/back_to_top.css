@@ -1,7 +1,4 @@
-/*
-// BACK TO TOP BUTTON
-*/
-
+/* BACK TO TOP BUTTON */
 a.back_to_top {
     display: none;
 
@@ -34,15 +31,44 @@ img.back_to_top {
 
 
 
-/*
-// COPY TO CLIPBOARD BUTTON
-*/
+/* BACK TO TOP BUTTON Animations */
+.button_entrance {
+    animation: button_entrance 0.3s both;
+}
 
+@keyframes button_entrance {
+    from {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.button_exit {
+    animation: button_exit 0.3s both;
+}
+
+@keyframes button_exit {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+}
+
+
+
+/* COPY TO CLIPBOARD BUTTON */
 button.copy_button {
-    font-size: inherit;
-
     background-color: transparent;
     color: var(--primary_link_color);
+    font-size: inherit;
 
     border: none;
 }
