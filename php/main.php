@@ -26,14 +26,19 @@ if (!isset($_SESSION["loggedin"])) {
 // Title & Favicon
 $favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
-// CSS files
-$animations_css = $directory_prefix . "Styles/animations.css";
+// CSS files (Styles)
 $back_to_top_css = $directory_prefix . "Styles/back_to_top.css";
 $footer_css = $directory_prefix . "Styles/footer.css";
 $index_css = $directory_prefix . "Styles/index.css";
 $navigation_css = $directory_prefix . "Styles/navigation.css";
 
 $coolcraft_css = $directory_prefix . "Styles/coolcraft.css";
+
+
+
+// JavaScript files (Scripts)
+$main_script = $directory_prefix . "Scripts/main.js";
+$nav_script = $directory_prefix . "Scripts/navigation.js";
 
 
 
@@ -101,9 +106,6 @@ if (!isset($_SESSION["loggedin"])) {
 }
 
 
-
-// Navigation Script
-$nav_script = $directory_prefix . "Scripts/navigation.js";
 
 $nav_icons = "
     <script>

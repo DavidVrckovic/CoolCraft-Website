@@ -32,7 +32,6 @@ include($directory_prefix . "php/main.php");
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
-    <link href="<?php echo ($animations_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
     <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
@@ -55,10 +54,10 @@ include($directory_prefix . "php/main.php");
     <main class="cflex">
 
         <!-- SECTION -->
-        <section class="cflex everything_center has_bg_img height_normal" id="welcome_section">
+        <section class="cflex everything_center has_bg_img height_normal" id="welcome_section" style='background-image: url("Images/Main/Hub Lobby 1 tiny.png");'>
 
             <!-- Background image -->
-            <img alt="Section background image" class="section_bg bg" id="welcome_section_bg_img" src="Images/Hub Lobby - 1.png">
+            <img alt="Section background image" class="section_bg bg" id="welcome_section_bg_img" src="Images/Main/Hub Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="welcome_inner">
@@ -110,10 +109,10 @@ include($directory_prefix . "php/main.php");
         </section>
 
         <!-- SECTION -->
-        <section class="cflex everything_center has_bg_img height_normal" id="why_section">
+        <section class="cflex everything_center has_bg_img height_normal" id="why_section" style='background-image: url("Images/Main/Minigames Lobby 1 tiny.png");'>
 
             <!-- Background image -->
-            <img alt="Section background image" class="section_bg bg" id="why_section_bg_img" loading="lazy" src="Images/Minigames Lobby - 1.png">
+            <img alt="Section background image" class="section_bg bg" id="why_section_bg_img" loading="lazy" src="Images/Main/Minigames Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="why_inner">
@@ -178,10 +177,10 @@ include($directory_prefix . "php/main.php");
         </section>
 
         <!-- SECTION -->
-        <section class="cflex everything_center has_bg_img height_normal" id="join_section">
+        <section class="cflex everything_center has_bg_img height_normal" id="join_section" style='background-image: url("Images/Main/SkyWars Lobby 1 tiny.png");'>
 
             <!-- Background image -->
-            <img alt="Section background image" class="section_bg bg" id="join_section_bg_img" loading="lazy" src="Images/SkyWars Lobby - 1.png">
+            <img alt="Section background image" class="section_bg bg" id="join_section_bg_img" loading="lazy" src="Images/Main/SkyWars Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="join_inner">
@@ -216,6 +215,9 @@ include($directory_prefix . "php/main.php");
         </section>
 
     </main>
+
+    <!-- Main script -->
+    <script src="<?php echo ($main_script); ?>"></script>
 
 
 
