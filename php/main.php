@@ -28,12 +28,10 @@ $favicon_image = $directory_prefix . "Images/Icons/CoolCraft icon.png";
 
 // CSS files
 $animations_css = $directory_prefix . "Styles/animations.css";
-$auth_css = $directory_prefix . "Styles/auth.css";
 $back_to_top_css = $directory_prefix . "Styles/back_to_top.css";
 $footer_css = $directory_prefix . "Styles/footer.css";
 $index_css = $directory_prefix . "Styles/index.css";
 $navigation_css = $directory_prefix . "Styles/navigation.css";
-$theme_css = $directory_prefix . "Styles/theme.css";
 
 $coolcraft_css = $directory_prefix . "Styles/coolcraft.css";
 
@@ -95,7 +93,7 @@ $nav_apply = $directory_prefix . "apply";
 
 
 // Options dropdown menu
-if (!isset($_SESSION["loggedin"], $_COOKIE["loggedin"])) {
+if (!isset($_SESSION["loggedin"])) {
     $nav_auth = $directory_prefix . "login";
 } else {
     $nav_auth = $directory_prefix . "logout";
