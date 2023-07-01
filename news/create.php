@@ -6,8 +6,8 @@
 // Determine the prefix for file locations
 $directory_prefix = "../";
 
-// Include the links file
-include($directory_prefix . "php/links.php");
+// Include the main script
+include($directory_prefix . "php/main.php");
 
 
 

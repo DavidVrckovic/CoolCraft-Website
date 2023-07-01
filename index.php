@@ -6,8 +6,8 @@
 // Determine the prefix for file locations
 $directory_prefix = "";
 
-// Include the links file
-include($directory_prefix . "php/links.php");
+// Include the main script
+include($directory_prefix . "php/main.php");
 ?>
 
 
@@ -27,7 +27,7 @@ include($directory_prefix . "php/links.php");
     <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
@@ -113,7 +113,7 @@ include($directory_prefix . "php/links.php");
         <section class="cflex everything_center has_bg_img height_normal" id="why_section">
 
             <!-- Background image -->
-            <img alt="Section background image" class="section_bg bg" id="why_section_bg_img" src="Images/Minigames Lobby - 1.png">
+            <img alt="Section background image" class="section_bg bg" id="why_section_bg_img" loading="lazy" src="Images/Minigames Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="why_inner">
@@ -181,7 +181,7 @@ include($directory_prefix . "php/links.php");
         <section class="cflex everything_center has_bg_img height_normal" id="join_section">
 
             <!-- Background image -->
-            <img alt="Section background image" class="section_bg bg" id="join_section_bg_img" src="Images/SkyWars Lobby - 1.png">
+            <img alt="Section background image" class="section_bg bg" id="join_section_bg_img" loading="lazy" src="Images/SkyWars Lobby - 1.png">
 
             <!-- Inner section -->
             <article class="inner cflex everything_center" id="join_inner">

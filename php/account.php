@@ -1,6 +1,6 @@
 <?php
 // Include the DB functions
-include("db_connection.php");
+include($directory_prefix . "php/db_connection.php");
 
 
 
@@ -161,3 +161,5 @@ function output_skywars_stats(mysqli_result|bool $db_results)
         ');
     }
 }
+
+?>

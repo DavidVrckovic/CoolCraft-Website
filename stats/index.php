@@ -6,8 +6,8 @@
 // Determine the prefix for file locations
 $directory_prefix = "../";
 
-// Include the links file
-include($directory_prefix . "php/links.php");
+// Include the main script
+include($directory_prefix . "php/main.php");
 
 
 
@@ -22,7 +22,7 @@ if (!isset($_SESSION["loggedin"])) {
 
 
 // Include the search script
-include("../php/search.php");
+include($directory_prefix . "php/search.php");
 ?>
 
 
@@ -42,11 +42,12 @@ include("../php/search.php");
     <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($animations_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
     <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">

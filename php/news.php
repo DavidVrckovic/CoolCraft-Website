@@ -234,6 +234,7 @@ function output_news_updates(mysqli_result|bool $db_results)
         <script>
             document.title = "CoolCraft | News | ' . $db_row["news_title"] . '";
             document.querySelector("article.inner h1.title").innerHTML = "' . $db_row["news_title"] . '";
+            document.querySelector("img.section_bg").src = "../Images/News/' . $db_row["news_id"] . '.png";
 
             document.querySelector("section.main").classList.remove("wflex");
             document.querySelector("section.main").classList.add("cflex");
@@ -294,6 +295,7 @@ function output_news_general_news(mysqli_result|bool $db_results)
         <script>
             document.title = "CoolCraft | News | ' . $db_row["news_title"] . '";
             document.querySelector("article.inner h1.title").innerHTML = "' . $db_row["news_title"] . '";
+            document.querySelector("img.section_bg").src = "../Images/News/' . $db_row["news_id"] . '.png";
 
             document.querySelector("section.main").classList.remove("wflex");
             document.querySelector("section.main").classList.add("cflex");

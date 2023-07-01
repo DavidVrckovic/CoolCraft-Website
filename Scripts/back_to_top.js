@@ -74,7 +74,7 @@ function display_on_scroll() {
             setTimeout(() => {
                 // Apply properties to elements
                 back_to_top_button.style.display = "none";
-            }, 300);
+            }, 100);
 
         }
 

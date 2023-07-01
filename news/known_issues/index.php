@@ -6,8 +6,8 @@
 // Determine the prefix for file locations
 $directory_prefix = "../../";
 
-// Include the links file
-include($directory_prefix . "php/links.php");
+// Include the main script
+include($directory_prefix . "php/main.php");
 ?>
 
 
@@ -27,11 +27,12 @@ include($directory_prefix . "php/links.php");
     <link href="<?php echo ($favicon_image); ?>" rel="icon" type="image/png">
 
     <!-- External sources -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
     <!-- General CSS files -->
     <link href="<?php echo ($coolcraft_css); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo ($index_css); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo ($animations_css); ?>" rel="stylesheet" type="text/css">
 
     <!-- Specific CSS files -->
     <link href="<?php echo ($back_to_top_css); ?>" rel="stylesheet" type="text/css">
@@ -89,12 +90,12 @@ include($directory_prefix . "php/links.php");
 
                     <!-- Text -->
                     <p class="text">
-                        <b> When on a game mode that supports Minecraft version 1.19.4, upon connecting to any lower-version game mode, chunks will not load. </b>
+                        <b> When on a game mode that supports the latest Minecraft version, upon connecting to any lower-version game mode, chunks will not load. </b>
                     </p>
 
                     <ul class="text">
                         <li>
-                            What you can do to fix: Connect to another lower-version game mode and chunks will load correctly.
+                            What you can do to fix: Reconnect to another game mode and chunks will load correctly.
                         </li>
                     </ul>
 
@@ -104,7 +105,7 @@ include($directory_prefix . "php/links.php");
 
                     <ul class="text">
                         <li>
-                            How to avoid: Use Minecraft version 1.19.4 or above.
+                            How to avoid: Use the latest Minecraft version.
                         </li>
                     </ul>
 
